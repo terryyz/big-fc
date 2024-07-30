@@ -1,0 +1,1079 @@
+{
+    "BigCodeBench/13": [
+        "ftplib.FTP",
+        "os.makedirs",
+        "os.path.exists",
+        "subprocess.call"
+    ],
+    "BigCodeBench/15": [
+        "csv.reader",
+        "os.makedirs",
+        "os.path.exists",
+        "subprocess.call",
+        "subprocess.STDOUT"
+    ],
+    "BigCodeBench/17": [
+        "psutil.process_iter",
+        "subprocess.Popen",
+        "time.sleep"
+    ],
+    "BigCodeBench/19": [
+        "glob.glob",
+        "os.path.basename",
+        "os.path.isfile",
+        "os.path.exists",
+        "os.path.join",
+        "zipfile.ZipFile"
+    ],
+    "BigCodeBench/34": [
+        "matplotlib.pyplot.axis",
+        "matplotlib.pyplot.figure",
+        "matplotlib.pyplot.imshow",
+        "re.sub",
+        "wordcloud.WordCloud"
+    ],
+    "BigCodeBench/37": [
+        "matplotlib.pyplot.figure",
+        "seaborn.barplot",
+        "sklearn.ensemble.RandomForestClassifier"
+    ],
+    "BigCodeBench/82": [
+        "flask.render_template",
+        "flask.redirect",
+        "flask.url_for",
+        "flask.Flask",
+        "flask_login.login_required",
+        "flask_login.UserMixin",
+        "flask_login.login_user",
+        "flask_login.logout_user",
+        "flask_login.LoginManager",
+        "flask_login.current_user.id",
+        "flask_wtf.FlaskForm",
+        "werkzeug.security.generate_password_hash",
+        "werkzeug.security.check_password_hash",
+        "wtforms.validators.Length",
+        "wtforms.validators.DataRequired",
+        "wtforms.SubmitField",
+        "wtforms.PasswordField",
+        "wtforms.StringField"
+    ],
+    "BigCodeBench/89": [
+        "matplotlib.pyplot.title",
+        "matplotlib.pyplot.figure",
+        "matplotlib.pyplot.scatter",
+        "matplotlib.pyplot.show",
+        "matplotlib.pyplot.subplot",
+        "numpy.where",
+        "numpy.delete",
+        "numpy.copy",
+        "numpy.abs",
+        "scipy.stats.zscore",
+        "sklearn.preprocessing.StandardScaler"
+    ],
+    "BigCodeBench/92": [
+        "matplotlib.pyplot.subplots",
+        "pandas.DataFrame",
+        "sklearn.cluster.KMeans"
+    ],
+    "BigCodeBench/93": [
+        "matplotlib.pyplot.subplots",
+        "numpy.random.seed",
+        "pandas.DataFrame",
+        "sklearn.decomposition.PCA"
+    ],
+    "BigCodeBench/99": [
+        "matplotlib.pyplot.rc",
+        "pandas.DataFrame",
+        "seaborn.pairplot",
+        "sklearn.datasets.load_iris"
+    ],
+    "BigCodeBench/100": [
+        "datetime.datetime.now",
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.rc",
+        "pandas.date_range",
+        "random.seed",
+        "random.randint"
+    ],
+    "BigCodeBench/101": [
+        "matplotlib.pyplot.rc",
+        "matplotlib.pyplot.figure",
+        "numpy.hstack",
+        "pandas.DataFrame",
+        "pandas.read_csv",
+        "seaborn.heatmap",
+        "seaborn.set_theme"
+    ],
+    "BigCodeBench/108": [
+        "matplotlib.pyplot.title",
+        "matplotlib.pyplot.ylabel",
+        "pandas.DataFrame",
+        "pandas.to_numeric",
+        "statsmodels.tsa.seasonal.seasonal_decompose"
+    ],
+    "BigCodeBench/120": [
+        "datetime.timedelta",
+        "datetime.datetime",
+        "pandas.Series",
+        "random.seed",
+        "random.randint"
+    ],
+    "BigCodeBench/123": [
+        "glob.glob",
+        "os.path.join",
+        "pandas.concat",
+        "pandas.read_csv"
+    ],
+    "BigCodeBench/124": [
+        "matplotlib.pyplot.subplots",
+        "random.seed",
+        "random.randint",
+        "time.time"
+    ],
+    "BigCodeBench/129": [
+        "bs4.BeautifulSoup",
+        "pandas.DataFrame",
+        "requests.ConnectionError",
+        "requests.HTTPError",
+        "requests.get"
+    ],
+    "BigCodeBench/139": [
+        "matplotlib.pyplot.subplots",
+        "numpy.number",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/147": [
+        "ipaddress.IPv4Network",
+        "socket.SOCK_STREAM",
+        "socket.error",
+        "socket.socket",
+        "socket.AF_INET",
+        "threading.Thread"
+    ],
+    "BigCodeBench/161": [
+        "datetime.datetime.strptime",
+        "pandas.DataFrame",
+        "re.match"
+    ],
+    "BigCodeBench/162": [
+        "matplotlib.pyplot.subplots",
+        "numpy.arange",
+        "re.split"
+    ],
+    "BigCodeBench/177": [
+        "nltk.word_tokenize",
+        "re.compile",
+        "re.IGNORECASE",
+        "string.punctuation"
+    ],
+    "BigCodeBench/184": [
+        "pandas.DataFrame",
+        "re.sub",
+        "sklearn.feature_extraction.text.CountVectorizer"
+    ],
+    "BigCodeBench/187": [
+        "geopandas.GeoDataFrame",
+        "numpy.random.uniform",
+        "shapely.geometry.Point"
+    ],
+    "BigCodeBench/199": [
+        "datetime.datetime",
+        "pandas.DataFrame",
+        "pytz.timezone",
+        "random.seed",
+        "random.randint"
+    ],
+    "BigCodeBench/208": [
+        "matplotlib.pyplot.title",
+        "matplotlib.pyplot.plot",
+        "matplotlib.pyplot.figure",
+        "matplotlib.pyplot.gca",
+        "numpy.cumsum",
+        "numpy.random.choice",
+        "numpy.random.seed",
+        "pandas.Series"
+    ],
+    "BigCodeBench/211": [
+        "os.path.basename",
+        "os.path.join",
+        "os.listdir",
+        "requests.get",
+        "zipfile.ZipFile"
+    ],
+    "BigCodeBench/214": [
+        "cv2.cvtColor",
+        "cv2.COLOR_BGR2RGB",
+        "matplotlib.pyplot.subplots",
+        "numpy.random.seed",
+        "numpy.zeros",
+        "numpy.uint8",
+        "random.randint"
+    ],
+    "BigCodeBench/227": [
+        "librosa.display.specshow",
+        "librosa.amplitude_to_db",
+        "librosa.stft",
+        "matplotlib.pyplot.title",
+        "matplotlib.pyplot.colorbar",
+        "matplotlib.pyplot.gcf",
+        "numpy.max",
+        "numpy.array",
+        "numpy.mean",
+        "numpy.sqrt",
+        "numpy.log10",
+        "numpy.abs",
+        "os.path.isfile",
+        "soundfile.read"
+    ],
+    "BigCodeBench/239": [
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.close",
+        "numpy.max",
+        "numpy.array",
+        "numpy.std",
+        "numpy.min",
+        "numpy.mean",
+        "numpy.linspace",
+        "scipy.stats.norm.pdf"
+    ],
+    "BigCodeBench/241": [
+        "matplotlib.pyplot.subplots",
+        "numpy.array",
+        "sklearn.preprocessing.normalize"
+    ],
+    "BigCodeBench/267": [
+        "matplotlib.pyplot.subplots",
+        "numpy.pi",
+        "numpy.sin",
+        "numpy.array",
+        "numpy.linspace",
+        "numpy.outer",
+        "numpy.abs",
+        "scipy.fftpack.fft"
+    ],
+    "BigCodeBench/273": [
+        "cgi.parse_header",
+        "json.JSONDecodeError",
+        "json.loads",
+        "json.dumps"
+    ],
+    "BigCodeBench/274": [
+        "cgi.parse_header",
+        "email.mime.text.MIMEText",
+        "json.loads",
+        "json.JSONDecodeError",
+        "smtplib.SMTPAuthenticationError"
+    ],
+    "BigCodeBench/287": [
+        "collections.Counter",
+        "json.dump",
+        "os.path.join",
+        "os.listdir"
+    ],
+    "BigCodeBench/302": [
+        "matplotlib.pyplot.title",
+        "matplotlib.pyplot.figure",
+        "pandas.concat",
+        "pandas.Series",
+        "pandas.DataFrame",
+        "pandas.to_datetime",
+        "seaborn.heatmap"
+    ],
+    "BigCodeBench/308": [
+        "pandas.DataFrame",
+        "random.randint",
+        "statistics.mean"
+    ],
+    "BigCodeBench/310": [
+        "csv.writer",
+        "os.getcwd",
+        "os.path.join",
+        "random.randint",
+        "statistics.mean"
+    ],
+    "BigCodeBench/313": [
+        "datetime.datetime.now",
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "os.listdir",
+        "re.search",
+        "shutil.move"
+    ],
+    "BigCodeBench/324": [
+        "subprocess.Popen",
+        "threading.Thread",
+        "time.sleep"
+    ],
+    "BigCodeBench/326": [
+        "glob.glob",
+        "os.path.basename",
+        "os.path.join",
+        "subprocess.Popen",
+        "sys.stderr"
+    ],
+    "BigCodeBench/341": [
+        "matplotlib.pyplot.subplots",
+        "pandas.api.types.is_numeric_dtype",
+        "pandas.DataFrame",
+        "seaborn.countplot",
+        "seaborn.boxplot",
+        "seaborn.stripplot"
+    ],
+    "BigCodeBench/346": [
+        "os.path.isfile",
+        "subprocess.Popen",
+        "subprocess.PIPE",
+        "subprocess.CalledProcessError",
+        "sys.executable",
+        "time.sleep"
+    ],
+    "BigCodeBench/360": [
+        "matplotlib.pyplot.subplots",
+        "numpy.std",
+        "numpy.mean",
+        "os.path.exists",
+        "pandas.read_excel"
+    ],
+    "BigCodeBench/367": [
+        "collections.defaultdict",
+        "datetime.datetime",
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.figure"
+    ],
+    "BigCodeBench/368": [
+        "os.path.join",
+        "os.listdir",
+        "random.seed",
+        "random.choice",
+        "shutil.move"
+    ],
+    "BigCodeBench/374": [
+        "glob.glob",
+        "openpyxl.load_workbook",
+        "os.path.isdir",
+        "regex.sub"
+    ],
+    "BigCodeBench/399": [
+        "math.pi",
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.figure",
+        "numpy.sin",
+        "numpy.linspace",
+        "numpy.cos"
+    ],
+    "BigCodeBench/401": [
+        "flask.Flask",
+        "flask_mail.Mail",
+        "os.getenv"
+    ],
+    "BigCodeBench/409": [
+        "numpy.median",
+        "numpy.std",
+        "numpy.mean",
+        "os.path.exists",
+        "os.path.join",
+        "pandas.read_excel"
+    ],
+    "BigCodeBench/417": [
+        "keras.models.Sequential",
+        "keras.layers.Dense",
+        "keras.optimizers.SGD",
+        "matplotlib.pyplot.subplots",
+        "sklearn.model_selection.train_test_split"
+    ],
+    "BigCodeBench/418": [
+        "matplotlib.pyplot.subplots",
+        "sklearn.model_selection.train_test_split",
+        "sklearn.metrics.roc_curve",
+        "sklearn.metrics.auc",
+        "tensorflow.keras.layers.Dense",
+        "tensorflow.keras.optimizers.SGD",
+        "tensorflow.keras.Sequential"
+    ],
+    "BigCodeBench/424": [
+        "cv2.imread",
+        "cv2.imwrite",
+        "numpy.where",
+        "numpy.array",
+        "numpy.stack",
+        "numpy.uint8",
+        "os.path.exists",
+        "sklearn.cluster.KMeans"
+    ],
+    "BigCodeBench/443": [
+        "matplotlib.pyplot.Axes",
+        "matplotlib.pyplot.subplots",
+        "numpy.ndarray",
+        "numpy.tensordot",
+        "sklearn.cluster.KMeans"
+    ],
+    "BigCodeBench/445": [
+        "matplotlib.pyplot.subplots",
+        "numpy.ndarray",
+        "numpy.random.seed",
+        "numpy.random.normal",
+        "scipy.spatial.Voronoi",
+        "scipy.spatial.voronoi_plot_2d"
+    ],
+    "BigCodeBench/454": [
+        "glob.glob",
+        "os.path.basename",
+        "os.path.exists",
+        "os.path.join",
+        "shutil.move"
+    ],
+    "BigCodeBench/458": [
+        "json.loads",
+        "pandas.DataFrame",
+        "pandas.to_numeric",
+        "re.compile"
+    ],
+    "BigCodeBench/461": [
+        "os.path.exists",
+        "psutil.ZombieProcess",
+        "psutil.NoSuchProcess",
+        "psutil.Process",
+        "subprocess.Popen",
+        "time.time",
+        "time.sleep"
+    ],
+    "BigCodeBench/477": [
+        "matplotlib.pyplot.subplots",
+        "numpy.random.rand",
+        "numpy.array",
+        "numpy.random.choice",
+        "numpy.random.seed",
+        "numpy.concatenate",
+        "numpy.random.shuffle",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/486": [
+        "datetime.datetime.fromtimestamp",
+        "numpy.arange",
+        "numpy.random.seed",
+        "numpy.random.normal",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/492": [
+        "datetime.datetime.fromtimestamp",
+        "datetime.datetime.now",
+        "pandas.date_range",
+        "pandas.DataFrame",
+        "random.seed",
+        "random.randint"
+    ],
+    "BigCodeBench/501": [
+        "os.path.abspath",
+        "pandas.read_json",
+        "xlwt.Workbook"
+    ],
+    "BigCodeBench/502": [
+        "datetime.timedelta",
+        "datetime.datetime.now",
+        "pandas.DataFrame",
+        "random.seed",
+        "random.randint",
+        "seaborn.lineplot"
+    ],
+    "BigCodeBench/503": [
+        "datetime.datetime.now",
+        "numpy.random.rand",
+        "numpy.random.seed",
+        "pandas.date_range",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/509": [
+        "csv.reader",
+        "difflib.ndiff",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/511": [
+        "matplotlib.pyplot.subplots",
+        "numpy.max",
+        "numpy.min",
+        "numpy.sum",
+        "numpy.mean",
+        "numpy.nan",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/513": [
+        "matplotlib.pyplot.title",
+        "numpy.max",
+        "numpy.min",
+        "numpy.sum",
+        "numpy.mean",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/526": [
+        "collections.defaultdict",
+        "json.load",
+        "numpy.nanmedian",
+        "numpy.nanmean",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/528": [
+        "collections.Counter",
+        "csv.reader",
+        "matplotlib.pyplot.tight_layout",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/530": [
+        "collections.Counter",
+        "matplotlib.pyplot.title",
+        "matplotlib.pyplot.Axes",
+        "matplotlib.pyplot.ylabel",
+        "matplotlib.pyplot.xlabel",
+        "numpy.floor",
+        "numpy.arange",
+        "pandas.DataFrame",
+        "seaborn.histplot"
+    ],
+    "BigCodeBench/532": [
+        "collections.Counter",
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.xlim",
+        "numpy.linspace",
+        "scipy.stats.norm.pdf",
+        "scipy.stats.norm.fit"
+    ],
+    "BigCodeBench/553": [
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.close",
+        "matplotlib.pyplot.show",
+        "numpy.random.seed",
+        "numpy.random.randn",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/560": [
+        "datetime.datetime.strptime",
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.close",
+        "matplotlib.pyplot.xticks",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/567": [
+        "matplotlib.pyplot.figure",
+        "matplotlib.pyplot.gca",
+        "matplotlib.pyplot.show",
+        "numpy.arange",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/574": [
+        "matplotlib.pyplot.subplots",
+        "numpy.pi",
+        "numpy.sin",
+        "numpy.random.rand",
+        "numpy.linspace",
+        "scipy.optimize.curve_fit"
+    ],
+    "BigCodeBench/579": [
+        "collections.Counter",
+        "csv.reader",
+        "matplotlib.pyplot.subplots",
+        "unicodedata.normalize"
+    ],
+    "BigCodeBench/582": [
+        "matplotlib.pyplot.subplots",
+        "numpy.histogram_bin_edges",
+        "numpy.linspace",
+        "numpy.random.randn",
+        "scipy.stats.norm.pdf",
+        "scipy.stats.norm.fit"
+    ],
+    "BigCodeBench/583": [
+        "Crypto.Random.get_random_bytes",
+        "Crypto.Cipher.AES.new",
+        "Crypto.Cipher.AES.MODE_EAX",
+        "base64.b64encode",
+        "os.urandom",
+        "rsa.newkeys"
+    ],
+    "BigCodeBench/587": [
+        "base64.b64encode",
+        "cryptography.hazmat.backends.default_backend",
+        "cryptography.hazmat.primitives.ciphers.Cipher",
+        "cryptography.hazmat.primitives.padding.PKCS7",
+        "cryptography.hazmat.primitives.ciphers.modes.CBC",
+        "cryptography.hazmat.primitives.ciphers.algorithms.AES",
+        "os.urandom",
+        "rsa.encrypt",
+        "rsa.newkeys"
+    ],
+    "BigCodeBench/590": [
+        "datetime.datetime.now",
+        "pandas.DataFrame",
+        "pyquery.PyQuery"
+    ],
+    "BigCodeBench/592": [
+        "csv.writer",
+        "datetime.datetime.now",
+        "os.path.exists",
+        "os.path.join",
+        "os.makedirs",
+        "random.randint"
+    ],
+    "BigCodeBench/593": [
+        "csv.writer",
+        "datetime.datetime.now",
+        "matplotlib.pyplot.tight_layout",
+        "matplotlib.pyplot.ylabel",
+        "matplotlib.pyplot.show",
+        "matplotlib.pyplot.xlabel",
+        "os.makedirs",
+        "os.path.join",
+        "os.path.exists",
+        "pandas.read_csv",
+        "random.randint"
+    ],
+    "BigCodeBench/594": [
+        "csv.writer",
+        "datetime.datetime.now",
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "random.randint",
+        "shutil.copy"
+    ],
+    "BigCodeBench/618": [
+        "matplotlib.pyplot.close",
+        "pandas.DataFrame",
+        "random.randint",
+        "seaborn.barplot"
+    ],
+    "BigCodeBench/636": [
+        "matplotlib.pyplot.gca",
+        "matplotlib.pyplot.close",
+        "numpy.random.randint",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/637": [
+        "matplotlib.pyplot.subplots",
+        "numpy.random.randint",
+        "pandas.DataFrame",
+        "random.sample"
+    ],
+    "BigCodeBench/654": [
+        "matplotlib.pyplot.plot",
+        "matplotlib.pyplot.figure",
+        "matplotlib.pyplot.legend",
+        "matplotlib.pyplot.gca",
+        "matplotlib.pyplot.show",
+        "numpy.where",
+        "numpy.arange",
+        "numpy.linspace",
+        "numpy.exp",
+        "scipy.optimize.curve_fit"
+    ],
+    "BigCodeBench/655": [
+        "nltk.corpus.stopwords.words",
+        "nltk.download",
+        "re.compile",
+        "sklearn.feature_extraction.text.TfidfVectorizer",
+        "sklearn.decomposition.NMF"
+    ],
+    "BigCodeBench/657": [
+        "gensim.models.Word2Vec",
+        "nltk.corpus.stopwords.words",
+        "re.compile"
+    ],
+    "BigCodeBench/678": [
+        "json.load",
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "os.listdir",
+        "pandas.concat",
+        "pandas.DataFrame",
+        "shutil.move"
+    ],
+    "BigCodeBench/720": [
+        "csv.writer",
+        "datetime.datetime.now",
+        "os.path.dirname",
+        "os.makedirs",
+        "os.path.isfile",
+        "random.uniform"
+    ],
+    "BigCodeBench/723": [
+        "bs4.BeautifulSoup",
+        "csv.writer",
+        "os.remove",
+        "os.path.exists"
+    ],
+    "BigCodeBench/752": [
+        "numpy.number",
+        "numpy.issubdtype",
+        "pandas.DataFrame",
+        "sklearn.linear_model.LinearRegression",
+        "sklearn.model_selection.train_test_split"
+    ],
+    "BigCodeBench/760": [
+        "codecs.encode",
+        "datetime.datetime",
+        "numpy.random.randint",
+        "numpy.random.choice",
+        "numpy.random.seed",
+        "pandas.DataFrame",
+        "re.sub"
+    ],
+    "BigCodeBench/763": [
+        "collections.defaultdict",
+        "csv.DictWriter",
+        "json.load",
+        "numpy.median",
+        "numpy.mean"
+    ],
+    "BigCodeBench/765": [
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.isfile",
+        "pathlib.Path",
+        "shutil.copyfile"
+    ],
+    "BigCodeBench/771": [
+        "csv.writer",
+        "csv.reader",
+        "os.listdir",
+        "pathlib.Path",
+        "re.compile"
+    ],
+    "BigCodeBench/777": [
+        "os.makedirs",
+        "os.path.join",
+        "os.listdir",
+        "re.match",
+        "zipfile.ZipFile"
+    ],
+    "BigCodeBench/785": [
+        "glob.glob",
+        "os.remove",
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "subprocess.run"
+    ],
+    "BigCodeBench/800": [
+        "collections.Counter",
+        "csv.DictReader",
+        "csv.writer",
+        "os.path.exists"
+    ],
+    "BigCodeBench/826": [
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "os.listdir",
+        "re.match",
+        "shutil.move"
+    ],
+    "BigCodeBench/845": [
+        "Levenshtein.ratio",
+        "collections.Counter",
+        "numpy.sqrt",
+        "re.compile"
+    ],
+    "BigCodeBench/854": [
+        "functools.reduce",
+        "itertools.permutations",
+        "math.factorial"
+    ],
+    "BigCodeBench/857": [
+        "glob.glob",
+        "os.path.basename",
+        "os.path.join",
+        "shutil.move",
+        "time.sleep",
+        "warnings.warn",
+        "warnings.simplefilter"
+    ],
+    "BigCodeBench/865": [
+        "numpy.array",
+        "pandas.DataFrame",
+        "scipy.stats.zscore",
+        "sklearn.preprocessing.MinMaxScaler"
+    ],
+    "BigCodeBench/870": [
+        "itertools.zip_longest",
+        "numpy.nanmean",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/879": [
+        "numpy.issubdtype",
+        "numpy.number",
+        "pandas.crosstab",
+        "scipy.stats.chi2_contingency"
+    ],
+    "BigCodeBench/897": [
+        "matplotlib.pyplot.subplots",
+        "numpy.bincount",
+        "numpy.arange",
+        "random.seed",
+        "random.choice"
+    ],
+    "BigCodeBench/906": [
+        "os.path.splitext",
+        "os.makedirs",
+        "os.path.join",
+        "os.listdir",
+        "re.search",
+        "shutil.move",
+        "zipfile.ZipFile"
+    ],
+    "BigCodeBench/914": [
+        "matplotlib.pyplot.subplots",
+        "numpy.array",
+        "pandas.to_datetime",
+        "pandas.Timestamp.timestamp",
+        "sklearn.linear_model.LinearRegression"
+    ],
+    "BigCodeBench/915": [
+        "matplotlib.pyplot.subplots",
+        "numpy.abs",
+        "scipy.stats.zscore"
+    ],
+    "BigCodeBench/916": [
+        "matplotlib.pyplot.tight_layout",
+        "matplotlib.pyplot.subplots",
+        "matplotlib.pyplot.close",
+        "pandas.DataFrame",
+        "seaborn.boxplot",
+        "seaborn.histplot"
+    ],
+    "BigCodeBench/917": [
+        "matplotlib.pyplot.subplots",
+        "matplotlib.axes.Axes",
+        "pandas.Timedelta",
+        "pandas.date_range",
+        "pandas.DataFrame",
+        "statsmodels.tsa.arima.model.ARIMA",
+        "typing.Tuple",
+        "typing.List"
+    ],
+    "BigCodeBench/928": [
+        "collections.Counter",
+        "itertools.permutations",
+        "string.ascii_lowercase"
+    ],
+    "BigCodeBench/942": [
+        "matplotlib.pyplot.subplots",
+        "numpy.random.randint",
+        "numpy.random.seed",
+        "pandas.date_range",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/945": [
+        "numpy.random.randint",
+        "numpy.arange",
+        "pandas.date_range",
+        "pandas.DataFrame",
+        "sklearn.linear_model.LinearRegression"
+    ],
+    "BigCodeBench/952": [
+        "datetime.datetime.today",
+        "pandas.DataFrame",
+        "random.seed",
+        "random.choice"
+    ],
+    "BigCodeBench/955": [
+        "collections.Counter",
+        "matplotlib.pyplot.subplots",
+        "numpy.arange",
+        "re.sub",
+        "re.IGNORECASE"
+    ],
+    "BigCodeBench/963": [
+        "glob.glob",
+        "os.path.abspath",
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "pathlib.Path",
+        "zipfile.ZipFile"
+    ],
+    "BigCodeBench/964": [
+        "docx.Document",
+        "os.walk",
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "pandas.read_excel",
+        "pandas.DataFrame",
+        "pandas.read_csv",
+        "pathlib.Path"
+    ],
+    "BigCodeBench/969": [
+        "numpy.number",
+        "pandas.DataFrame",
+        "sklearn.preprocessing.MinMaxScaler"
+    ],
+    "BigCodeBench/971": [
+        "datetime.datetime.fromtimestamp",
+        "datetime.timezone.utc",
+        "os.stat",
+        "os.scandir",
+        "pathlib.Path"
+    ],
+    "BigCodeBench/985": [
+        "json.loads",
+        "json.JSONDecodeError",
+        "math.floor",
+        "os.makedirs",
+        "os.path.join",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/988": [
+        "os.path.exists",
+        "os.path.join",
+        "os.listdir",
+        "os.path.isdir",
+        "pathlib.Path",
+        "re.search"
+    ],
+    "BigCodeBench/990": [
+        "base64.b64encode",
+        "binascii.hexlify",
+        "codecs.encode"
+    ],
+    "BigCodeBench/998": [
+        "hashlib.md5",
+        "os.remove",
+        "tarfile.open"
+    ],
+    "BigCodeBench/999": [
+        "collections.Counter",
+        "csv.DictReader",
+        "os.remove"
+    ],
+    "BigCodeBench/1003": [
+        "lxml.etree.XMLSyntaxError",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/1004": [
+        "collections.Counter",
+        "matplotlib.pyplot.subplots",
+        "re.findall"
+    ],
+    "BigCodeBench/1006": [
+        "os.path.splitext",
+        "os.path.basename",
+        "os.makedirs",
+        "os.path.exists",
+        "os.path.join",
+        "requests.RequestException",
+        "requests.get",
+        "zipfile.BadZipFile",
+        "zipfile.ZipFile"
+    ],
+    "BigCodeBench/1008": [
+        "bs4.BeautifulSoup",
+        "io.StringIO",
+        "pandas.read_html",
+        "pandas.DataFrame",
+        "requests.exceptions.HTTPError",
+        "requests.get"
+    ],
+    "BigCodeBench/1012": [
+        "pathlib.Path",
+        "requests.get",
+        "requests.exceptions.RequestException",
+        "zipfile.BadZipFile",
+        "zipfile.ZipFile"
+    ],
+    "BigCodeBench/1013": [
+        "bs4.BeautifulSoup",
+        "csv.writer",
+        "requests.get",
+        "urllib.parse.urljoin"
+    ],
+    "BigCodeBench/1015": [
+        "lxml.html.fromstring",
+        "pandas.DataFrame",
+        "requests.RequestException",
+        "requests.get",
+        "sqlite3.connect",
+        "sqlite3.DatabaseError"
+    ],
+    "BigCodeBench/1019": [
+        "PIL.Image.open",
+        "codecs.decode",
+        "pytesseract.image_to_string"
+    ],
+    "BigCodeBench/1020": [
+        "chardet.detect",
+        "json.loads",
+        "requests.get"
+    ],
+    "BigCodeBench/1022": [
+        "datetime.datetime.now",
+        "os.path.isfile",
+        "pandas.errors.EmptyDataError",
+        "pandas.DataFrame",
+        "pandas.to_datetime",
+        "pandas.read_csv"
+    ],
+    "BigCodeBench/1039": [
+        "hashlib.sha256",
+        "os.path.exists",
+        "ssl.PROTOCOL_TLS_SERVER",
+        "ssl.SSLContext"
+    ],
+    "BigCodeBench/1040": [
+        "datetime.timedelta",
+        "datetime.datetime.now",
+        "queue.Empty",
+        "queue.Queue",
+        "select.select",
+        "socket.socket",
+        "socket.AF_INET",
+        "socket.SOCK_STREAM"
+    ],
+    "BigCodeBench/1042": [
+        "email.message.EmailMessage",
+        "getpass.getpass",
+        "smtplib.SMTP"
+    ],
+    "BigCodeBench/1053": [
+        "matplotlib.pyplot.savefig",
+        "matplotlib.pyplot.close",
+        "pandas.DataFrame",
+        "pandas.read_csv",
+        "sklearn.feature_extraction.text.CountVectorizer"
+    ],
+    "BigCodeBench/1057": [
+        "itertools.product",
+        "numpy.array",
+        "pandas.DataFrame"
+    ],
+    "BigCodeBench/1077": [
+        "datetime.datetime.strptime",
+        "numpy.mean",
+        "pytz.UTC",
+        "pytz.timezone"
+    ],
+    "BigCodeBench/1085": [
+        "collections.Counter",
+        "matplotlib.pyplot.subplots",
+        "re.sub"
+    ],
+    "BigCodeBench/1124": [
+        "bs4.BeautifulSoup",
+        "re.search",
+        "requests.RequestException",
+        "requests.get",
+        "urllib.parse.urlparse"
+    ],
+    "BigCodeBench/1129": [
+        "datetime.datetime.now",
+        "json.loads",
+        "os.getcwd",
+        "os.path.join",
+        "requests.get"
+    ],
+    "BigCodeBench/1137": [
+        "bs4.BeautifulSoup",
+        "json.dump",
+        "re.findall",
+        "requests.get"
+    ]
+}
