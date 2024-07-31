@@ -99,17 +99,27 @@ if __name__ == "__main__":
     dataset = load_dataset("bigcode/bigcodebench-hard", split="v0.1.0_hf")
     apis = []
     api_dict = dict()
+    api2task = dict()
     for item in tqdm(dataset):
         task_id = item["task_id"]
         complete_prompt = item["complete_prompt"]
         canonical_solution = item["canonical_solution"]
         tmp_apis = extract_apis(complete_prompt+canonical_solution)
         tmp_apis = [api for api in tmp_apis if not any(api in other_api for other_api in tmp_apis if api != other_api)]
-        apis.extend(tmp_apis)
+        for api in tmp_apis:
+            try:
+                api2task[api].append(task_id)
+            except:
+                api2task[api] = [task_id]
         api_dict[task_id] = sorted(list(set(tmp_apis)), key=lambda x: x.split('.')[0])
+        apis.extend(tmp_apis)
     
     with open("apis.json", "w") as f:
         json.dump(api_dict, f, indent=4)
+    
+    with open("api2task.json", "w") as f:
+        json.dump(api2task, f, indent=4)
+    
     sorted_apis = sorted(list(set(apis)), key=lambda x: x.split('.')[0])
     with open("apis.txt", "w") as f:
         for api in sorted_apis:

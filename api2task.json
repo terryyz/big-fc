@@ -1,0 +1,1383 @@
+{
+    "subprocess.call": [
+        "BigCodeBench/13",
+        "BigCodeBench/15"
+    ],
+    "os.path.exists": [
+        "BigCodeBench/13",
+        "BigCodeBench/15",
+        "BigCodeBench/19",
+        "BigCodeBench/313",
+        "BigCodeBench/360",
+        "BigCodeBench/409",
+        "BigCodeBench/424",
+        "BigCodeBench/454",
+        "BigCodeBench/461",
+        "BigCodeBench/592",
+        "BigCodeBench/593",
+        "BigCodeBench/594",
+        "BigCodeBench/678",
+        "BigCodeBench/723",
+        "BigCodeBench/765",
+        "BigCodeBench/785",
+        "BigCodeBench/800",
+        "BigCodeBench/826",
+        "BigCodeBench/963",
+        "BigCodeBench/964",
+        "BigCodeBench/988",
+        "BigCodeBench/1006",
+        "BigCodeBench/1039"
+    ],
+    "os.makedirs": [
+        "BigCodeBench/13",
+        "BigCodeBench/15",
+        "BigCodeBench/313",
+        "BigCodeBench/592",
+        "BigCodeBench/593",
+        "BigCodeBench/594",
+        "BigCodeBench/678",
+        "BigCodeBench/720",
+        "BigCodeBench/765",
+        "BigCodeBench/777",
+        "BigCodeBench/785",
+        "BigCodeBench/826",
+        "BigCodeBench/906",
+        "BigCodeBench/963",
+        "BigCodeBench/964",
+        "BigCodeBench/985",
+        "BigCodeBench/1006"
+    ],
+    "ftplib.FTP": [
+        "BigCodeBench/13"
+    ],
+    "subprocess.STDOUT": [
+        "BigCodeBench/15"
+    ],
+    "csv.reader": [
+        "BigCodeBench/15",
+        "BigCodeBench/509",
+        "BigCodeBench/528",
+        "BigCodeBench/579",
+        "BigCodeBench/771"
+    ],
+    "time.sleep": [
+        "BigCodeBench/17",
+        "BigCodeBench/324",
+        "BigCodeBench/346",
+        "BigCodeBench/461",
+        "BigCodeBench/857"
+    ],
+    "psutil.process_iter": [
+        "BigCodeBench/17"
+    ],
+    "subprocess.Popen": [
+        "BigCodeBench/17",
+        "BigCodeBench/324",
+        "BigCodeBench/326",
+        "BigCodeBench/346",
+        "BigCodeBench/461"
+    ],
+    "glob.glob": [
+        "BigCodeBench/19",
+        "BigCodeBench/123",
+        "BigCodeBench/326",
+        "BigCodeBench/374",
+        "BigCodeBench/454",
+        "BigCodeBench/785",
+        "BigCodeBench/857",
+        "BigCodeBench/963"
+    ],
+    "os.path.isfile": [
+        "BigCodeBench/19",
+        "BigCodeBench/227",
+        "BigCodeBench/346",
+        "BigCodeBench/720",
+        "BigCodeBench/765",
+        "BigCodeBench/1022"
+    ],
+    "zipfile.ZipFile": [
+        "BigCodeBench/19",
+        "BigCodeBench/211",
+        "BigCodeBench/777",
+        "BigCodeBench/906",
+        "BigCodeBench/963",
+        "BigCodeBench/1006",
+        "BigCodeBench/1012"
+    ],
+    "os.path.join": [
+        "BigCodeBench/19",
+        "BigCodeBench/123",
+        "BigCodeBench/211",
+        "BigCodeBench/287",
+        "BigCodeBench/310",
+        "BigCodeBench/313",
+        "BigCodeBench/326",
+        "BigCodeBench/368",
+        "BigCodeBench/409",
+        "BigCodeBench/454",
+        "BigCodeBench/592",
+        "BigCodeBench/593",
+        "BigCodeBench/594",
+        "BigCodeBench/678",
+        "BigCodeBench/777",
+        "BigCodeBench/785",
+        "BigCodeBench/826",
+        "BigCodeBench/857",
+        "BigCodeBench/906",
+        "BigCodeBench/963",
+        "BigCodeBench/964",
+        "BigCodeBench/985",
+        "BigCodeBench/988",
+        "BigCodeBench/1006",
+        "BigCodeBench/1129"
+    ],
+    "os.path.basename": [
+        "BigCodeBench/19",
+        "BigCodeBench/211",
+        "BigCodeBench/326",
+        "BigCodeBench/454",
+        "BigCodeBench/857",
+        "BigCodeBench/1006"
+    ],
+    "matplotlib.pyplot.imshow": [
+        "BigCodeBench/34"
+    ],
+    "wordcloud.WordCloud": [
+        "BigCodeBench/34"
+    ],
+    "re.sub": [
+        "BigCodeBench/34",
+        "BigCodeBench/184",
+        "BigCodeBench/760",
+        "BigCodeBench/955",
+        "BigCodeBench/1085"
+    ],
+    "matplotlib.pyplot.figure": [
+        "BigCodeBench/34",
+        "BigCodeBench/37",
+        "BigCodeBench/89",
+        "BigCodeBench/101",
+        "BigCodeBench/208",
+        "BigCodeBench/302",
+        "BigCodeBench/367",
+        "BigCodeBench/399",
+        "BigCodeBench/567",
+        "BigCodeBench/654"
+    ],
+    "matplotlib.pyplot.axis": [
+        "BigCodeBench/34"
+    ],
+    "sklearn.ensemble.RandomForestClassifier": [
+        "BigCodeBench/37"
+    ],
+    "seaborn.barplot": [
+        "BigCodeBench/37",
+        "BigCodeBench/618"
+    ],
+    "flask.redirect": [
+        "BigCodeBench/82"
+    ],
+    "werkzeug.security.generate_password_hash": [
+        "BigCodeBench/82"
+    ],
+    "wtforms.StringField": [
+        "BigCodeBench/82"
+    ],
+    "flask_login.login_user": [
+        "BigCodeBench/82"
+    ],
+    "wtforms.SubmitField": [
+        "BigCodeBench/82"
+    ],
+    "flask.url_for": [
+        "BigCodeBench/82"
+    ],
+    "wtforms.PasswordField": [
+        "BigCodeBench/82"
+    ],
+    "wtforms.validators.DataRequired": [
+        "BigCodeBench/82"
+    ],
+    "flask_login.UserMixin": [
+        "BigCodeBench/82"
+    ],
+    "flask_login.logout_user": [
+        "BigCodeBench/82"
+    ],
+    "flask_login.current_user.id": [
+        "BigCodeBench/82"
+    ],
+    "flask.render_template": [
+        "BigCodeBench/82"
+    ],
+    "flask_login.login_required": [
+        "BigCodeBench/82"
+    ],
+    "wtforms.validators.Length": [
+        "BigCodeBench/82"
+    ],
+    "werkzeug.security.check_password_hash": [
+        "BigCodeBench/82"
+    ],
+    "flask_wtf.FlaskForm": [
+        "BigCodeBench/82"
+    ],
+    "flask.Flask": [
+        "BigCodeBench/82",
+        "BigCodeBench/401"
+    ],
+    "flask_login.LoginManager": [
+        "BigCodeBench/82"
+    ],
+    "scipy.stats.zscore": [
+        "BigCodeBench/89",
+        "BigCodeBench/865",
+        "BigCodeBench/915"
+    ],
+    "matplotlib.pyplot.title": [
+        "BigCodeBench/89",
+        "BigCodeBench/108",
+        "BigCodeBench/208",
+        "BigCodeBench/227",
+        "BigCodeBench/302",
+        "BigCodeBench/513",
+        "BigCodeBench/530"
+    ],
+    "numpy.abs": [
+        "BigCodeBench/89",
+        "BigCodeBench/227",
+        "BigCodeBench/267",
+        "BigCodeBench/915"
+    ],
+    "numpy.copy": [
+        "BigCodeBench/89"
+    ],
+    "sklearn.preprocessing.StandardScaler": [
+        "BigCodeBench/89"
+    ],
+    "matplotlib.pyplot.show": [
+        "BigCodeBench/89",
+        "BigCodeBench/553",
+        "BigCodeBench/567",
+        "BigCodeBench/593",
+        "BigCodeBench/654"
+    ],
+    "numpy.delete": [
+        "BigCodeBench/89"
+    ],
+    "matplotlib.pyplot.scatter": [
+        "BigCodeBench/89"
+    ],
+    "numpy.where": [
+        "BigCodeBench/89",
+        "BigCodeBench/424",
+        "BigCodeBench/654"
+    ],
+    "matplotlib.pyplot.subplot": [
+        "BigCodeBench/89"
+    ],
+    "sklearn.cluster.KMeans": [
+        "BigCodeBench/92",
+        "BigCodeBench/424",
+        "BigCodeBench/443"
+    ],
+    "pandas.DataFrame": [
+        "BigCodeBench/92",
+        "BigCodeBench/93",
+        "BigCodeBench/99",
+        "BigCodeBench/101",
+        "BigCodeBench/108",
+        "BigCodeBench/129",
+        "BigCodeBench/139",
+        "BigCodeBench/161",
+        "BigCodeBench/184",
+        "BigCodeBench/199",
+        "BigCodeBench/302",
+        "BigCodeBench/308",
+        "BigCodeBench/341",
+        "BigCodeBench/458",
+        "BigCodeBench/477",
+        "BigCodeBench/486",
+        "BigCodeBench/492",
+        "BigCodeBench/502",
+        "BigCodeBench/503",
+        "BigCodeBench/509",
+        "BigCodeBench/511",
+        "BigCodeBench/513",
+        "BigCodeBench/526",
+        "BigCodeBench/528",
+        "BigCodeBench/530",
+        "BigCodeBench/553",
+        "BigCodeBench/560",
+        "BigCodeBench/567",
+        "BigCodeBench/590",
+        "BigCodeBench/618",
+        "BigCodeBench/636",
+        "BigCodeBench/637",
+        "BigCodeBench/678",
+        "BigCodeBench/752",
+        "BigCodeBench/760",
+        "BigCodeBench/865",
+        "BigCodeBench/870",
+        "BigCodeBench/916",
+        "BigCodeBench/917",
+        "BigCodeBench/942",
+        "BigCodeBench/945",
+        "BigCodeBench/952",
+        "BigCodeBench/964",
+        "BigCodeBench/969",
+        "BigCodeBench/985",
+        "BigCodeBench/1003",
+        "BigCodeBench/1008",
+        "BigCodeBench/1015",
+        "BigCodeBench/1022",
+        "BigCodeBench/1053",
+        "BigCodeBench/1057"
+    ],
+    "matplotlib.pyplot.subplots": [
+        "BigCodeBench/92",
+        "BigCodeBench/93",
+        "BigCodeBench/100",
+        "BigCodeBench/124",
+        "BigCodeBench/139",
+        "BigCodeBench/162",
+        "BigCodeBench/214",
+        "BigCodeBench/239",
+        "BigCodeBench/241",
+        "BigCodeBench/267",
+        "BigCodeBench/341",
+        "BigCodeBench/360",
+        "BigCodeBench/367",
+        "BigCodeBench/399",
+        "BigCodeBench/417",
+        "BigCodeBench/418",
+        "BigCodeBench/443",
+        "BigCodeBench/445",
+        "BigCodeBench/477",
+        "BigCodeBench/511",
+        "BigCodeBench/532",
+        "BigCodeBench/553",
+        "BigCodeBench/560",
+        "BigCodeBench/574",
+        "BigCodeBench/579",
+        "BigCodeBench/582",
+        "BigCodeBench/637",
+        "BigCodeBench/897",
+        "BigCodeBench/914",
+        "BigCodeBench/915",
+        "BigCodeBench/916",
+        "BigCodeBench/917",
+        "BigCodeBench/942",
+        "BigCodeBench/955",
+        "BigCodeBench/1004",
+        "BigCodeBench/1085"
+    ],
+    "sklearn.decomposition.PCA": [
+        "BigCodeBench/93"
+    ],
+    "numpy.random.seed": [
+        "BigCodeBench/93",
+        "BigCodeBench/208",
+        "BigCodeBench/214",
+        "BigCodeBench/445",
+        "BigCodeBench/477",
+        "BigCodeBench/486",
+        "BigCodeBench/503",
+        "BigCodeBench/553",
+        "BigCodeBench/760",
+        "BigCodeBench/942"
+    ],
+    "matplotlib.pyplot.rc": [
+        "BigCodeBench/99",
+        "BigCodeBench/100",
+        "BigCodeBench/101"
+    ],
+    "seaborn.pairplot": [
+        "BigCodeBench/99"
+    ],
+    "sklearn.datasets.load_iris": [
+        "BigCodeBench/99"
+    ],
+    "random.randint": [
+        "BigCodeBench/100",
+        "BigCodeBench/120",
+        "BigCodeBench/124",
+        "BigCodeBench/199",
+        "BigCodeBench/214",
+        "BigCodeBench/308",
+        "BigCodeBench/310",
+        "BigCodeBench/492",
+        "BigCodeBench/502",
+        "BigCodeBench/592",
+        "BigCodeBench/593",
+        "BigCodeBench/594",
+        "BigCodeBench/618"
+    ],
+    "random.seed": [
+        "BigCodeBench/100",
+        "BigCodeBench/120",
+        "BigCodeBench/124",
+        "BigCodeBench/199",
+        "BigCodeBench/368",
+        "BigCodeBench/492",
+        "BigCodeBench/502",
+        "BigCodeBench/897",
+        "BigCodeBench/952"
+    ],
+    "pandas.date_range": [
+        "BigCodeBench/100",
+        "BigCodeBench/492",
+        "BigCodeBench/503",
+        "BigCodeBench/917",
+        "BigCodeBench/942",
+        "BigCodeBench/945"
+    ],
+    "datetime.datetime.now": [
+        "BigCodeBench/100",
+        "BigCodeBench/313",
+        "BigCodeBench/492",
+        "BigCodeBench/502",
+        "BigCodeBench/503",
+        "BigCodeBench/590",
+        "BigCodeBench/592",
+        "BigCodeBench/593",
+        "BigCodeBench/594",
+        "BigCodeBench/720",
+        "BigCodeBench/1022",
+        "BigCodeBench/1040",
+        "BigCodeBench/1129"
+    ],
+    "seaborn.set_theme": [
+        "BigCodeBench/101"
+    ],
+    "seaborn.heatmap": [
+        "BigCodeBench/101",
+        "BigCodeBench/302"
+    ],
+    "numpy.hstack": [
+        "BigCodeBench/101"
+    ],
+    "pandas.read_csv": [
+        "BigCodeBench/101",
+        "BigCodeBench/123",
+        "BigCodeBench/593",
+        "BigCodeBench/964",
+        "BigCodeBench/1022",
+        "BigCodeBench/1053"
+    ],
+    "pandas.to_numeric": [
+        "BigCodeBench/108",
+        "BigCodeBench/458"
+    ],
+    "matplotlib.pyplot.ylabel": [
+        "BigCodeBench/108",
+        "BigCodeBench/530",
+        "BigCodeBench/593"
+    ],
+    "statsmodels.tsa.seasonal.seasonal_decompose": [
+        "BigCodeBench/108"
+    ],
+    "datetime.timedelta": [
+        "BigCodeBench/120",
+        "BigCodeBench/502",
+        "BigCodeBench/1040"
+    ],
+    "pandas.Series": [
+        "BigCodeBench/120",
+        "BigCodeBench/208",
+        "BigCodeBench/302"
+    ],
+    "datetime.datetime": [
+        "BigCodeBench/120",
+        "BigCodeBench/199",
+        "BigCodeBench/367"
+    ],
+    "pandas.concat": [
+        "BigCodeBench/123",
+        "BigCodeBench/302",
+        "BigCodeBench/678"
+    ],
+    "time.time": [
+        "BigCodeBench/124",
+        "BigCodeBench/461"
+    ],
+    "requests.HTTPError": [
+        "BigCodeBench/129"
+    ],
+    "requests.get": [
+        "BigCodeBench/129",
+        "BigCodeBench/211",
+        "BigCodeBench/1006",
+        "BigCodeBench/1008",
+        "BigCodeBench/1012",
+        "BigCodeBench/1013",
+        "BigCodeBench/1015",
+        "BigCodeBench/1020",
+        "BigCodeBench/1124",
+        "BigCodeBench/1129",
+        "BigCodeBench/1137"
+    ],
+    "requests.ConnectionError": [
+        "BigCodeBench/129"
+    ],
+    "bs4.BeautifulSoup": [
+        "BigCodeBench/129",
+        "BigCodeBench/723",
+        "BigCodeBench/1008",
+        "BigCodeBench/1013",
+        "BigCodeBench/1124",
+        "BigCodeBench/1137"
+    ],
+    "numpy.number": [
+        "BigCodeBench/139",
+        "BigCodeBench/752",
+        "BigCodeBench/879",
+        "BigCodeBench/969"
+    ],
+    "threading.Thread": [
+        "BigCodeBench/147",
+        "BigCodeBench/324"
+    ],
+    "socket.SOCK_STREAM": [
+        "BigCodeBench/147",
+        "BigCodeBench/1040"
+    ],
+    "ipaddress.IPv4Network": [
+        "BigCodeBench/147"
+    ],
+    "socket.error": [
+        "BigCodeBench/147"
+    ],
+    "socket.AF_INET": [
+        "BigCodeBench/147",
+        "BigCodeBench/1040"
+    ],
+    "socket.socket": [
+        "BigCodeBench/147",
+        "BigCodeBench/1040"
+    ],
+    "datetime.datetime.strptime": [
+        "BigCodeBench/161",
+        "BigCodeBench/560",
+        "BigCodeBench/1077"
+    ],
+    "re.match": [
+        "BigCodeBench/161",
+        "BigCodeBench/777",
+        "BigCodeBench/826"
+    ],
+    "numpy.arange": [
+        "BigCodeBench/162",
+        "BigCodeBench/486",
+        "BigCodeBench/530",
+        "BigCodeBench/567",
+        "BigCodeBench/654",
+        "BigCodeBench/897",
+        "BigCodeBench/945",
+        "BigCodeBench/955"
+    ],
+    "re.split": [
+        "BigCodeBench/162"
+    ],
+    "re.IGNORECASE": [
+        "BigCodeBench/177",
+        "BigCodeBench/955"
+    ],
+    "nltk.word_tokenize": [
+        "BigCodeBench/177"
+    ],
+    "string.punctuation": [
+        "BigCodeBench/177"
+    ],
+    "re.compile": [
+        "BigCodeBench/177",
+        "BigCodeBench/458",
+        "BigCodeBench/655",
+        "BigCodeBench/657",
+        "BigCodeBench/771",
+        "BigCodeBench/845"
+    ],
+    "sklearn.feature_extraction.text.CountVectorizer": [
+        "BigCodeBench/184",
+        "BigCodeBench/1053"
+    ],
+    "geopandas.GeoDataFrame": [
+        "BigCodeBench/187"
+    ],
+    "numpy.random.uniform": [
+        "BigCodeBench/187"
+    ],
+    "shapely.geometry.Point": [
+        "BigCodeBench/187"
+    ],
+    "pytz.timezone": [
+        "BigCodeBench/199",
+        "BigCodeBench/1077"
+    ],
+    "numpy.cumsum": [
+        "BigCodeBench/208"
+    ],
+    "matplotlib.pyplot.plot": [
+        "BigCodeBench/208",
+        "BigCodeBench/654"
+    ],
+    "numpy.random.choice": [
+        "BigCodeBench/208",
+        "BigCodeBench/477",
+        "BigCodeBench/760"
+    ],
+    "matplotlib.pyplot.gca": [
+        "BigCodeBench/208",
+        "BigCodeBench/567",
+        "BigCodeBench/636",
+        "BigCodeBench/654"
+    ],
+    "os.listdir": [
+        "BigCodeBench/211",
+        "BigCodeBench/287",
+        "BigCodeBench/313",
+        "BigCodeBench/368",
+        "BigCodeBench/678",
+        "BigCodeBench/771",
+        "BigCodeBench/777",
+        "BigCodeBench/826",
+        "BigCodeBench/906",
+        "BigCodeBench/988"
+    ],
+    "numpy.uint8": [
+        "BigCodeBench/214",
+        "BigCodeBench/424"
+    ],
+    "numpy.zeros": [
+        "BigCodeBench/214"
+    ],
+    "cv2.cvtColor": [
+        "BigCodeBench/214"
+    ],
+    "cv2.COLOR_BGR2RGB": [
+        "BigCodeBench/214"
+    ],
+    "soundfile.read": [
+        "BigCodeBench/227"
+    ],
+    "numpy.mean": [
+        "BigCodeBench/227",
+        "BigCodeBench/239",
+        "BigCodeBench/360",
+        "BigCodeBench/409",
+        "BigCodeBench/511",
+        "BigCodeBench/513",
+        "BigCodeBench/763",
+        "BigCodeBench/1077"
+    ],
+    "librosa.display.specshow": [
+        "BigCodeBench/227"
+    ],
+    "numpy.array": [
+        "BigCodeBench/227",
+        "BigCodeBench/239",
+        "BigCodeBench/241",
+        "BigCodeBench/267",
+        "BigCodeBench/424",
+        "BigCodeBench/477",
+        "BigCodeBench/865",
+        "BigCodeBench/914",
+        "BigCodeBench/1057"
+    ],
+    "matplotlib.pyplot.gcf": [
+        "BigCodeBench/227"
+    ],
+    "librosa.stft": [
+        "BigCodeBench/227"
+    ],
+    "numpy.max": [
+        "BigCodeBench/227",
+        "BigCodeBench/239",
+        "BigCodeBench/511",
+        "BigCodeBench/513"
+    ],
+    "numpy.sqrt": [
+        "BigCodeBench/227",
+        "BigCodeBench/845"
+    ],
+    "matplotlib.pyplot.colorbar": [
+        "BigCodeBench/227"
+    ],
+    "numpy.log10": [
+        "BigCodeBench/227"
+    ],
+    "librosa.amplitude_to_db": [
+        "BigCodeBench/227"
+    ],
+    "numpy.std": [
+        "BigCodeBench/239",
+        "BigCodeBench/360",
+        "BigCodeBench/409"
+    ],
+    "matplotlib.pyplot.close": [
+        "BigCodeBench/239",
+        "BigCodeBench/553",
+        "BigCodeBench/560",
+        "BigCodeBench/618",
+        "BigCodeBench/636",
+        "BigCodeBench/916",
+        "BigCodeBench/1053"
+    ],
+    "scipy.stats.norm.pdf": [
+        "BigCodeBench/239",
+        "BigCodeBench/532",
+        "BigCodeBench/582"
+    ],
+    "numpy.linspace": [
+        "BigCodeBench/239",
+        "BigCodeBench/267",
+        "BigCodeBench/399",
+        "BigCodeBench/532",
+        "BigCodeBench/574",
+        "BigCodeBench/582",
+        "BigCodeBench/654"
+    ],
+    "numpy.min": [
+        "BigCodeBench/239",
+        "BigCodeBench/511",
+        "BigCodeBench/513"
+    ],
+    "sklearn.preprocessing.normalize": [
+        "BigCodeBench/241"
+    ],
+    "numpy.outer": [
+        "BigCodeBench/267"
+    ],
+    "scipy.fftpack.fft": [
+        "BigCodeBench/267"
+    ],
+    "numpy.pi": [
+        "BigCodeBench/267",
+        "BigCodeBench/574"
+    ],
+    "numpy.sin": [
+        "BigCodeBench/267",
+        "BigCodeBench/399",
+        "BigCodeBench/574"
+    ],
+    "json.loads": [
+        "BigCodeBench/273",
+        "BigCodeBench/274",
+        "BigCodeBench/458",
+        "BigCodeBench/985",
+        "BigCodeBench/1020",
+        "BigCodeBench/1129"
+    ],
+    "cgi.parse_header": [
+        "BigCodeBench/273",
+        "BigCodeBench/274"
+    ],
+    "json.JSONDecodeError": [
+        "BigCodeBench/273",
+        "BigCodeBench/274",
+        "BigCodeBench/985"
+    ],
+    "json.dumps": [
+        "BigCodeBench/273"
+    ],
+    "email.mime.text.MIMEText": [
+        "BigCodeBench/274"
+    ],
+    "smtplib.SMTPAuthenticationError": [
+        "BigCodeBench/274"
+    ],
+    "collections.Counter": [
+        "BigCodeBench/287",
+        "BigCodeBench/528",
+        "BigCodeBench/530",
+        "BigCodeBench/532",
+        "BigCodeBench/579",
+        "BigCodeBench/800",
+        "BigCodeBench/845",
+        "BigCodeBench/928",
+        "BigCodeBench/955",
+        "BigCodeBench/999",
+        "BigCodeBench/1004",
+        "BigCodeBench/1085"
+    ],
+    "json.dump": [
+        "BigCodeBench/287",
+        "BigCodeBench/1137"
+    ],
+    "pandas.to_datetime": [
+        "BigCodeBench/302",
+        "BigCodeBench/914",
+        "BigCodeBench/1022"
+    ],
+    "statistics.mean": [
+        "BigCodeBench/308",
+        "BigCodeBench/310"
+    ],
+    "csv.writer": [
+        "BigCodeBench/310",
+        "BigCodeBench/592",
+        "BigCodeBench/593",
+        "BigCodeBench/594",
+        "BigCodeBench/720",
+        "BigCodeBench/723",
+        "BigCodeBench/771",
+        "BigCodeBench/800",
+        "BigCodeBench/1013"
+    ],
+    "os.getcwd": [
+        "BigCodeBench/310",
+        "BigCodeBench/1129"
+    ],
+    "shutil.move": [
+        "BigCodeBench/313",
+        "BigCodeBench/368",
+        "BigCodeBench/454",
+        "BigCodeBench/678",
+        "BigCodeBench/826",
+        "BigCodeBench/857",
+        "BigCodeBench/906"
+    ],
+    "re.search": [
+        "BigCodeBench/313",
+        "BigCodeBench/906",
+        "BigCodeBench/988",
+        "BigCodeBench/1124"
+    ],
+    "sys.stderr": [
+        "BigCodeBench/326"
+    ],
+    "pandas.api.types.is_numeric_dtype": [
+        "BigCodeBench/341"
+    ],
+    "seaborn.countplot": [
+        "BigCodeBench/341"
+    ],
+    "seaborn.stripplot": [
+        "BigCodeBench/341"
+    ],
+    "seaborn.boxplot": [
+        "BigCodeBench/341",
+        "BigCodeBench/916"
+    ],
+    "sys.executable": [
+        "BigCodeBench/346"
+    ],
+    "subprocess.PIPE": [
+        "BigCodeBench/346"
+    ],
+    "subprocess.CalledProcessError": [
+        "BigCodeBench/346"
+    ],
+    "pandas.read_excel": [
+        "BigCodeBench/360",
+        "BigCodeBench/409",
+        "BigCodeBench/964"
+    ],
+    "collections.defaultdict": [
+        "BigCodeBench/367",
+        "BigCodeBench/526",
+        "BigCodeBench/763"
+    ],
+    "random.choice": [
+        "BigCodeBench/368",
+        "BigCodeBench/897",
+        "BigCodeBench/952"
+    ],
+    "regex.sub": [
+        "BigCodeBench/374"
+    ],
+    "os.path.isdir": [
+        "BigCodeBench/374",
+        "BigCodeBench/988"
+    ],
+    "openpyxl.load_workbook": [
+        "BigCodeBench/374"
+    ],
+    "math.pi": [
+        "BigCodeBench/399"
+    ],
+    "numpy.cos": [
+        "BigCodeBench/399"
+    ],
+    "flask_mail.Mail": [
+        "BigCodeBench/401"
+    ],
+    "os.getenv": [
+        "BigCodeBench/401"
+    ],
+    "numpy.median": [
+        "BigCodeBench/409",
+        "BigCodeBench/763"
+    ],
+    "keras.models.Sequential": [
+        "BigCodeBench/417"
+    ],
+    "sklearn.model_selection.train_test_split": [
+        "BigCodeBench/417",
+        "BigCodeBench/418",
+        "BigCodeBench/752"
+    ],
+    "keras.layers.Dense": [
+        "BigCodeBench/417"
+    ],
+    "keras.optimizers.SGD": [
+        "BigCodeBench/417"
+    ],
+    "tensorflow.keras.optimizers.SGD": [
+        "BigCodeBench/418"
+    ],
+    "sklearn.metrics.roc_curve": [
+        "BigCodeBench/418"
+    ],
+    "tensorflow.keras.layers.Dense": [
+        "BigCodeBench/418"
+    ],
+    "sklearn.metrics.auc": [
+        "BigCodeBench/418"
+    ],
+    "tensorflow.keras.Sequential": [
+        "BigCodeBench/418"
+    ],
+    "cv2.imwrite": [
+        "BigCodeBench/424"
+    ],
+    "numpy.stack": [
+        "BigCodeBench/424"
+    ],
+    "cv2.imread": [
+        "BigCodeBench/424"
+    ],
+    "numpy.tensordot": [
+        "BigCodeBench/443"
+    ],
+    "matplotlib.pyplot.Axes": [
+        "BigCodeBench/443",
+        "BigCodeBench/530"
+    ],
+    "numpy.ndarray": [
+        "BigCodeBench/443",
+        "BigCodeBench/445"
+    ],
+    "scipy.spatial.voronoi_plot_2d": [
+        "BigCodeBench/445"
+    ],
+    "numpy.random.normal": [
+        "BigCodeBench/445",
+        "BigCodeBench/486"
+    ],
+    "scipy.spatial.Voronoi": [
+        "BigCodeBench/445"
+    ],
+    "psutil.Process": [
+        "BigCodeBench/461"
+    ],
+    "psutil.ZombieProcess": [
+        "BigCodeBench/461"
+    ],
+    "psutil.NoSuchProcess": [
+        "BigCodeBench/461"
+    ],
+    "numpy.random.rand": [
+        "BigCodeBench/477",
+        "BigCodeBench/503",
+        "BigCodeBench/574"
+    ],
+    "numpy.concatenate": [
+        "BigCodeBench/477"
+    ],
+    "numpy.random.shuffle": [
+        "BigCodeBench/477"
+    ],
+    "datetime.datetime.fromtimestamp": [
+        "BigCodeBench/486",
+        "BigCodeBench/492",
+        "BigCodeBench/971"
+    ],
+    "xlwt.Workbook": [
+        "BigCodeBench/501"
+    ],
+    "os.path.abspath": [
+        "BigCodeBench/501",
+        "BigCodeBench/963"
+    ],
+    "pandas.read_json": [
+        "BigCodeBench/501"
+    ],
+    "seaborn.lineplot": [
+        "BigCodeBench/502"
+    ],
+    "difflib.ndiff": [
+        "BigCodeBench/509"
+    ],
+    "numpy.sum": [
+        "BigCodeBench/511",
+        "BigCodeBench/513"
+    ],
+    "numpy.nan": [
+        "BigCodeBench/511"
+    ],
+    "numpy.nanmedian": [
+        "BigCodeBench/526"
+    ],
+    "numpy.nanmean": [
+        "BigCodeBench/526",
+        "BigCodeBench/870"
+    ],
+    "json.load": [
+        "BigCodeBench/526",
+        "BigCodeBench/678",
+        "BigCodeBench/763"
+    ],
+    "matplotlib.pyplot.tight_layout": [
+        "BigCodeBench/528",
+        "BigCodeBench/593",
+        "BigCodeBench/916"
+    ],
+    "numpy.floor": [
+        "BigCodeBench/530"
+    ],
+    "matplotlib.pyplot.xlabel": [
+        "BigCodeBench/530",
+        "BigCodeBench/593"
+    ],
+    "seaborn.histplot": [
+        "BigCodeBench/530",
+        "BigCodeBench/916"
+    ],
+    "scipy.stats.norm.fit": [
+        "BigCodeBench/532",
+        "BigCodeBench/582"
+    ],
+    "matplotlib.pyplot.xlim": [
+        "BigCodeBench/532"
+    ],
+    "numpy.random.randn": [
+        "BigCodeBench/553",
+        "BigCodeBench/582"
+    ],
+    "matplotlib.pyplot.xticks": [
+        "BigCodeBench/560"
+    ],
+    "scipy.optimize.curve_fit": [
+        "BigCodeBench/574",
+        "BigCodeBench/654"
+    ],
+    "unicodedata.normalize": [
+        "BigCodeBench/579"
+    ],
+    "numpy.histogram_bin_edges": [
+        "BigCodeBench/582"
+    ],
+    "rsa.newkeys": [
+        "BigCodeBench/583",
+        "BigCodeBench/587"
+    ],
+    "Crypto.Cipher.AES.new": [
+        "BigCodeBench/583"
+    ],
+    "Crypto.Cipher.AES.MODE_EAX": [
+        "BigCodeBench/583"
+    ],
+    "Crypto.Random.get_random_bytes": [
+        "BigCodeBench/583"
+    ],
+    "base64.b64encode": [
+        "BigCodeBench/583",
+        "BigCodeBench/587",
+        "BigCodeBench/990"
+    ],
+    "os.urandom": [
+        "BigCodeBench/583",
+        "BigCodeBench/587"
+    ],
+    "cryptography.hazmat.primitives.ciphers.algorithms.AES": [
+        "BigCodeBench/587"
+    ],
+    "cryptography.hazmat.primitives.ciphers.modes.CBC": [
+        "BigCodeBench/587"
+    ],
+    "rsa.encrypt": [
+        "BigCodeBench/587"
+    ],
+    "cryptography.hazmat.backends.default_backend": [
+        "BigCodeBench/587"
+    ],
+    "cryptography.hazmat.primitives.ciphers.Cipher": [
+        "BigCodeBench/587"
+    ],
+    "cryptography.hazmat.primitives.padding.PKCS7": [
+        "BigCodeBench/587"
+    ],
+    "pyquery.PyQuery": [
+        "BigCodeBench/590"
+    ],
+    "shutil.copy": [
+        "BigCodeBench/594"
+    ],
+    "numpy.random.randint": [
+        "BigCodeBench/636",
+        "BigCodeBench/637",
+        "BigCodeBench/760",
+        "BigCodeBench/942",
+        "BigCodeBench/945"
+    ],
+    "random.sample": [
+        "BigCodeBench/637"
+    ],
+    "numpy.exp": [
+        "BigCodeBench/654"
+    ],
+    "matplotlib.pyplot.legend": [
+        "BigCodeBench/654"
+    ],
+    "sklearn.decomposition.NMF": [
+        "BigCodeBench/655"
+    ],
+    "nltk.download": [
+        "BigCodeBench/655"
+    ],
+    "sklearn.feature_extraction.text.TfidfVectorizer": [
+        "BigCodeBench/655"
+    ],
+    "nltk.corpus.stopwords.words": [
+        "BigCodeBench/655",
+        "BigCodeBench/657"
+    ],
+    "gensim.models.Word2Vec": [
+        "BigCodeBench/657"
+    ],
+    "random.uniform": [
+        "BigCodeBench/720"
+    ],
+    "os.path.dirname": [
+        "BigCodeBench/720"
+    ],
+    "os.remove": [
+        "BigCodeBench/723",
+        "BigCodeBench/785",
+        "BigCodeBench/998",
+        "BigCodeBench/999"
+    ],
+    "sklearn.linear_model.LinearRegression": [
+        "BigCodeBench/752",
+        "BigCodeBench/914",
+        "BigCodeBench/945"
+    ],
+    "numpy.issubdtype": [
+        "BigCodeBench/752",
+        "BigCodeBench/879"
+    ],
+    "datetime.datetime.datetime": [
+        "BigCodeBench/760"
+    ],
+    "codecs.encode": [
+        "BigCodeBench/760",
+        "BigCodeBench/990"
+    ],
+    "csv.DictWriter": [
+        "BigCodeBench/763"
+    ],
+    "pathlib.Path": [
+        "BigCodeBench/765",
+        "BigCodeBench/771",
+        "BigCodeBench/963",
+        "BigCodeBench/964",
+        "BigCodeBench/971",
+        "BigCodeBench/988",
+        "BigCodeBench/1012"
+    ],
+    "shutil.copyfile": [
+        "BigCodeBench/765"
+    ],
+    "subprocess.run": [
+        "BigCodeBench/785"
+    ],
+    "csv.DictReader": [
+        "BigCodeBench/800",
+        "BigCodeBench/999"
+    ],
+    "Levenshtein.ratio": [
+        "BigCodeBench/845"
+    ],
+    "itertools.permutations": [
+        "BigCodeBench/854",
+        "BigCodeBench/928"
+    ],
+    "functools.reduce": [
+        "BigCodeBench/854"
+    ],
+    "math.factorial": [
+        "BigCodeBench/854"
+    ],
+    "warnings.warn": [
+        "BigCodeBench/857"
+    ],
+    "warnings.simplefilter": [
+        "BigCodeBench/857"
+    ],
+    "sklearn.preprocessing.MinMaxScaler": [
+        "BigCodeBench/865",
+        "BigCodeBench/969"
+    ],
+    "itertools.zip_longest": [
+        "BigCodeBench/870"
+    ],
+    "scipy.stats.chi2_contingency": [
+        "BigCodeBench/879"
+    ],
+    "pandas.crosstab": [
+        "BigCodeBench/879"
+    ],
+    "numpy.bincount": [
+        "BigCodeBench/897"
+    ],
+    "os.path.splitext": [
+        "BigCodeBench/906",
+        "BigCodeBench/1006"
+    ],
+    "pandas.Timestamp.timestamp": [
+        "BigCodeBench/914"
+    ],
+    "matplotlib.axes.Axes": [
+        "BigCodeBench/917"
+    ],
+    "typing.Tuple": [
+        "BigCodeBench/917"
+    ],
+    "pandas.Timedelta": [
+        "BigCodeBench/917"
+    ],
+    "typing.List": [
+        "BigCodeBench/917"
+    ],
+    "statsmodels.tsa.arima.model.ARIMA": [
+        "BigCodeBench/917"
+    ],
+    "string.ascii_lowercase": [
+        "BigCodeBench/928"
+    ],
+    "datetime.datetime.today": [
+        "BigCodeBench/952"
+    ],
+    "docx.Document": [
+        "BigCodeBench/964"
+    ],
+    "os.walk": [
+        "BigCodeBench/964"
+    ],
+    "os.scandir": [
+        "BigCodeBench/971"
+    ],
+    "os.stat": [
+        "BigCodeBench/971"
+    ],
+    "datetime.timezone.utc": [
+        "BigCodeBench/971"
+    ],
+    "math.floor": [
+        "BigCodeBench/985"
+    ],
+    "binascii.hexlify": [
+        "BigCodeBench/990"
+    ],
+    "tarfile.open": [
+        "BigCodeBench/998"
+    ],
+    "hashlib.md5": [
+        "BigCodeBench/998"
+    ],
+    "lxml.etree.XMLSyntaxError": [
+        "BigCodeBench/1003"
+    ],
+    "re.findall": [
+        "BigCodeBench/1004",
+        "BigCodeBench/1137"
+    ],
+    "zipfile.BadZipFile": [
+        "BigCodeBench/1006",
+        "BigCodeBench/1012"
+    ],
+    "requests.RequestException": [
+        "BigCodeBench/1006",
+        "BigCodeBench/1015",
+        "BigCodeBench/1124"
+    ],
+    "pandas.read_html": [
+        "BigCodeBench/1008"
+    ],
+    "requests.exceptions.HTTPError": [
+        "BigCodeBench/1008"
+    ],
+    "io.StringIO": [
+        "BigCodeBench/1008"
+    ],
+    "requests.exceptions.RequestException": [
+        "BigCodeBench/1012"
+    ],
+    "urllib.parse.urljoin": [
+        "BigCodeBench/1013"
+    ],
+    "sqlite3.DatabaseError": [
+        "BigCodeBench/1015"
+    ],
+    "sqlite3.connect": [
+        "BigCodeBench/1015"
+    ],
+    "lxml.html.fromstring": [
+        "BigCodeBench/1015"
+    ],
+    "pytesseract.image_to_string": [
+        "BigCodeBench/1019"
+    ],
+    "codecs.decode": [
+        "BigCodeBench/1019"
+    ],
+    "PIL.Image.open": [
+        "BigCodeBench/1019"
+    ],
+    "chardet.detect": [
+        "BigCodeBench/1020"
+    ],
+    "pandas.errors.EmptyDataError": [
+        "BigCodeBench/1022"
+    ],
+    "ssl.PROTOCOL_TLS_SERVER": [
+        "BigCodeBench/1039"
+    ],
+    "hashlib.sha256": [
+        "BigCodeBench/1039"
+    ],
+    "ssl.SSLContext": [
+        "BigCodeBench/1039"
+    ],
+    "queue.Empty": [
+        "BigCodeBench/1040"
+    ],
+    "select.select": [
+        "BigCodeBench/1040"
+    ],
+    "queue.Queue": [
+        "BigCodeBench/1040"
+    ],
+    "smtplib.SMTP": [
+        "BigCodeBench/1042"
+    ],
+    "getpass.getpass": [
+        "BigCodeBench/1042"
+    ],
+    "email.message.EmailMessage": [
+        "BigCodeBench/1042"
+    ],
+    "matplotlib.pyplot.savefig": [
+        "BigCodeBench/1053"
+    ],
+    "itertools.product": [
+        "BigCodeBench/1057"
+    ],
+    "pytz.UTC": [
+        "BigCodeBench/1077"
+    ],
+    "urllib.parse.urlparse": [
+        "BigCodeBench/1124"
+    ]
+}
