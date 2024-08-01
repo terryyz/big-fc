@@ -3,7 +3,7 @@ MODEL=deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
 BACKEND=vllm
 TEMP=0.8
 N_SAMPLES=10
-NUM_GPU=4
+NUM_GPU=2
 if [[ $MODEL == *"/"* ]]; then
   ORG=$(echo $MODEL | cut -d'/' -f1)--
   BASE_MODEL=$(echo $MODEL | cut -d'/' -f2)

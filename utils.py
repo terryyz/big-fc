@@ -29,9 +29,9 @@ def write_jsonl(
                     x = {k: v for k, v in x.items() if not k.startswith("_")}
                 fp.write((json.dumps(x) + "\n").encode("utf-8"))
 
-def get_apis():
+def get_apidocs():
     with open("apis_info.jsonl", "r") as f:
-        return {i: json.loads(line) for i, line in enumerate(f)}
+        return {json.loads(line)["name"]: json.loads(line) for i, line in enumerate(f)}
     
 def load_api2task():
     with open("api2task.json", "r") as f:

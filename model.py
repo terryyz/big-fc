@@ -27,16 +27,16 @@ EOS = [
 _MAGIC_SPLITTER_ = "-[[]]-this-is-really-our-highest-priority-[[]]-"
 
 
-def make_chat_prompt(api: str, example: str, tokenizer: AutoTokenizer, negative: bool = False) -> str:
+def make_chat_prompt(api: str, api_doc: dict, example: str, tokenizer: AutoTokenizer, negative: bool = False) -> str:
     if negative:
-        prompt = NEGATIVE_TEMPLATE.format(api=api, example=example)
-        response = RESPONSE_TEMPLATE.format(_MAGIC_SPLITTER_=_MAGIC_SPLITTER_, type="")
+        prompt = NEGATIVE_TEMPLATE.format(api=api, api_doc=api_doc, example=example)
+        response = RESPONSE_TEMPLATE.format(_MAGIC_SPLITTER_=_MAGIC_SPLITTER_, type="", label="irrelevant")
     else:
-        prompt = POSITIVE_TEMPLATE.format(api=api, example=example)
+        prompt = POSITIVE_TEMPLATE.format(api=api, api_doc=api_doc, example=example)
         if "error" in api:
-            response = RESPONSE_TEMPLATE.format(_MAGIC_SPLITTER_=_MAGIC_SPLITTER_, type="")
+            response = RESPONSE_TEMPLATE.format(_MAGIC_SPLITTER_=_MAGIC_SPLITTER_, type="", label="relevant")
         else:
-            response = RESPONSE_TEMPLATE.format(_MAGIC_SPLITTER_=_MAGIC_SPLITTER_, type=api["type"])
+            response = RESPONSE_TEMPLATE.format(_MAGIC_SPLITTER_=_MAGIC_SPLITTER_, type=api_doc["type"], label="relevant")
     prompt = tokenizer.apply_chat_template(
         [
             {"role": "user", "content": prompt},
@@ -73,7 +73,7 @@ class DecoderBase(ABC):
 
     @abstractmethod
     def codegen(
-        self, api: str, example: str, negative: bool = False, do_sample: bool = True, num_samples: int = 200
+        self, api: str, api_doc: dict, example: str, negative: bool = False, do_sample: bool = True, num_samples: int = 200
     ) -> List[str]:
         pass
 
@@ -136,9 +136,9 @@ class GeneralVllmDecoder(VllmDecoder):
         print(f"EOS strings: {self.eos}")
 
     def codegen(
-        self, api: str, example: str, negative: bool = False, do_sample: bool = True, num_samples: int = 200
+        self, api: str, api_doc: dict, example: str, negative: bool = False, do_sample: bool = True, num_samples: int = 200
     ) -> List[str]:
-        prompt = make_chat_prompt(api, example, self.tokenizer, negative=negative)
+        prompt = make_chat_prompt(api, api_doc, example, self.tokenizer, negative=negative)
         return VllmDecoder.codegen(self, prompt, do_sample, num_samples)
 
 
@@ -148,7 +148,7 @@ class OpenAIChatDecoder(DecoderBase):
         self.client = openai.OpenAI(base_url=base_url)
 
     def codegen(
-        self, api: str, example: str, negative: bool = False, do_sample: bool = True, num_samples: int = 200
+        self, api: str, api_doc: dict, example: str, negative: bool = False, do_sample: bool = True, num_samples: int = 200
     ) -> List[str]:
         if do_sample:
             assert self.temperature > 0, "Temperature must be positive for sampling"
@@ -157,9 +157,9 @@ class OpenAIChatDecoder(DecoderBase):
         # construct prompt
         fmt = "json_object"
         if negative:
-            message = NEGATIVE_TEMPLATE.format(api=api, example=example) + "\n" + RESPONSE_TEMPLATE.format(type="").split("```json")[0]
+            message = NEGATIVE_TEMPLATE.format(api=api, api_doc=api_doc, example=example) + "\n" + RESPONSE_TEMPLATE.format(type="", label="irrelevant").split("```json")[0]
         else:
-            message = POSITIVE_TEMPLATE.format(api=api, example=example) + "\n" + RESPONSE_TEMPLATE.format(type=api["type"]).split("```json")[0]
+            message = POSITIVE_TEMPLATE.format(api=api, api_doc=api_doc, example=examplem) + "\n" + RESPONSE_TEMPLATE.format(type=api_doc["type"], label="relevant").split("```json")[0]
 
         ret = openai_request.make_auto_request(
             self.client,

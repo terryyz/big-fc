@@ -6,7 +6,10 @@ def get_api_info(api):
     try:
         # Remove newline character if present
         api = api.strip()
-
+        flg = False
+        if api == "datetime.datetime.datetime":
+            api = "datetime.datetime"
+            flg = True
         # Split the API string into parts
         parts = api.split('.')
                 
@@ -24,7 +27,7 @@ def get_api_info(api):
                     module = submodule
         
         # Prepare the result dictionary
-        result = {'name': api}
+        result = {'name': "datetime.datetime.datetime"} if flg else {'name': api}
         
         if inspect.ismodule(module):
             result['type'] = 'module'
@@ -64,7 +67,7 @@ if __name__ == "__main__":
     import json
     from tqdm import tqdm
     with open("apis.txt", "r") as f:
-        apis = f.readlines()
+        apis = list(set([l.split("(")[0] for l in f.readlines()]))
 
     with open("apis_info.jsonl", "w") as f:
         for api in tqdm(apis[:]):
