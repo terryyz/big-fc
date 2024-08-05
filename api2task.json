@@ -142,10 +142,10 @@
     "matplotlib.pyplot.axis('off')": [
         "BigCodeBench/34"
     ],
-    "matplotlib.pyplot.imshow(wordcloud)": [
+    "re.sub('http[s]?://\\\\S+', '', text)": [
         "BigCodeBench/34"
     ],
-    "re.sub('http[s]?://\\\\S+', '', text)": [
+    "matplotlib.pyplot.imshow(wordcloud)": [
         "BigCodeBench/34"
     ],
     "matplotlib.pyplot.figure(figsize=(10, 5))": [
@@ -165,10 +165,10 @@
     "seaborn.barplot(x=feature_imp, y=feature_imp.index)": [
         "BigCodeBench/37"
     ],
-    "seaborn.barplot.set_xlabel('Feature Importance Score')": [
+    "pd.Series(model.feature_importances_, index=X.columns)": [
         "BigCodeBench/37"
     ],
-    "pd.Series(model.feature_importances_, index=X.columns)": [
+    "seaborn.barplot.set_xlabel('Feature Importance Score')": [
         "BigCodeBench/37"
     ],
     "sklearn.ensemble.RandomForestClassifier(random_state=42)": [
@@ -183,29 +183,23 @@
     "pd.Series(model.feature_importances_, index=X.columns).sort_values.index": [
         "BigCodeBench/37"
     ],
+    "flask.Flask.config": [
+        "BigCodeBench/82",
+        "BigCodeBench/401"
+    ],
     "LoginForm.password": [
         "BigCodeBench/82"
     ],
     "LoginForm.username": [
         "BigCodeBench/82"
     ],
-    "flask.Flask.config": [
-        "BigCodeBench/82",
-        "BigCodeBench/401"
-    ],
-    "flask_wtf.FlaskForm()": [
-        "BigCodeBench/82"
-    ],
     "flask.url_for('login')": [
-        "BigCodeBench/82"
-    ],
-    "LoginForm.password.data": [
         "BigCodeBench/82"
     ],
     "LoginForm.username.data": [
         "BigCodeBench/82"
     ],
-    "flask_login.UserMixin()": [
+    "LoginForm.password.data": [
         "BigCodeBench/82"
     ],
     "flask_login.UserMixin.id": [
@@ -223,10 +217,10 @@
     "flask_login.current_user.id": [
         "BigCodeBench/82"
     ],
-    "flask_login.login_user(user)": [
+    "flask.Flask.route('/logout')": [
         "BigCodeBench/82"
     ],
-    "flask.Flask.route('/logout')": [
+    "flask_login.login_user(user)": [
         "BigCodeBench/82"
     ],
     "wtforms.SubmitField('Log In')": [
@@ -296,10 +290,10 @@
     "column_data.reshape(-1, 1)": [
         "BigCodeBench/89"
     ],
-    "matplotlib.pyplot.subplot(1, 2, 2)": [
+    "matplotlib.pyplot.subplot(1, 2, 1)": [
         "BigCodeBench/89"
     ],
-    "matplotlib.pyplot.subplot(1, 2, 1)": [
+    "matplotlib.pyplot.subplot(1, 2, 2)": [
         "BigCodeBench/89"
     ],
     "scipy.stats.zscore(standardized_data)": [
@@ -379,7 +373,7 @@
         "BigCodeBench/1004",
         "BigCodeBench/1085"
     ],
-    "matplotlib.pyplot.subplots.legend()": [
+    "matplotlib.pyplot.subplots[1].legend()": [
         "BigCodeBench/92",
         "BigCodeBench/100",
         "BigCodeBench/239",
@@ -399,19 +393,19 @@
     "sklearn.cluster.KMeans(n_clusters=n_clusters)": [
         "BigCodeBench/92"
     ],
-    "matplotlib.pyplot.subplots.set_ylabel('Feature 2')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Feature 2')": [
         "BigCodeBench/92"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Feature 1')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Feature 1')": [
         "BigCodeBench/92"
     ],
-    "matplotlib.pyplot.subplots.set_title('K-Means Clustering')": [
+    "matplotlib.pyplot.subplots[1].set_title('K-Means Clustering')": [
         "BigCodeBench/92"
     ],
-    "matplotlib.pyplot.subplots.scatter(centroids[:, 0], centroids[:, 1], marker='x', s=200, c='red', label='Centroids')": [
+    "matplotlib.pyplot.subplots[1].scatter(centroids[:, 0], centroids[:, 1], marker='x', s=200, c='red', label='Centroids')": [
         "BigCodeBench/92"
     ],
-    "matplotlib.pyplot.subplots.scatter(data.iloc[:, 0], data.iloc[:, 1], c=labels, cmap='viridis', alpha=0.6, label='Data points')": [
+    "matplotlib.pyplot.subplots[1].scatter(data.iloc[:, 0], data.iloc[:, 1], c=labels, cmap='viridis', alpha=0.6, label='Data points')": [
         "BigCodeBench/92"
     ],
     "numpy.random": [
@@ -441,7 +435,7 @@
     "sklearn.decomposition.PCA(n_components=n_components)": [
         "BigCodeBench/93"
     ],
-    "matplotlib.pyplot.subplots.scatter(transformed_data[:, 0], transformed_data[:, 1])": [
+    "matplotlib.pyplot.subplots[1].scatter(transformed_data[:, 0], transformed_data[:, 1])": [
         "BigCodeBench/93"
     ],
     "pandas.DataFrame(transformed_data, columns=[f'PC{i + 1}' for i in range(n_components)])": [
@@ -505,20 +499,20 @@
         "BigCodeBench/1040",
         "BigCodeBench/1129"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Date')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Date')": [
         "BigCodeBench/100"
-    ],
-    "matplotlib.pyplot.subplots.set_ylabel('Value')": [
-        "BigCodeBench/100",
-        "BigCodeBench/560"
     ],
     "pandas.date_range(end=datetime.now(), periods=30)": [
         "BigCodeBench/100"
     ],
-    "matplotlib.pyplot.subplots.set_title('Random Time Series Data')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Value')": [
+        "BigCodeBench/100",
+        "BigCodeBench/560"
+    ],
+    "matplotlib.pyplot.subplots[1].set_title('Random Time Series Data')": [
         "BigCodeBench/100"
     ],
-    "matplotlib.pyplot.subplots.plot(dates, values, label='Value over Time')": [
+    "matplotlib.pyplot.subplots[1].plot(dates, values, label='Value over Time')": [
         "BigCodeBench/100"
     ],
     "pandas.read_csv.values": [
@@ -618,10 +612,10 @@
     "random.randint(1, 100)": [
         "BigCodeBench/124"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Number')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Number')": [
         "BigCodeBench/124"
     ],
-    "matplotlib.pyplot.subplots.set_ylabel('Frequency')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Frequency')": [
         "BigCodeBench/124",
         "BigCodeBench/139",
         "BigCodeBench/162",
@@ -629,10 +623,10 @@
         "BigCodeBench/897",
         "BigCodeBench/1004"
     ],
-    "matplotlib.pyplot.subplots.hist(random_list, bins=20)": [
+    "matplotlib.pyplot.subplots[1].hist(random_list, bins=20)": [
         "BigCodeBench/124"
     ],
-    "matplotlib.pyplot.subplots.set_title('Histogram of Random Numbers')": [
+    "matplotlib.pyplot.subplots[1].set_title('Histogram of Random Numbers')": [
         "BigCodeBench/124"
     ],
     "th.text": [
@@ -654,20 +648,17 @@
         "BigCodeBench/1124",
         "BigCodeBench/1137"
     ],
+    "data.append(cols)": [
+        "BigCodeBench/129"
+    ],
     "requests.get(url)": [
         "BigCodeBench/129",
         "BigCodeBench/1129"
-    ],
-    "data.append(cols)": [
-        "BigCodeBench/129"
     ],
     "row.find_all('td')": [
         "BigCodeBench/129"
     ],
     "requests.HTTPError": [
-        "BigCodeBench/129"
-    ],
-    "requests.ConnectionError": [
         "BigCodeBench/129"
     ],
     "soup.find.find_all('tr')": [
@@ -676,6 +667,9 @@
         "BigCodeBench/1008"
     ],
     "soup.find.find_all('th')": [
+        "BigCodeBench/129"
+    ],
+    "requests.ConnectionError": [
         "BigCodeBench/129"
     ],
     "requests.get.raise_for_status()": [
@@ -688,15 +682,15 @@
     "bs4.BeautifulSoup.find('table')": [
         "BigCodeBench/129"
     ],
+    "requests.HTTPError(f'HTTP error occurred: {e}')": [
+        "BigCodeBench/129"
+    ],
     "bs4.BeautifulSoup(response.text, 'html.parser')": [
         "BigCodeBench/129",
         "BigCodeBench/1008",
         "BigCodeBench/1013",
         "BigCodeBench/1124",
         "BigCodeBench/1137"
-    ],
-    "requests.HTTPError(f'HTTP error occurred: {e}')": [
-        "BigCodeBench/129"
     ],
     "pandas.DataFrame(data, columns=headers if headers else None)": [
         "BigCodeBench/129"
@@ -724,7 +718,7 @@
         "BigCodeBench/139",
         "BigCodeBench/969"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Value')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Value')": [
         "BigCodeBench/139",
         "BigCodeBench/532"
     ],
@@ -774,7 +768,7 @@
     "line.strip.strip()": [
         "BigCodeBench/161"
     ],
-    "match.groups.strip()": [
+    "match.groups[2].strip()": [
         "BigCodeBench/161"
     ],
     "re.match(log_pattern, line)": [
@@ -783,10 +777,10 @@
     "pandas.DataFrame.to_csv(output_csv_path, index=False)": [
         "BigCodeBench/161"
     ],
-    "datetime.datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')": [
+    "parsed_data.append([log_type, timestamp, message.strip()])": [
         "BigCodeBench/161"
     ],
-    "parsed_data.append([log_type, timestamp, message.strip()])": [
+    "datetime.datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')": [
         "BigCodeBench/161"
     ],
     "pandas.DataFrame(parsed_data, columns=['Type', 'Timestamp', 'Message'])": [
@@ -798,13 +792,13 @@
     "numpy.arange(max(word_lengths) + 2)": [
         "BigCodeBench/162"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Word Length')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Word Length')": [
         "BigCodeBench/162"
     ],
-    "matplotlib.pyplot.subplots.set_title('Distribution of Word Lengths')": [
+    "matplotlib.pyplot.subplots[1].set_title('Distribution of Word Lengths')": [
         "BigCodeBench/162"
     ],
-    "matplotlib.pyplot.subplots.hist(word_lengths, bins=bins, rwidth=rwidth)": [
+    "matplotlib.pyplot.subplots[1].hist(word_lengths, bins=bins, rwidth=rwidth)": [
         "BigCodeBench/162"
     ],
     "re.IGNORECASE": [
@@ -959,10 +953,10 @@
     "numpy.zeros(image_size, dtype=np.uint8)": [
         "BigCodeBench/214"
     ],
-    "matplotlib.pyplot.subplots.set_title('Random RGB Image')": [
+    "matplotlib.pyplot.subplots[1].set_title('Random RGB Image')": [
         "BigCodeBench/214"
     ],
-    "matplotlib.pyplot.subplots.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))": [
+    "matplotlib.pyplot.subplots[1].imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))": [
         "BigCodeBench/214"
     ],
     "numpy.max": [
@@ -1039,24 +1033,24 @@
         "BigCodeBench/239",
         "BigCodeBench/532"
     ],
-    "matplotlib.pyplot.subplots.get_xlim()": [
-        "BigCodeBench/239",
-        "BigCodeBench/582"
-    ],
     "numpy.array([b for (a, b) in original])": [
         "BigCodeBench/239",
         "BigCodeBench/241"
     ],
-    "matplotlib.pyplot.subplots.set_title('Histogram with PDF')": [
-        "BigCodeBench/239"
+    "matplotlib.pyplot.subplots[1].get_xlim()": [
+        "BigCodeBench/239",
+        "BigCodeBench/582"
     ],
-    "matplotlib.pyplot.subplots.plot(x, p, 'k', linewidth=2, label='PDF')": [
+    "matplotlib.pyplot.subplots[1].set_title('Histogram with PDF')": [
         "BigCodeBench/239"
     ],
     "scipy.stats.norm.pdf(x, computed_stats['mean'], computed_stats['std'])": [
         "BigCodeBench/239"
     ],
-    "matplotlib.pyplot.subplots.hist(arr, density=True, alpha=0.6, bins='auto', label='Histogram')": [
+    "matplotlib.pyplot.subplots[1].plot(x, p, 'k', linewidth=2, label='PDF')": [
+        "BigCodeBench/239"
+    ],
+    "matplotlib.pyplot.subplots[1].hist(arr, density=True, alpha=0.6, bins='auto', label='Histogram')": [
         "BigCodeBench/239"
     ],
     "numpy.array.size": [
@@ -1065,13 +1059,13 @@
     "sklearn.preprocessing.normalize([arr])": [
         "BigCodeBench/241"
     ],
-    "matplotlib.pyplot.subplots.plot(arr, label='Original')": [
+    "matplotlib.pyplot.subplots[1].plot(arr, label='Original')": [
         "BigCodeBench/241"
     ],
-    "matplotlib.pyplot.subplots.plot(norm_arr, label='Normalized')": [
+    "matplotlib.pyplot.subplots[1].plot(norm_arr, label='Normalized')": [
         "BigCodeBench/241"
     ],
-    "matplotlib.pyplot.subplots.set_title('Original vs. Normalized Data')": [
+    "matplotlib.pyplot.subplots[1].set_title('Original vs. Normalized Data')": [
         "BigCodeBench/241"
     ],
     "numpy.pi": [
@@ -1102,16 +1096,16 @@
     "numpy.linspace(0, 2, 2 * sample_rate, False)": [
         "BigCodeBench/267"
     ],
-    "matplotlib.pyplot.subplots.plot(np.abs(fft))": [
+    "matplotlib.pyplot.subplots[1].plot(np.abs(fft))": [
         "BigCodeBench/267"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Frequency [Hz]')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Frequency [Hz]')": [
         "BigCodeBench/267"
     ],
-    "matplotlib.pyplot.subplots.set_title('FFT of the Signal')": [
+    "matplotlib.pyplot.subplots[1].set_title('FFT of the Signal')": [
         "BigCodeBench/267"
     ],
-    "matplotlib.pyplot.subplots.set_ylabel('Frequency Spectrum Magnitude')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Frequency Spectrum Magnitude')": [
         "BigCodeBench/267"
     ],
     "http.server": [
@@ -1134,16 +1128,12 @@
         "BigCodeBench/273",
         "BigCodeBench/274"
     ],
-    "http.server.BaseHTTPRequestHandler()": [
+    "http.server.BaseHTTPRequestHandler.rfile": [
         "BigCodeBench/273",
         "BigCodeBench/274"
     ],
     "http.server.BaseHTTPRequestHandler.wfile": [
         "BigCodeBench/273"
-    ],
-    "http.server.BaseHTTPRequestHandler.rfile": [
-        "BigCodeBench/273",
-        "BigCodeBench/274"
     ],
     "http.server.BaseHTTPRequestHandler.headers": [
         "BigCodeBench/273",
@@ -1157,11 +1147,11 @@
         "BigCodeBench/273",
         "BigCodeBench/274"
     ],
-    "http.server.BaseHTTPRequestHandler.rfile.read(length)": [
+    "http.server.BaseHTTPRequestHandler.send_response(200)": [
         "BigCodeBench/273",
         "BigCodeBench/274"
     ],
-    "http.server.BaseHTTPRequestHandler.send_response(200)": [
+    "http.server.BaseHTTPRequestHandler.rfile.read(length)": [
         "BigCodeBench/273",
         "BigCodeBench/274"
     ],
@@ -1195,10 +1185,10 @@
     "smtplib.SMTPAuthenticationError": [
         "BigCodeBench/274"
     ],
-    "smtplib.SMTP(smtp_server, smtp_port)": [
+    "email.mime.text.MIMEText.as_string()": [
         "BigCodeBench/274"
     ],
-    "email.mime.text.MIMEText.as_string()": [
+    "smtplib.SMTP(smtp_server, smtp_port)": [
         "BigCodeBench/274"
     ],
     "email.mime.text.MIMEText(email_data['message'])": [
@@ -1207,10 +1197,10 @@
     "smtplib.SMTP.login(smtp_username, smtp_password)": [
         "BigCodeBench/274"
     ],
-    "http.server.BaseHTTPRequestHandler.send_response(535)": [
+    "http.server.BaseHTTPRequestHandler.send_response(400)": [
         "BigCodeBench/274"
     ],
-    "http.server.BaseHTTPRequestHandler.send_response(400)": [
+    "http.server.BaseHTTPRequestHandler.send_response(535)": [
         "BigCodeBench/274"
     ],
     "smtplib.SMTP.sendmail(smtp_username, [email_data['to']], msg.as_string())": [
@@ -1223,13 +1213,13 @@
         "BigCodeBench/1015",
         "BigCodeBench/1137"
     ],
+    "collections.Counter()": [
+        "BigCodeBench/287"
+    ],
     "os.listdir(directory)": [
         "BigCodeBench/287",
         "BigCodeBench/313",
         "BigCodeBench/777"
-    ],
-    "collections.Counter()": [
-        "BigCodeBench/287"
     ],
     "file_name.endswith('.txt')": [
         "BigCodeBench/287"
@@ -1237,10 +1227,10 @@
     "collections.Counter.update(words)": [
         "BigCodeBench/287"
     ],
-    "json.dump(dict(word_counts), file)": [
+    "os.path.join(directory, file_name)": [
         "BigCodeBench/287"
     ],
-    "os.path.join(directory, file_name)": [
+    "json.dump(dict(word_counts), file)": [
         "BigCodeBench/287"
     ],
     "df.index": [
@@ -1319,13 +1309,13 @@
     "os.path.join(os.getcwd(), filename)": [
         "BigCodeBench/310"
     ],
-    "statistics.mean([row[3] for row in data])": [
+    "statistics.mean([row[2] for row in data])": [
         "BigCodeBench/310"
     ],
     "statistics.mean([row[1] for row in data])": [
         "BigCodeBench/310"
     ],
-    "statistics.mean([row[2] for row in data])": [
+    "statistics.mean([row[3] for row in data])": [
         "BigCodeBench/310"
     ],
     "re.search.group(1)": [
@@ -1464,19 +1454,19 @@
     "os.path.exists(file_location)": [
         "BigCodeBench/360"
     ],
-    "matplotlib.pyplot.subplots.set_ylabel('Values')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Values')": [
         "BigCodeBench/360"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Columns')": [
-        "BigCodeBench/360"
-    ],
-    "matplotlib.pyplot.subplots.bar(column, mean, yerr=std)": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Columns')": [
         "BigCodeBench/360"
     ],
     "pandas.read_excel(file_location, sheet_name=sheet_name)": [
         "BigCodeBench/360"
     ],
-    "matplotlib.pyplot.subplots.set_title('Mean and Standard Deviation')": [
+    "matplotlib.pyplot.subplots[1].bar(column, mean, yerr=std)": [
+        "BigCodeBench/360"
+    ],
+    "matplotlib.pyplot.subplots[1].set_title('Mean and Standard Deviation')": [
         "BigCodeBench/360"
     ],
     "activity.strftime('%A')": [
@@ -1485,16 +1475,16 @@
     "collections.defaultdict(int)": [
         "BigCodeBench/367"
     ],
-    "matplotlib.pyplot.subplots.bar(days, counts)": [
+    "matplotlib.pyplot.subplots[1].bar(days, counts)": [
         "BigCodeBench/367"
     ],
-    "matplotlib.pyplot.subplots.set_title('Weekly Activity')": [
+    "matplotlib.pyplot.subplots[1].set_title('Weekly Activity')": [
         "BigCodeBench/367"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Day of the Week')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Day of the Week')": [
         "BigCodeBench/367"
     ],
-    "matplotlib.pyplot.subplots.set_ylabel('Number of Activities')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Number of Activities')": [
         "BigCodeBench/367"
     ],
     "os.listdir(src_dir)": [
@@ -1536,19 +1526,19 @@
     "math.pi": [
         "BigCodeBench/399"
     ],
-    "numpy.cos(frequency * x)": [
+    "numpy.sin(frequency * x)": [
         "BigCodeBench/399"
     ],
-    "numpy.sin(frequency * x)": [
+    "numpy.cos(frequency * x)": [
         "BigCodeBench/399"
     ],
     "numpy.linspace(0, 2 * math.pi, sample_size)": [
         "BigCodeBench/399"
     ],
-    "matplotlib.pyplot.subplots.plot(x, y_cos, label='cos')": [
+    "matplotlib.pyplot.subplots[1].plot(x, y_sin, label='sin')": [
         "BigCodeBench/399"
     ],
-    "matplotlib.pyplot.subplots.plot(x, y_sin, label='sin')": [
+    "matplotlib.pyplot.subplots[1].plot(x, y_cos, label='cos')": [
         "BigCodeBench/399"
     ],
     "flask_mail.Mail(app)": [
@@ -1581,10 +1571,10 @@
     "numpy.mean(df[column_name])": [
         "BigCodeBench/409"
     ],
-    "pandas.read_excel(excel_file)": [
+    "numpy.median(df[column_name])": [
         "BigCodeBench/409"
     ],
-    "numpy.median(df[column_name])": [
+    "pandas.read_excel(excel_file)": [
         "BigCodeBench/409"
     ],
     "os.path.join(excel_file_path, file_name)": [
@@ -1596,31 +1586,31 @@
     "keras.optimizers.SGD(learning_rate=0.1)": [
         "BigCodeBench/417"
     ],
-    "matplotlib.pyplot.subplots.set_ylabel('Loss')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Loss')": [
         "BigCodeBench/417"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Epoch')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Epoch')": [
         "BigCodeBench/417"
     ],
-    "matplotlib.pyplot.subplots.set_title('Model loss')": [
-        "BigCodeBench/417"
-    ],
-    "keras.layers.Dense(input_dim=2, units=1, activation='sigmoid')": [
+    "matplotlib.pyplot.subplots[1].set_title('Model loss')": [
         "BigCodeBench/417"
     ],
     "sklearn.model_selection.train_test_split(X, Y, test_size=0.25)": [
         "BigCodeBench/417"
     ],
-    "matplotlib.pyplot.subplots.legend(['Train', 'Test'], loc='upper left')": [
+    "keras.layers.Dense(input_dim=2, units=1, activation='sigmoid')": [
+        "BigCodeBench/417"
+    ],
+    "matplotlib.pyplot.subplots[1].legend(['Train', 'Test'], loc='upper left')": [
         "BigCodeBench/417"
     ],
     "keras.models.Sequential([Dense(input_dim=2, units=1, activation='sigmoid')])": [
         "BigCodeBench/417"
     ],
-    "matplotlib.pyplot.subplots.plot(history.history['loss'], label='Train Loss')": [
+    "matplotlib.pyplot.subplots[1].plot(history.history['loss'], label='Train Loss')": [
         "BigCodeBench/417"
     ],
-    "matplotlib.pyplot.subplots.plot(history.history['val_loss'], label='Validation Loss')": [
+    "matplotlib.pyplot.subplots[1].plot(history.history['val_loss'], label='Validation Loss')": [
         "BigCodeBench/417"
     ],
     "keras.models.Sequential.compile(loss='binary_crossentropy', optimizer=SGD(learning_rate=0.1))": [
@@ -1641,35 +1631,35 @@
     "sklearn.metrics.roc_curve(Y_test, Y_pred)": [
         "BigCodeBench/418"
     ],
-    "matplotlib.pyplot.subplots.legend(loc='best')": [
+    "matplotlib.pyplot.subplots[1].legend(loc='best')": [
         "BigCodeBench/418",
         "BigCodeBench/915"
     ],
-    "matplotlib.pyplot.subplots.set_title('ROC curve')": [
+    "tensorflow.keras.optimizers.SGD(learning_rate=0.1)": [
         "BigCodeBench/418"
     ],
-    "tensorflow.keras.optimizers.SGD(learning_rate=0.1)": [
+    "matplotlib.pyplot.subplots[1].set_title('ROC curve')": [
         "BigCodeBench/418"
     ],
     "tensorflow.keras.Sequential.predict(X_test, verbose=0)": [
         "BigCodeBench/418"
     ],
-    "matplotlib.pyplot.subplots.plot([0, 1], [0, 1], 'k--')": [
-        "BigCodeBench/418"
-    ],
-    "matplotlib.pyplot.subplots.set_ylabel('True positive rate')": [
-        "BigCodeBench/418"
-    ],
-    "matplotlib.pyplot.subplots.set_xlabel('False positive rate')": [
+    "matplotlib.pyplot.subplots[1].plot([0, 1], [0, 1], 'k--')": [
         "BigCodeBench/418"
     ],
     "sklearn.model_selection.train_test_split(X, Y, test_size=0.3)": [
         "BigCodeBench/418"
     ],
+    "matplotlib.pyplot.subplots[1].set_ylabel('True positive rate')": [
+        "BigCodeBench/418"
+    ],
+    "matplotlib.pyplot.subplots[1].set_xlabel('False positive rate')": [
+        "BigCodeBench/418"
+    ],
     "tensorflow.keras.layers.Dense(input_dim=2, units=1, activation='sigmoid')": [
         "BigCodeBench/418"
     ],
-    "matplotlib.pyplot.subplots.plot(fpr, tpr, label='AUC = {:.3f}'.format(auc_score))": [
+    "matplotlib.pyplot.subplots[1].plot(fpr, tpr, label='AUC = {:.3f}'.format(auc_score))": [
         "BigCodeBench/418"
     ],
     "tensorflow.keras.Sequential.fit(X_train, Y_train, epochs=200, batch_size=1, verbose=0)": [
@@ -1681,10 +1671,10 @@
     "tensorflow.keras.Sequential.compile(loss='binary_crossentropy', optimizer=keras.optimizers.SGD(learning_rate=0.1))": [
         "BigCodeBench/418"
     ],
-    "numpy.array(img)": [
+    "cv2.imread.shape": [
         "BigCodeBench/424"
     ],
-    "cv2.imread.shape": [
+    "numpy.array(img)": [
         "BigCodeBench/424"
     ],
     "cv2.imread.copy()": [
@@ -1746,16 +1736,16 @@
     "sklearn.cluster.KMeans.fit_predict(flattened_result)": [
         "BigCodeBench/443"
     ],
-    "matplotlib.pyplot.subplots.set_title('KMeans Clustering Visualization')": [
+    "numpy.tensordot.swapaxes.reshape(-1, tensor_shape[2])": [
         "BigCodeBench/443"
     ],
-    "numpy.tensordot.swapaxes.reshape(-1, tensor_shape[2])": [
+    "matplotlib.pyplot.subplots[1].set_title('KMeans Clustering Visualization')": [
         "BigCodeBench/443"
     ],
     "sklearn.cluster.KMeans(n_clusters=n_clusters, random_state=random_state, n_init=n_init)": [
         "BigCodeBench/443"
     ],
-    "matplotlib.pyplot.subplots.scatter(flattened_result[:, 0], flattened_result[:, 1], c=cluster_result)": [
+    "matplotlib.pyplot.subplots[1].scatter(flattened_result[:, 0], flattened_result[:, 1], c=cluster_result)": [
         "BigCodeBench/443"
     ],
     "points.shape": [
@@ -1837,13 +1827,13 @@
     "psutil.Process(pid)": [
         "BigCodeBench/461"
     ],
+    "psutil.ZombieProcess": [
+        "BigCodeBench/461"
+    ],
     "psutil.NoSuchProcess": [
         "BigCodeBench/461"
     ],
     "subprocess.Popen.pid": [
-        "BigCodeBench/461"
-    ],
-    "psutil.ZombieProcess": [
         "BigCodeBench/461"
     ],
     "psutil.Process.is_running()": [
@@ -1852,10 +1842,10 @@
     "os.path.exists(script_path)": [
         "BigCodeBench/461"
     ],
-    "subprocess.Popen.terminate()": [
+    "psutil.Process.memory_info()": [
         "BigCodeBench/461"
     ],
-    "psutil.Process.memory_info()": [
+    "subprocess.Popen.terminate()": [
         "BigCodeBench/461"
     ],
     "subprocess.Popen(['bash', script_path])": [
@@ -1885,7 +1875,7 @@
     "pandas.DataFrame({'x': np.random.rand(N), 'y': np.random.rand(N), 'category': all_categories})": [
         "BigCodeBench/477"
     ],
-    "matplotlib.pyplot.subplots.scatter(df[df['category'] == category]['x'], df[df['category'] == category]['y'], label=category)": [
+    "matplotlib.pyplot.subplots[1].scatter(df[df['category'] == category]['x'], df[df['category'] == category]['y'], label=category)": [
         "BigCodeBench/477"
     ],
     "df.plot.set_ylabel('Value')": [
@@ -2003,10 +1993,6 @@
         "BigCodeBench/511",
         "BigCodeBench/513"
     ],
-    "pandas.DataFrame.empty": [
-        "BigCodeBench/511",
-        "BigCodeBench/1015"
-    ],
     "numpy.sum(column_data)": [
         "BigCodeBench/511",
         "BigCodeBench/513"
@@ -2014,6 +2000,10 @@
     "numpy.max(column_data)": [
         "BigCodeBench/511",
         "BigCodeBench/513"
+    ],
+    "pandas.DataFrame.empty": [
+        "BigCodeBench/511",
+        "BigCodeBench/1015"
     ],
     "numpy.mean(column_data)": [
         "BigCodeBench/511",
@@ -2024,10 +2014,10 @@
         "BigCodeBench/513",
         "BigCodeBench/636"
     ],
-    "matplotlib.pyplot.subplots.set_title(f'Pie Chart of {column}')": [
+    "matplotlib.pyplot.subplots[1].set_title(f'Pie Chart of {column}')": [
         "BigCodeBench/511"
     ],
-    "matplotlib.pyplot.subplots.pie(column_data, labels=df['Age'], autopct='%1.1f%%')": [
+    "matplotlib.pyplot.subplots[1].pie(column_data, labels=df['Age'], autopct='%1.1f%%')": [
         "BigCodeBench/511"
     ],
     "pandas.DataFrame.plot": [
@@ -2053,10 +2043,10 @@
     "numpy.nanmean(v)": [
         "BigCodeBench/526"
     ],
-    "d.get(key, np.nan)": [
+    "numpy.nanmedian(v)": [
         "BigCodeBench/526"
     ],
-    "numpy.nanmedian(v)": [
+    "d.get(key, np.nan)": [
         "BigCodeBench/526"
     ],
     "pandas.DataFrame(result)": [
@@ -2137,14 +2127,14 @@
     "collections.Counter(duplicates['value'])": [
         "BigCodeBench/532"
     ],
-    "matplotlib.pyplot.subplots.set_title('Distribution')": [
+    "matplotlib.pyplot.subplots[1].set_title('Distribution')": [
         "BigCodeBench/532"
     ],
-    "matplotlib.pyplot.subplots.plot(x, p, 'k', linewidth=2)": [
+    "matplotlib.pyplot.subplots[1].plot(x, p, 'k', linewidth=2)": [
         "BigCodeBench/532",
         "BigCodeBench/582"
     ],
-    "matplotlib.pyplot.subplots.hist(df['value'], bins=bins, density=True, alpha=0.6, color='g')": [
+    "matplotlib.pyplot.subplots[1].hist(df['value'], bins=bins, density=True, alpha=0.6, color='g')": [
         "BigCodeBench/532"
     ],
     "numpy.random.seed(0)": [
@@ -2187,16 +2177,16 @@
     "matplotlib.pyplot.xticks(rotation='vertical')": [
         "BigCodeBench/560"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Month')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Month')": [
         "BigCodeBench/560"
     ],
     "pandas.DataFrame(data, columns=['Month', 'Value'])": [
         "BigCodeBench/560"
     ],
-    "matplotlib.pyplot.subplots.bar(df.index, df['Value'])": [
+    "matplotlib.pyplot.subplots[1].bar(df.index, df['Value'])": [
         "BigCodeBench/560"
     ],
-    "matplotlib.pyplot.subplots.set_title(f'Monthly Data for {list(unique_years)[0]}')": [
+    "matplotlib.pyplot.subplots[1].set_title(f'Monthly Data for {list(unique_years)[0]}')": [
         "BigCodeBench/560"
     ],
     "data.split.split('-')": [
@@ -2232,22 +2222,22 @@
     "numpy.random.rand(array_length)": [
         "BigCodeBench/574"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('x')": [
-        "BigCodeBench/574"
-    ],
-    "matplotlib.pyplot.subplots.set_ylabel('y')": [
-        "BigCodeBench/574"
-    ],
     "numpy.linspace(0, 4 * np.pi, array_length)": [
+        "BigCodeBench/574"
+    ],
+    "matplotlib.pyplot.subplots[1].set_xlabel('x')": [
+        "BigCodeBench/574"
+    ],
+    "matplotlib.pyplot.subplots[1].set_ylabel('y')": [
         "BigCodeBench/574"
     ],
     "scipy.optimize.curve_fit(func, x, y, p0=[1, 1])": [
         "BigCodeBench/574"
     ],
-    "matplotlib.pyplot.subplots.plot(x, y, 'b-', label='data')": [
+    "matplotlib.pyplot.subplots[1].plot(x, y, 'b-', label='data')": [
         "BigCodeBench/574"
     ],
-    "matplotlib.pyplot.subplots.plot(x, func(x, *popt), 'r-', label='fit: a=%5.3f, b=%5.3f' % tuple(popt))": [
+    "matplotlib.pyplot.subplots[1].plot(x, func(x, *popt), 'r-', label='fit: a=%5.3f, b=%5.3f' % tuple(popt))": [
         "BigCodeBench/574"
     ],
     "csv.reader(file)": [
@@ -2269,7 +2259,7 @@
     "unicodedata.normalize('NFKD', word)": [
         "BigCodeBench/579"
     ],
-    "matplotlib.pyplot.subplots.bar(labels, values)": [
+    "matplotlib.pyplot.subplots[1].bar(labels, values)": [
         "BigCodeBench/579"
     ],
     "numpy.random.randn(size)": [
@@ -2284,7 +2274,7 @@
     "numpy.histogram_bin_edges(data, bins='auto')": [
         "BigCodeBench/582"
     ],
-    "matplotlib.pyplot.subplots.hist(data, bins=number_of_bins, density=True, alpha=0.6, color='g')": [
+    "matplotlib.pyplot.subplots[1].hist(data, bins=number_of_bins, density=True, alpha=0.6, color='g')": [
         "BigCodeBench/582"
     ],
     "os.urandom(8)": [
@@ -2294,13 +2284,13 @@
         "BigCodeBench/583",
         "BigCodeBench/587"
     ],
-    "rsa.newkeys.save_pkcs1()": [
-        "BigCodeBench/583"
-    ],
     "Crypto.Cipher.AES.MODE_EAX": [
         "BigCodeBench/583"
     ],
     "Crypto.Cipher.AES.new.nonce": [
+        "BigCodeBench/583"
+    ],
+    "rsa.newkeys[1].save_pkcs1()": [
         "BigCodeBench/583"
     ],
     "open.write(priv_key_encrypted)": [
@@ -2430,10 +2420,10 @@
     "os.path.join(output_dir, 'sensor_data.csv')": [
         "BigCodeBench/592"
     ],
-    "random.randint(0, 50)": [
+    "pandas.read_csv.empty": [
         "BigCodeBench/593"
     ],
-    "pandas.read_csv.empty": [
+    "random.randint(0, 50)": [
         "BigCodeBench/593"
     ],
     "pandas.read_csv(FILE_PATH)": [
@@ -2457,10 +2447,10 @@
     "os.path.exists(BACKUP_PATH)": [
         "BigCodeBench/594"
     ],
-    "os.path.join(output_dir, 'backup/')": [
+    "shutil.copy(FILE_PATH, BACKUP_PATH)": [
         "BigCodeBench/594"
     ],
-    "shutil.copy(FILE_PATH, BACKUP_PATH)": [
+    "os.path.join(output_dir, 'backup/')": [
         "BigCodeBench/594"
     ],
     "os.path.join(output_dir, 'weather_data.csv')": [
@@ -2518,13 +2508,13 @@
     "random.sample(STUDENTS, num_students)": [
         "BigCodeBench/637"
     ],
-    "numpy.random.randint(40, 101, size=(num_students, len(COURSES)))": [
-        "BigCodeBench/637"
-    ],
     "pandas.DataFrame(grades, index=students_sample, columns=COURSES)": [
         "BigCodeBench/637"
     ],
-    "matplotlib.pyplot.subplots.set_title('Course-wise Average and Passing Grade Counts')": [
+    "numpy.random.randint(40, 101, size=(num_students, len(COURSES)))": [
+        "BigCodeBench/637"
+    ],
+    "matplotlib.pyplot.subplots[1].set_title('Course-wise Average and Passing Grade Counts')": [
         "BigCodeBench/637"
     ],
     "indices.size": [
@@ -2565,14 +2555,14 @@
     "topic.argsort()": [
         "BigCodeBench/655"
     ],
+    "nltk.corpus.stopwords": [
+        "BigCodeBench/655",
+        "BigCodeBench/657"
+    ],
     "re.compile('[\\\\W_]+')": [
         "BigCodeBench/655",
         "BigCodeBench/657",
         "BigCodeBench/845"
-    ],
-    "nltk.corpus.stopwords": [
-        "BigCodeBench/655",
-        "BigCodeBench/657"
     ],
     "re.compile.sub(' ', text)": [
         "BigCodeBench/655",
@@ -2629,10 +2619,10 @@
     "os.makedirs(processed_path)": [
         "BigCodeBench/678"
     ],
-    "pandas.concat([df, temp_df])": [
+    "os.path.join(path, filename)": [
         "BigCodeBench/678"
     ],
-    "os.path.join(path, filename)": [
+    "pandas.concat([df, temp_df])": [
         "BigCodeBench/678"
     ],
     "os.path.exists(processed_path)": [
@@ -2713,22 +2703,22 @@
     "name.lower()": [
         "BigCodeBench/760"
     ],
+    "numpy.random.randint(1, 29)": [
+        "BigCodeBench/760"
+    ],
     "numpy.random.randint(1, 13)": [
         "BigCodeBench/760"
     ],
     "numpy.random.seed(rng_seed)": [
         "BigCodeBench/760"
     ],
-    "numpy.random.randint(1, 29)": [
-        "BigCodeBench/760"
-    ],
     "codecs.encode(name, 'utf-8')": [
         "BigCodeBench/760"
     ],
-    "numpy.random.choice(other_names)": [
+    "numpy.random.choice(latin_names)": [
         "BigCodeBench/760"
     ],
-    "numpy.random.choice(latin_names)": [
+    "numpy.random.choice(other_names)": [
         "BigCodeBench/760"
     ],
     "re.sub('\\\\s+', '.', name.lower())": [
@@ -2801,10 +2791,10 @@
     "csv.reader(infile)": [
         "BigCodeBench/771"
     ],
-    "csv.writer(outfile)": [
+    "re.compile(pattern)": [
         "BigCodeBench/771"
     ],
-    "re.compile(pattern)": [
+    "csv.writer(outfile)": [
         "BigCodeBench/771"
     ],
     "os.listdir(file_dir)": [
@@ -2932,10 +2922,10 @@
     "collections.Counter(text2.split())": [
         "BigCodeBench/845"
     ],
-    "ALPHANUMERIC.sub(' ', text1).lower.split()": [
+    "ALPHANUMERIC.sub(' ', text2).lower.split()": [
         "BigCodeBench/845"
     ],
-    "ALPHANUMERIC.sub(' ', text2).lower.split()": [
+    "ALPHANUMERIC.sub(' ', text1).lower.split()": [
         "BigCodeBench/845"
     ],
     "math.factorial(n)": [
@@ -2950,10 +2940,10 @@
     "os.path.basename(src_file)": [
         "BigCodeBench/857"
     ],
-    "warnings.simplefilter('always')": [
+    "shutil.move(src_file, DEST_DIR)": [
         "BigCodeBench/857"
     ],
-    "shutil.move(src_file, DEST_DIR)": [
+    "warnings.simplefilter('always')": [
         "BigCodeBench/857"
     ],
     "os.path.join(SOURCE_DIR, '*' + ext)": [
@@ -3020,13 +3010,13 @@
     "numpy.bincount(outcomes, minlength=7)": [
         "BigCodeBench/897"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Dice Value')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Dice Value')": [
         "BigCodeBench/897"
     ],
-    "matplotlib.pyplot.subplots.set_title('Histogram of Dice Rolls')": [
+    "matplotlib.pyplot.subplots[1].set_title('Histogram of Dice Rolls')": [
         "BigCodeBench/897"
     ],
-    "matplotlib.pyplot.subplots.hist(outcomes, bins=np.arange(1, 7 + 1.5) - 0.5, edgecolor='black')": [
+    "matplotlib.pyplot.subplots[1].hist(outcomes, bins=np.arange(1, 7 + 1.5) - 0.5, edgecolor='black')": [
         "BigCodeBench/897"
     ],
     "os.path.splitext(file)": [
@@ -3079,10 +3069,10 @@
     "numpy.array([df['date'].max() + i * 24 * 60 * 60 for i in range(1, 8)])": [
         "BigCodeBench/914"
     ],
-    "matplotlib.pyplot.subplots.scatter(df['date'], df['closing_price'], color='black')": [
+    "matplotlib.pyplot.subplots[1].scatter(df['date'], df['closing_price'], color='black')": [
         "BigCodeBench/914"
     ],
-    "matplotlib.pyplot.subplots.plot(future_dates, pred_prices, color='blue', linewidth=3)": [
+    "matplotlib.pyplot.subplots[1].plot(future_dates, pred_prices, color='blue', linewidth=3)": [
         "BigCodeBench/914"
     ],
     "numpy.abs(df['Z_score'])": [
@@ -3094,19 +3084,19 @@
     "matplotlib.pyplot.subplots(figsize=(10, 5))": [
         "BigCodeBench/915"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Index')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Index')": [
         "BigCodeBench/915"
     ],
-    "matplotlib.pyplot.subplots.set_ylabel('Closing Price')": [
+    "matplotlib.pyplot.subplots[1].set_ylabel('Closing Price')": [
         "BigCodeBench/915"
     ],
-    "matplotlib.pyplot.subplots.set_title('Outliers in Closing Prices')": [
+    "matplotlib.pyplot.subplots[1].set_title('Outliers in Closing Prices')": [
         "BigCodeBench/915"
     ],
-    "matplotlib.pyplot.subplots.plot(df['closing_price'], color='blue', label='Normal')": [
+    "matplotlib.pyplot.subplots[1].plot(df['closing_price'], color='blue', label='Normal')": [
         "BigCodeBench/915"
     ],
-    "matplotlib.pyplot.subplots.plot(outliers['closing_price'], linestyle='none', marker='X', color='red', markersize=12, label='Outlier')": [
+    "matplotlib.pyplot.subplots[1].plot(outliers['closing_price'], linestyle='none', marker='X', color='red', markersize=12, label='Outlier')": [
         "BigCodeBench/915"
     ],
     "matplotlib.pyplot.subplots(1, 2, figsize=(12, 6))": [
@@ -3148,10 +3138,10 @@
     "pandas.date_range(start=df['date'].iloc[-1] + pd.Timedelta(days=1), periods=7)": [
         "BigCodeBench/917"
     ],
-    "matplotlib.pyplot.subplots.plot(forecast_dates, forecast, label='Forecasted Closing Prices')": [
+    "matplotlib.pyplot.subplots[1].plot(forecast_dates, forecast, label='Forecasted Closing Prices')": [
         "BigCodeBench/917"
     ],
-    "matplotlib.pyplot.subplots.plot(df['date'], df['closing_price'], label='Historical Closing Prices')": [
+    "matplotlib.pyplot.subplots[1].plot(df['date'], df['closing_price'], label='Historical Closing Prices')": [
         "BigCodeBench/917"
     ],
     "string.ascii_lowercase": [
@@ -3166,10 +3156,10 @@
     "collections.Counter(word_combinations)": [
         "BigCodeBench/928"
     ],
-    "matplotlib.pyplot.subplots.grid(True)": [
+    "numpy.random.randint(low=100, high=500)": [
         "BigCodeBench/942"
     ],
-    "numpy.random.randint(low=100, high=500)": [
+    "matplotlib.pyplot.subplots[1].grid(True)": [
         "BigCodeBench/942"
     ],
     "report_data.append([date, category, sales])": [
@@ -3181,10 +3171,10 @@
     "pandas.date_range(start=start_date, periods=periods, freq=freq)": [
         "BigCodeBench/942"
     ],
-    "matplotlib.pyplot.subplots.set_title('Category-wise Sales Trends')": [
+    "pandas.DataFrame(report_data, columns=['Date', 'Category', 'Sales'])": [
         "BigCodeBench/942"
     ],
-    "pandas.DataFrame(report_data, columns=['Date', 'Category', 'Sales'])": [
+    "matplotlib.pyplot.subplots[1].set_title('Category-wise Sales Trends')": [
         "BigCodeBench/942"
     ],
     "pandas.DataFrame.pivot(index='Date', columns='Category', values='Sales')": [
@@ -3205,10 +3195,10 @@
     "pandas.date_range(start=start_date, freq=freq, periods=periods)": [
         "BigCodeBench/945"
     ],
-    "random.choice(task_list)": [
+    "random.choice(employees)": [
         "BigCodeBench/952"
     ],
-    "random.choice(employees)": [
+    "random.choice(task_list)": [
         "BigCodeBench/952"
     ],
     "datetime.datetime.today()": [
@@ -3235,13 +3225,13 @@
     "collections.Counter(text.split())": [
         "BigCodeBench/955"
     ],
-    "matplotlib.pyplot.subplots.set_xticks(indices)": [
+    "matplotlib.pyplot.subplots[1].set_xticks(indices)": [
         "BigCodeBench/955"
     ],
-    "matplotlib.pyplot.subplots.set_xticklabels(words)": [
+    "matplotlib.pyplot.subplots[1].set_xticklabels(words)": [
         "BigCodeBench/955"
     ],
-    "matplotlib.pyplot.subplots.bar(indices, frequencies)": [
+    "matplotlib.pyplot.subplots[1].bar(indices, frequencies)": [
         "BigCodeBench/955"
     ],
     "re.sub(word, word.replace(' ', '_'), text, flags=re.IGNORECASE)": [
@@ -3256,11 +3246,11 @@
     "zipfile.ZipFile(zip_path, 'w')": [
         "BigCodeBench/963"
     ],
-    "os.path.exists(source_directory)": [
+    "os.path.exists(target_directory)": [
         "BigCodeBench/963",
         "BigCodeBench/964"
     ],
-    "os.path.exists(target_directory)": [
+    "os.path.exists(source_directory)": [
         "BigCodeBench/963",
         "BigCodeBench/964"
     ],
@@ -3286,10 +3276,10 @@
     "docx.Document(filepath)": [
         "BigCodeBench/964"
     ],
-    "docx.Document.paragraphs": [
+    "os.path.join(root, file)": [
         "BigCodeBench/964"
     ],
-    "os.path.join(root, file)": [
+    "docx.Document.paragraphs": [
         "BigCodeBench/964"
     ],
     "os.walk(source_directory)": [
@@ -3325,10 +3315,10 @@
     "pandas.DataFrame(scaler.fit_transform(df_cumsum), columns=df.columns)": [
         "BigCodeBench/969"
     ],
-    "entry.path": [
+    "entry.name": [
         "BigCodeBench/971"
     ],
-    "entry.name": [
+    "entry.path": [
         "BigCodeBench/971"
     ],
     "os.stat.st_size": [
@@ -3407,13 +3397,13 @@
     "os.path.isdir(dir_path)": [
         "BigCodeBench/988"
     ],
+    "re.search('\\\\d', x.name)": [
+        "BigCodeBench/988"
+    ],
     "re.search('\\\\W', x.stem)": [
         "BigCodeBench/988"
     ],
     "os.path.exists(dir_path)": [
-        "BigCodeBench/988"
-    ],
-    "re.search('\\\\d', x.name)": [
         "BigCodeBench/988"
     ],
     "predicate_functions.items()": [
@@ -3437,10 +3427,10 @@
     "codecs.encode(decoded_str, 'rot_13')": [
         "BigCodeBench/990"
     ],
-    "binascii.hexlify(decoded_str.encode())": [
+    "base64.b64encode(decoded_str.encode())": [
         "BigCodeBench/990"
     ],
-    "base64.b64encode(decoded_str.encode())": [
+    "binascii.hexlify(decoded_str.encode())": [
         "BigCodeBench/990"
     ],
     "bytes.fromhex.decode.encode()": [
@@ -3519,16 +3509,19 @@
     "re.findall('\\\\b\\\\w+\\\\b', text)": [
         "BigCodeBench/1004"
     ],
-    "matplotlib.pyplot.subplots.set_xlabel('Words')": [
+    "matplotlib.pyplot.subplots[1].set_xlabel('Words')": [
         "BigCodeBench/1004"
     ],
-    "matplotlib.pyplot.subplots.set_title('Top 10 Most Common Words')": [
+    "matplotlib.pyplot.subplots[1].set_title('Top 10 Most Common Words')": [
         "BigCodeBench/1004"
     ],
-    "matplotlib.pyplot.subplots.bar([word[0] for word in top_words], [word[1] for word in top_words])": [
+    "matplotlib.pyplot.subplots[1].bar([word[0] for word in top_words], [word[1] for word in top_words])": [
         "BigCodeBench/1004"
     ],
     "requests.get.headers": [
+        "BigCodeBench/1006"
+    ],
+    "os.makedirs(extract_path)": [
         "BigCodeBench/1006"
     ],
     "requests.RequestException": [
@@ -3536,22 +3529,19 @@
         "BigCodeBench/1015",
         "BigCodeBench/1124"
     ],
-    "os.makedirs(extract_path)": [
-        "BigCodeBench/1006"
-    ],
     "os.makedirs(download_path)": [
         "BigCodeBench/1006"
     ],
     "os.path.splitext(file_name)": [
         "BigCodeBench/1006"
     ],
-    "os.path.exists(extract_path)": [
-        "BigCodeBench/1006"
-    ],
     "requests.get(url, timeout=5)": [
         "BigCodeBench/1006",
         "BigCodeBench/1008",
         "BigCodeBench/1020"
+    ],
+    "os.path.exists(extract_path)": [
+        "BigCodeBench/1006"
     ],
     "os.path.exists(download_path)": [
         "BigCodeBench/1006"
@@ -3605,10 +3595,10 @@
     "requests.get.iter_content()": [
         "BigCodeBench/1012"
     ],
-    "pathlib.Path('unzipped_files')": [
+    "zipfile.ZipFile(filepath, 'r')": [
         "BigCodeBench/1012"
     ],
-    "zipfile.ZipFile(filepath, 'r')": [
+    "pathlib.Path('unzipped_files')": [
         "BigCodeBench/1012"
     ],
     "zipfile.ZipFile.extractall(zip_dir)": [
@@ -3746,10 +3736,10 @@
     "hashlib.sha256.update(byte_block)": [
         "BigCodeBench/1039"
     ],
-    "context.wrap_socket.recv(buffer_size)": [
+    "sha256_hash.hexdigest.encode('utf-8')": [
         "BigCodeBench/1039"
     ],
-    "sha256_hash.hexdigest.encode('utf-8')": [
+    "context.wrap_socket.recv(buffer_size)": [
         "BigCodeBench/1039"
     ],
     "ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)": [
@@ -3782,22 +3772,22 @@
     "inputs.remove(s)": [
         "BigCodeBench/1040"
     ],
-    "outputs.append(s)": [
-        "BigCodeBench/1040"
-    ],
     "outputs.remove(s)": [
         "BigCodeBench/1040"
     ],
-    "s.recv(buffer_size)": [
+    "outputs.append(s)": [
         "BigCodeBench/1040"
     ],
-    "s.accept.setblocking(0)": [
+    "s.recv(buffer_size)": [
         "BigCodeBench/1040"
     ],
     "socket.socket.listen(5)": [
         "BigCodeBench/1040"
     ],
     "inputs.append(connection)": [
+        "BigCodeBench/1040"
+    ],
+    "s.accept[0].setblocking(0)": [
         "BigCodeBench/1040"
     ],
     "socket.socket.setblocking(0)": [
@@ -3866,10 +3856,10 @@
     "sklearn.feature_extraction.text.CountVectorizer.vocabulary_": [
         "BigCodeBench/1053"
     ],
-    "pandas.DataFrame.plot.bar(x='Word', y='Count', rot=0, legend=False)": [
+    "sklearn.feature_extraction.text.CountVectorizer.vocabulary_.items()": [
         "BigCodeBench/1053"
     ],
-    "sklearn.feature_extraction.text.CountVectorizer.vocabulary_.items()": [
+    "pandas.DataFrame.plot.bar(x='Word', y='Count', rot=0, legend=False)": [
         "BigCodeBench/1053"
     ],
     "pandas.read_csv(file_path, usecols=[0], names=['Text'], header=None)": [
@@ -3905,13 +3895,13 @@
     "re.sub(f'[{punctuation}]', '', text)": [
         "BigCodeBench/1085"
     ],
-    "matplotlib.pyplot.subplots.bar([], [])": [
+    "matplotlib.pyplot.subplots[1].bar([], [])": [
         "BigCodeBench/1085"
     ],
     "re.sub.lower.split()": [
         "BigCodeBench/1085"
     ],
-    "matplotlib.pyplot.subplots.bar(*zip(*most_common_words))": [
+    "matplotlib.pyplot.subplots[1].bar(*zip(*most_common_words))": [
         "BigCodeBench/1085"
     ],
     "title.string": [

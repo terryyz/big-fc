@@ -144,6 +144,17 @@ def extract_apis(code):
                         elif base_name in imported_names:
                             api_call = f"{imported_names[base_name]}.{base.attr}['{ast.unparse(subscript.slice)}']"
                             self.add_api_call(api_call, node)
+            elif isinstance(node.targets[0], ast.Tuple):
+                for index, target in enumerate(node.targets[0].elts):
+                    if isinstance(target, ast.Name):
+                        if isinstance(node.value, ast.Call):
+                            api_call = ast.unparse(node.value.func)
+                            if api_call in imported_modules:
+                                api_call = imported_modules[api_call]
+                            elif api_call in imported_names:
+                                api_call = imported_names[api_call]
+                            variable_map[target.id] = f"{api_call}[{index}]"
+                            self.object_creations[target.id] = index
             elif isinstance(node.value, ast.Call):
                 api_call = ast.unparse(node.value.func)
                 if api_call in imported_modules:
@@ -190,7 +201,7 @@ def extract_apis(code):
                             elif nested_base in imported_names:
                                 api_call = f"{imported_names[nested_base]}.{nested_attr.attr}.{attr.attr}"
                                 self.add_api_call(api_call, node)
-                
+
             self.generic_visit(node)
 
         def add_api_call(self, api_call, node):
@@ -243,8 +254,6 @@ def extract_apis(code):
             return '(' + ', '.join(args) + ')'
 
     ApiExtractor().visit(tree)
-    object_class = [c+"()" for c in class_map.values()]
-    api_list.extend(object_class)
     return api_list
 
 if __name__ == "__main__":
@@ -259,8 +268,6 @@ if __name__ == "__main__":
     api2task = dict()
     for item in tqdm(dataset[:]):
         task_id = item["task_id"]
-        # if task_id != "BigCodeBench/139":
-        #     continue
         complete_prompt = item["complete_prompt"]
         canonical_solution = item["canonical_solution"]
         tmp_apis = sorted(set(extract_apis(complete_prompt+canonical_solution)), key=lambda x: len(x))
