@@ -33,7 +33,7 @@ def create_constant_schema(api_info):
 
 def parse_signature(signature):
     # Remove the outer parentheses
-    signature = signature.strip('()')
+    signature, _, return_type = signature.strip('()').partition(') ->')
     
     # Split the signature into individual parameters
     params = re.split(r',\s*(?![^[]*\])', signature)
