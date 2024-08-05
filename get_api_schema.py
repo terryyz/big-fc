@@ -33,7 +33,6 @@ def create_constant_schema(api_info):
 
 def parse_signature(signature):
     # Remove the outer parentheses
-    print(signature)
     signature = signature.strip('()')
     
     # Split the signature into individual parameters
@@ -63,13 +62,21 @@ def parse_signature(signature):
             param_info["type"] = parse_type_annotation(type_annotation)
         
         if len(parts) > 1:
-            # There's a default value
-            default = parts[1].strip()
-            parsed_default = parse_default_value(default)
-            param_info["default"] = parsed_default
-            # Infer type from default value if not explicitly specified
-            if "type" not in param_info or param_info["type"] == ["object"]:
-                param_info["type"] = [type(parsed_default).__name__]
+            
+            # There's a type annotation or default value
+            if '=' in param:
+                # There's a default value
+                default = parts[-1].strip()
+                param_info["default"] = parse_default_value(default)
+            else:
+                # There's only a type annotation
+                type_annotation = parts[1].strip().strip("'")
+                
+                param_info["type"] = parse_type_annotation(type_annotation)
+        
+        if "type" not in param_info and "default" in param_info:
+            # Infer type from default value
+            param_info["type"] = [type(param_info["default"]).__name__]
         # else:
         #     # No default value, assume it's an object
         #     param_info["type"] = ["object"]
@@ -102,7 +109,6 @@ def parse_type_annotation(annotation):
     elif annotation.lower().startswith('os.pathlike'):
         return ['string']
     else:
-        print(annotation)
         return [annotation.lower()]
 
 def parse_default_value(default):
@@ -151,16 +157,8 @@ def create_parameter_schema(parsed_signature):
                 else:
                     param_schema["type"] = types
         
-        # if "default" in param_info:
-        #     default = param_info["default"]
-            # if default == "True":
-            #     param_schema["default"] = True
-            # elif default == "False":
-            #     param_schema["default"] = False
-            # elif default == "None":
-            #     param_schema["default"] = None
-            # else:
-            #     param_schema["default"] = default
+        if "default" in param_info:
+            param_schema["default"] = param_info["default"]
         
         # if param_schema:  # Only add non-empty parameter schemas
         schema["properties"][param_name] = param_schema
@@ -173,28 +171,22 @@ def process_api_info(api_info):
             continue
         schema = parse_api_info(api_data)
         if schema:
-            api_data['schema'] = schema
+            api_data['parameters'] = schema
         
         if 'chains' in api_data:
             for chain_name, chain_data in api_data['chains'].items():
                 chain_schema = parse_api_info(chain_data)
                 if chain_schema:
-                    chain_data['schema'] = chain_schema
-
-def main():
-    # Read the JSON file
-    with open('apis_info.json', 'r') as f:
+                    chain_data['parameters'] = chain_schema
+   
+if __name__ == "__main__":
+     # Read the JSON file
+    with open('apis_info_grouped.json', 'r') as f:
         full_api_info = json.load(f)
     
-    # Process the API info for BigCodeBench/82
-    process_api_info(full_api_info["BigCodeBench/15"])
-    print(json.dumps(full_api_info["BigCodeBench/15"], indent=2))
-if __name__ == "__main__":
-    main()
-    # Test the function
-    # signature = "import_name: 'str', static_url_path: 'str | None' = None, static_folder: 'str | os.PathLike[str] | None' = 'static', static_host: 'str | None' = None, host_matching: 'bool' = False, subdomain_matching: 'bool' = False, template_folder: 'str | os.PathLike[str] | None' = 'templates', instance_path: 'str | None' = None, instance_relative_config: 'bool' = False, root_path: 'str | None' = None"
-
-    # parsed = parse_signature(signature)
-    # print(signature)
-    # print(parsed)
-    # print("---")
+    for task_id, task_info in full_api_info.items():
+        process_api_info(task_info)
+    
+    with open('apis_info_grouped_schema.json', 'w') as f:
+        json.dump(full_api_info, f, indent=2)
+    

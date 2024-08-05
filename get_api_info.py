@@ -68,7 +68,7 @@ def get_subscript_method_info(base_api, subscript, method):
             'name': f"{base_api}[{subscript}].{method}",
             'type': 'method',
             'signature': str(inspect.signature(method_obj)),
-            'short_docstring': (inspect.getdoc(method_obj) or '').split('\n\n')[0]
+            'description': inspect.getdoc(method_obj) or ''
         }
         
         return result
@@ -134,7 +134,7 @@ def get_api_info(api_call):
             'name': api,
             'type': None,
             'signature': None,
-            'short_docstring': None
+            'description': None
         }
         if inspect.ismodule(module):
             result['type'] = 'module'
@@ -161,7 +161,7 @@ def get_api_info(api_call):
             result['value'] = str(module)
         if result['signature'] and "(" in api_call:
             result['signature'] = filter_unused_args(result['signature'], api_call)
-        result['short_docstring'] = (inspect.getdoc(module) or '').split('\n\n')[0]
+        result['description'] = inspect.getdoc(module) or ''
         return result
     except ImportError as e:
         return {'name': api_call, 'error': f'Import error: {str(e)}'}
@@ -245,6 +245,125 @@ def process_api_list(api_list):
     api_info = remove_unnecessary_modules(api_info)
     return api_info
 
+def map_subscriptable_methods(api_info):
+    for key, value in list(api_info.items()):
+        if '[' in key and '].' in key:
+            base_key, subscript_method = key.rsplit('[', 1)
+            subscript, method = subscript_method.split('].')
+            base_key = base_key.rstrip('.')
+            subscript = subscript.rstrip('.')
+
+            # Update the base key to be a class if it's callable
+            if base_key in api_info and api_info[base_key]['type'] == 'callable':
+                api_info[base_key]['type'] = 'class'
+                if 'chains' not in api_info[base_key]:
+                    api_info[base_key]['chains'] = {}
+
+            # Ensure 'chains' key exists
+            if base_key in api_info:
+                if 'chains' not in api_info[base_key]:
+                    api_info[base_key]['chains'] = {}
+                if f"[{subscript}]" not in api_info[base_key]['chains']:
+                    api_info[base_key]['chains'][f"[{subscript}]"] = {'chains': {}}
+                api_info[base_key]['chains'][f"[{subscript}]"]['chains'][method] = value
+                del api_info[key]
+        elif '.' in key:
+            parts = key.split('.')
+            base_key = '.'.join(parts[:-1])
+            method = parts[-1]
+
+            # Ensure 'chains' key exists
+            if base_key in api_info:
+                if 'chains' not in api_info[base_key]:
+                    api_info[base_key]['chains'] = {}
+                api_info[base_key]['chains'][method] = value
+                del api_info[key]
+            else:
+                # Handle nested attributes
+                parent_key = '.'.join(parts[:-2])
+                attr = parts[-2]
+                if parent_key in api_info:
+                    if 'chains' not in api_info[parent_key]:
+                        api_info[parent_key]['chains'] = {}
+                    if attr not in api_info[parent_key]['chains']:
+                        api_info[parent_key]['chains'][attr] = {'chains': {}}
+                    elif 'chains' not in api_info[parent_key]['chains'][attr]:
+                        api_info[parent_key]['chains'][attr]['chains'] = {}
+                    api_info[parent_key]['chains'][attr]['chains'][method] = value
+                    del api_info[key]
+
+    return api_info
+
+
+def parse_signature(signature):
+    # Remove the outer parentheses
+    signature = signature.strip('()')
+    
+    # Split the signature into individual parameters
+    params = re.split(r',\s*(?![^[]*\])', signature)
+    
+    parameters = {}
+    for param in params:
+        # Split each parameter into name, type annotation, and default value
+        parts = re.split(r':\s*|\s*=\s*', param, 2)
+        name = parts[0].strip()
+        
+        if name == 'self':
+            parameters[name] = {}
+            continue
+        
+        if name.startswith('*'):
+            # Handle *args and **kwargs
+            continue
+        
+        param_info = {}
+        
+        # Handle type annotation
+        if len(parts) > 1:
+            type_annotation = parts[1].strip().strip("'\"")
+            param_info["type"] = parse_type_annotation(type_annotation)
+        else:
+            param_info["type"] = ["object"]  # Default to object if no type is specified
+        
+        # Handle default value
+        if len(parts) > 2:
+            default = parts[2].strip()
+            param_info["default"] = parse_default_value(default)
+        
+        parameters[name] = param_info
+    
+    return parameters
+
+def parse_type_annotation(annotation):
+    if '|' in annotation:
+        types = [t.strip().lower() for t in annotation.split('|')]
+        parsed_types = set()
+        for t in types:
+            if t == 'none':
+                parsed_types.add('null')
+            elif t.startswith('os.pathlike'):
+                parsed_types.add('string')
+            else:
+                parsed_types.add(t)
+        return list(parsed_types)
+    elif annotation.lower().startswith('os.pathlike'):
+        return ['string']
+    else:
+        return [annotation.lower()]
+
+def parse_default_value(default):
+    if default.lower() == 'none':
+        return None
+    elif default in ('True', 'False'):
+        return default == 'True'
+    elif default.startswith("'") or default.startswith('"'):
+        return default.strip("'\"")
+    elif default.replace('.', '').isdigit():
+        return float(default) if '.' in default else int(default)
+    else:
+        return default
+    
+
 if __name__ == "__main__":
     # Read the API list from the JSON file
     with open("apis.json", "r") as f:
@@ -258,4 +377,10 @@ if __name__ == "__main__":
 
     # Write the result to a JSON file
     with open("apis_info.json", "w") as f:
+        json.dump(result, f, indent=2)
+    
+    # with open("apis_info.json", "r") as f:
+    #     result = json.load(f)
+    result = map_subscriptable_methods(result)
+    with open("apis_info_grouped.json", "w") as f:
         json.dump(result, f, indent=2)

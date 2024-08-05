@@ -2,7 +2,7 @@ import ast
 
 def extract_apis(code):
     tree = ast.parse(code)
-    api_list = []
+    api_dict = {}
     imported_modules = {}
     imported_names = {}
     variable_map = {}
@@ -92,10 +92,10 @@ def extract_apis(code):
                 
                 if base in imported_modules:
                     api_call = f"{imported_modules[base]}.{'.'.join(attrs[1:])}"
-                    self.add_api_call(api_call, node)
+                    self.add_api_call(api_call, full_attr, node)
                 elif base in imported_names:
                     api_call = f"{imported_names[base]}.{'.'.join(attrs[1:])}" if len(attrs) > 1 else imported_names[base]
-                    self.add_api_call(api_call, node)
+                    self.add_api_call(api_call, full_attr, node)
                 elif base in variable_map:
                     api_call = variable_map[base]
                     api_call = f"{api_call}.{'.'.join(attrs[1:])}"
@@ -105,15 +105,15 @@ def extract_apis(code):
                         api_call = f"{imported_modules[base]}.{'.'.join(attrs[1:])}"
                     elif base in imported_names:
                         api_call = f"{imported_names[base]}.{'.'.join(attrs[1:])}"
-                    self.add_api_call(api_call, node)
+                    self.add_api_call(api_call, full_attr, node)
                 else:
                     # Handle direct module attributes like np.pi
                     if base in imported_modules:
                         api_call = f"{imported_modules[base]}.{'.'.join(attrs[1:])}"
-                        self.add_api_call(api_call, node)
+                        self.add_api_call(api_call, full_attr, node)
                     elif base in imported_names:
                         api_call = f"{imported_names[base]}.{'.'.join(attrs[1:])}"
-                        self.add_api_call(api_call, node)
+                        self.add_api_call(api_call, full_attr, node)
                     else:
                         parent = self.get_parent(node)
                         if isinstance(parent, ast.Call) and parent.func == node:
@@ -121,11 +121,11 @@ def extract_apis(code):
                             if obj_init:
                                 method_call = f"{'.'.join(attrs[1:])}{self.get_call_args(parent)}"
                                 api_call = f"{obj_init}.{method_call}"
-                                self.add_api_call(api_call, node)
+                                self.add_api_call(api_call, full_attr, node)
                             else:
-                                self.add_api_call(full_attr, node)
+                                self.add_api_call(full_attr, full_attr, node)
                         else:
-                            self.add_api_call(full_attr, node)
+                            self.add_api_call(full_attr, full_attr, node)
             self.generic_visit(node)
         
         def visit_Assign(self, node):
@@ -137,13 +137,13 @@ def extract_apis(code):
                         base_name = base.value.id
                         if base_name in variable_map:
                             api_call = f"{variable_map[base_name]}.{base.attr}['{ast.unparse(subscript.slice)}']"
-                            self.add_api_call(api_call, node)
+                            self.add_api_call(api_call, api_call, node)
                         elif base_name in imported_modules:
                             api_call = f"{imported_modules[base_name]}.{base.attr}['{ast.unparse(subscript.slice)}']"
-                            self.add_api_call(api_call, node)
+                            self.add_api_call(api_call, api_call, node)
                         elif base_name in imported_names:
                             api_call = f"{imported_names[base_name]}.{base.attr}['{ast.unparse(subscript.slice)}']"
-                            self.add_api_call(api_call, node)
+                            self.add_api_call(api_call, api_call, node)
             elif isinstance(node.targets[0], ast.Tuple):
                 for index, target in enumerate(node.targets[0].elts):
                     if isinstance(target, ast.Name):
@@ -176,15 +176,15 @@ def extract_apis(code):
                     base = attr.value.id
                     if base in variable_map:
                         api_call = f"{variable_map[base]}.{attr.attr}"
-                        self.add_api_call(api_call, node)
+                        self.add_api_call(api_call, api_call, node)
                     else:
                         # Handle cases where the base is a direct import or class instance
                         if base in imported_modules:
                             api_call = f"{imported_modules[base]}.{attr.attr}"
-                            self.add_api_call(api_call, node)
+                            self.add_api_call(api_call, api_call, node)
                         elif base in imported_names:
                             api_call = f"{imported_names[base]}.{attr.attr}"
-                            self.add_api_call(api_call, node)
+                            self.add_api_call(api_call, api_call, node)
                 # Handle nested attributes like app.config['MAIL_SERVER']
                 if isinstance(attr.value, ast.Attribute):
                     nested_attr = attr.value
@@ -192,19 +192,19 @@ def extract_apis(code):
                         nested_base = nested_attr.value.id
                         if nested_base in variable_map:
                             api_call = f"{variable_map[nested_base]}.{nested_attr.attr}.{attr.attr}"
-                            self.add_api_call(api_call, node)
+                            self.add_api_call(api_call, api_call, node)
                         else:
                             # Handle cases where the nested base is a direct import or class instance
                             if nested_base in imported_modules:
                                 api_call = f"{imported_modules[nested_base]}.{nested_attr.attr}.{attr.attr}"
-                                self.add_api_call(api_call, node)
+                                self.add_api_call(api_call, api_call, node)
                             elif nested_base in imported_names:
                                 api_call = f"{imported_names[nested_base]}.{nested_attr.attr}.{attr.attr}"
-                                self.add_api_call(api_call, node)
+                                self.add_api_call(api_call, api_call, node)
 
             self.generic_visit(node)
 
-        def add_api_call(self, api_call, node):
+        def add_api_call(self, api_call, full_attr, node):
             parent = self.get_parent(node)
             if isinstance(parent, ast.Call) and parent.func == node:
                 args = self.get_call_args(parent)
@@ -218,17 +218,19 @@ def extract_apis(code):
 
             # Add the API call if it's part of a Call node, Subscript node, or a direct attribute
             if isinstance(parent, ast.Call) or isinstance(parent, ast.Subscript) or isinstance(node, ast.Attribute):
-                if api_call not in api_list:
-                    api_list.append(api_call)
+                if full_attr not in api_dict:
+                    api_dict[full_attr] = []
+                if api_call not in api_dict[full_attr]:
+                    api_dict[full_attr].append(api_call)
         
         def visit_Name(self, node):
             if node.id in imported_modules:
                 api_call = imported_modules[node.id]
                 if '.' in api_call:
-                    self.add_api_call(api_call, node)
+                    self.add_api_call(api_call, node.id, node)
             elif node.id in imported_names:
                 api_call = imported_names[node.id]
-                self.add_api_call(api_call, node)
+                self.add_api_call(api_call, node.id, node)
             self.generic_visit(node)
 
         def visit_Call(self, node):
@@ -250,11 +252,14 @@ def extract_apis(code):
             for arg in call_node.args:
                 args.append(ast.unparse(arg))
             for keyword in call_node.keywords:
-                args.append(f"{keyword.arg}={ast.unparse(keyword.value)}")
+                if keyword.arg is not None:
+                    args.append(f"{keyword.arg}={ast.unparse(keyword.value)}")
+                else:
+                    args.append(f"**{ast.unparse(keyword.value)}")
             return '(' + ', '.join(args) + ')'
 
     ApiExtractor().visit(tree)
-    return api_list
+    return api_dict
 
 if __name__ == "__main__":
     import json
@@ -266,12 +271,15 @@ if __name__ == "__main__":
     apis = []
     api_list = dict()
     api2task = dict()
+    code2apis = dict()
     for item in tqdm(dataset[:]):
         task_id = item["task_id"]
         complete_prompt = item["complete_prompt"]
         canonical_solution = item["canonical_solution"]
-        tmp_apis = sorted(set(extract_apis(complete_prompt+canonical_solution)), key=lambda x: len(x))
-        # print(tmp_apis)
+        tmp_code2apis = extract_apis(complete_prompt+canonical_solution)
+        code2apis[task_id] = tmp_code2apis
+        all_apis = [api for apis in tmp_code2apis.values() for api in apis]
+        tmp_apis = sorted(set(all_apis), key=lambda x: len(x))
         filtered_apis = []
         for api in tmp_apis:
             # if not any(other_api.startswith(api) for other_api in tmp_apis if api != other_api):
@@ -293,6 +301,9 @@ if __name__ == "__main__":
         api_list[task_id] = sorted(filtered_apis, key=lambda x: x.split('.')[0])
         apis.extend(filtered_apis)
     
+    with open("code2apis.json", "w") as f:
+        json.dump(code2apis, f, indent=4)
+        
     with open("apis.json", "w") as f:
         json.dump(api_list, f, indent=4)
     
