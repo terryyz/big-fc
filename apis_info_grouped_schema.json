@@ -551,23 +551,23 @@
               },
               "static_url_path": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "static_folder": {
                 "type": [
-                  "string",
+                  "str",
                   "null",
-                  "str"
+                  "string"
                 ],
                 "default": "static"
               },
               "static_host": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -581,16 +581,16 @@
               },
               "template_folder": {
                 "type": [
-                  "string",
+                  "str",
                   "null",
-                  "str"
+                  "string"
                 ],
                 "default": "templates"
               },
               "instance_path": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -600,8 +600,8 @@
               },
               "root_path": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               }
@@ -631,23 +631,23 @@
           },
           "static_url_path": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           },
           "static_folder": {
             "type": [
-              "string",
+              "str",
               "null",
-              "str"
+              "string"
             ],
             "default": "static"
           },
           "static_host": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           },
@@ -661,16 +661,16 @@
           },
           "template_folder": {
             "type": [
-              "string",
+              "str",
               "null",
-              "str"
+              "string"
             ],
             "default": "templates"
           },
           "instance_path": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           },
@@ -680,8 +680,8 @@
           },
           "root_path": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           }
@@ -827,10 +827,10 @@
         "properties": {
           "template_name_or_list": {
             "type": [
-              "template]",
+              "str",
               "list[str",
               "template",
-              "str"
+              "template]"
             ]
           }
         }
@@ -894,7 +894,7 @@
             "type": "str"
           },
           "password": {
-            "type": "str') -> 'bool"
+            "type": "str"
           }
         }
       }
@@ -1805,15 +1805,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -1826,10 +1826,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -1896,42 +1896,42 @@
               },
               "sep": {
                 "type": [
-                  "lib.nodefault",
+                  "str",
                   "null",
-                  "str"
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "delimiter": {
                 "type": [
-                  "lib.nodefault",
+                  "str",
                   "null",
-                  "str"
+                  "lib.nodefault"
                 ],
                 "default": null
               },
               "header": {
                 "type": [
-                  "literal['infer']\"",
-                  "sequence[int]",
                   "null",
-                  "\"int"
+                  "literal['infer']\"",
+                  "\"int",
+                  "sequence[int]"
                 ],
                 "default": "infer"
               },
               "names": {
                 "type": [
-                  "lib.nodefault",
                   "null",
-                  "sequence[hashable]"
+                  "sequence[hashable]",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "index_col": {
                 "type": [
-                  "indexlabel",
                   "literal[false]",
-                  "null"
+                  "null",
+                  "indexlabel"
                 ],
                 "default": null
               },
@@ -2006,16 +2006,16 @@
               },
               "parse_dates": {
                 "type": [
-                  "null",
                   "bool",
+                  "null",
                   "sequence[hashable]"
                 ],
                 "default": null
               },
               "infer_datetime_format": {
                 "type": [
-                  "lib.nodefault",
-                  "bool"
+                  "bool",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
@@ -2029,8 +2029,8 @@
               },
               "date_format": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -2059,8 +2059,8 @@
               },
               "thousands": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -2070,8 +2070,8 @@
               },
               "lineterminator": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -2089,37 +2089,37 @@
               },
               "escapechar": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "comment": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding_errors": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": "strict"
               },
               "dialect": {
                 "type": [
-                  "csv.dialect",
+                  "str",
                   "null",
-                  "str"
+                  "csv.dialect"
                 ],
                 "default": null
               },
@@ -2155,7 +2155,7 @@
                   "lib.nodefault",
                   "dtypebackend"
                 ],
-                "default": "<no_default>) -> 'DataFrame | TextFileReader'"
+                "default": "<no_default>"
               }
             }
           }
@@ -2173,18 +2173,18 @@
           },
           "sep": {
             "type": [
-              "lib.nodefault",
+              "str",
               "null",
-              "str"
+              "lib.nodefault"
             ],
             "default": "<no_default>"
           },
           "header": {
             "type": [
-              "literal['infer']\"",
-              "sequence[int]",
               "null",
-              "\"int"
+              "literal['infer']\"",
+              "\"int",
+              "sequence[int]"
             ],
             "default": "infer"
           },
@@ -3007,8 +3007,8 @@
             "properties": {
               "path_or_buf": {
                 "type": [
-                  "filepath",
                   "null",
+                  "filepath",
                   "writebuffer[str]",
                   "writebuffer[bytes]"
                 ],
@@ -3031,15 +3031,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -3052,10 +3052,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -5196,10 +5196,10 @@
               },
               "copy": {
                 "type": [
-                  "null",
-                  "bool"
+                  "bool",
+                  "null"
                 ],
-                "default": "None) -> 'DataFrame | Series'"
+                "default": null
               }
             }
           }
@@ -5287,15 +5287,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -5308,10 +5308,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -5904,7 +5904,7 @@
       "parameters": {
         "type": "object",
         "properties": {
-          "arr_or_dtype) -> 'bool": {}
+          "arr_or_dtype": {}
         }
       }
     },
@@ -6535,44 +6535,44 @@
               "io": {},
               "sheet_name": {
                 "type": [
+                  "str",
                   "integer",
-                  "list[intstrt]",
                   "null",
-                  "str"
+                  "list[intstrt]"
                 ],
                 "default": 0
               },
               "header": {
                 "type": [
                   "integer",
-                  "sequence[int]",
-                  "null"
+                  "null",
+                  "sequence[int]"
                 ],
                 "default": 0
               },
               "names": {
                 "type": [
-                  "list[str]",
-                  "null"
+                  "null",
+                  "list[str]"
                 ],
                 "default": null
               },
               "index_col": {
                 "type": [
                   "integer",
-                  "sequence[int]",
-                  "null"
+                  "null",
+                  "sequence[int]"
                 ],
                 "default": null
               },
               "usecols": {
                 "type": [
-                  "callable[[str], bool]",
-                  "null",
-                  "str",
-                  "sequence[int]",
                   "integer",
-                  "sequence[str]"
+                  "str",
+                  "sequence[str]",
+                  "sequence[int]",
+                  "null",
+                  "callable[[str], bool]"
                 ],
                 "default": null
               },
@@ -6592,31 +6592,31 @@
               },
               "converters": {
                 "type": [
-                  "dict[int, callable]",
                   "null",
-                  "dict[str, callable]"
+                  "dict[str, callable]",
+                  "dict[int, callable]"
                 ],
                 "default": null
               },
               "true_values": {
                 "type": [
-                  "null",
-                  "iterable[hashable]"
+                  "iterable[hashable]",
+                  "null"
                 ],
                 "default": null
               },
               "false_values": {
                 "type": [
-                  "null",
-                  "iterable[hashable]"
+                  "iterable[hashable]",
+                  "null"
                 ],
                 "default": null
               },
               "skiprows": {
                 "type": [
                   "integer",
-                  "sequence[int]",
                   "callable[[int], object]",
+                  "sequence[int]",
                   "null"
                 ],
                 "default": null
@@ -6647,30 +6647,30 @@
               "parse_dates": {
                 "type": [
                   "dict",
-                  "list",
-                  "bool"
+                  "bool",
+                  "list"
                 ],
                 "default": false
               },
               "date_parser": {
                 "type": [
-                  "lib.nodefault",
-                  "callable"
+                  "callable",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "date_format": {
                 "type": [
-                  "dict[hashable, str]",
+                  "str",
                   "null",
-                  "str"
+                  "dict[hashable, str]"
                 ],
                 "default": null
               },
               "thousands": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -6680,8 +6680,8 @@
               },
               "comment": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -6698,7 +6698,7 @@
                   "lib.nodefault",
                   "dtypebackend"
                 ],
-                "default": "<no_default>) -> 'DataFrame | dict[IntStrT, DataFrame]'"
+                "default": "<no_default>"
               }
             }
           }
@@ -6710,10 +6710,10 @@
           "io": {},
           "sheet_name": {
             "type": [
+              "str",
               "integer",
-              "list[intstrt]",
               "null",
-              "str"
+              "list[intstrt]"
             ],
             "default": 0
           }
@@ -7157,23 +7157,23 @@
               },
               "static_url_path": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "static_folder": {
                 "type": [
-                  "string",
+                  "str",
                   "null",
-                  "str"
+                  "string"
                 ],
                 "default": "static"
               },
               "static_host": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -7187,16 +7187,16 @@
               },
               "template_folder": {
                 "type": [
-                  "string",
+                  "str",
                   "null",
-                  "str"
+                  "string"
                 ],
                 "default": "templates"
               },
               "instance_path": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -7206,8 +7206,8 @@
               },
               "root_path": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               }
@@ -7223,23 +7223,23 @@
           },
           "static_url_path": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           },
           "static_folder": {
             "type": [
-              "string",
+              "str",
               "null",
-              "str"
+              "string"
             ],
             "default": "static"
           },
           "static_host": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           },
@@ -7253,16 +7253,16 @@
           },
           "template_folder": {
             "type": [
-              "string",
+              "str",
               "null",
-              "str"
+              "string"
             ],
             "default": "templates"
           },
           "instance_path": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           },
@@ -7272,8 +7272,8 @@
           },
           "root_path": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           }
@@ -7375,44 +7375,44 @@
               "io": {},
               "sheet_name": {
                 "type": [
+                  "str",
                   "integer",
-                  "list[intstrt]",
                   "null",
-                  "str"
+                  "list[intstrt]"
                 ],
                 "default": 0
               },
               "header": {
                 "type": [
                   "integer",
-                  "sequence[int]",
-                  "null"
+                  "null",
+                  "sequence[int]"
                 ],
                 "default": 0
               },
               "names": {
                 "type": [
-                  "list[str]",
-                  "null"
+                  "null",
+                  "list[str]"
                 ],
                 "default": null
               },
               "index_col": {
                 "type": [
                   "integer",
-                  "sequence[int]",
-                  "null"
+                  "null",
+                  "sequence[int]"
                 ],
                 "default": null
               },
               "usecols": {
                 "type": [
-                  "callable[[str], bool]",
-                  "null",
-                  "str",
-                  "sequence[int]",
                   "integer",
-                  "sequence[str]"
+                  "str",
+                  "sequence[str]",
+                  "sequence[int]",
+                  "null",
+                  "callable[[str], bool]"
                 ],
                 "default": null
               },
@@ -7432,31 +7432,31 @@
               },
               "converters": {
                 "type": [
-                  "dict[int, callable]",
                   "null",
-                  "dict[str, callable]"
+                  "dict[str, callable]",
+                  "dict[int, callable]"
                 ],
                 "default": null
               },
               "true_values": {
                 "type": [
-                  "null",
-                  "iterable[hashable]"
+                  "iterable[hashable]",
+                  "null"
                 ],
                 "default": null
               },
               "false_values": {
                 "type": [
-                  "null",
-                  "iterable[hashable]"
+                  "iterable[hashable]",
+                  "null"
                 ],
                 "default": null
               },
               "skiprows": {
                 "type": [
                   "integer",
-                  "sequence[int]",
                   "callable[[int], object]",
+                  "sequence[int]",
                   "null"
                 ],
                 "default": null
@@ -7487,30 +7487,30 @@
               "parse_dates": {
                 "type": [
                   "dict",
-                  "list",
-                  "bool"
+                  "bool",
+                  "list"
                 ],
                 "default": false
               },
               "date_parser": {
                 "type": [
-                  "lib.nodefault",
-                  "callable"
+                  "callable",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "date_format": {
                 "type": [
-                  "dict[hashable, str]",
+                  "str",
                   "null",
-                  "str"
+                  "dict[hashable, str]"
                 ],
                 "default": null
               },
               "thousands": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -7520,8 +7520,8 @@
               },
               "comment": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -7538,7 +7538,7 @@
                   "lib.nodefault",
                   "dtypebackend"
                 ],
-                "default": "<no_default>) -> 'DataFrame | dict[IntStrT, DataFrame]'"
+                "default": "<no_default>"
               }
             }
           }
@@ -8673,15 +8673,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -8694,10 +8694,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -9325,15 +9325,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -9346,10 +9346,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -9517,15 +9517,15 @@
             "properties": {
               "path_or_buf": {
                 "type": [
+                  "readbuffer[bytes]",
                   "filepath",
-                  "readbuffer[str]",
-                  "readbuffer[bytes]"
+                  "readbuffer[str]"
                 ]
               },
               "orient": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -9546,8 +9546,8 @@
               },
               "convert_dates": {
                 "type": [
-                  "list[str]",
-                  "bool"
+                  "bool",
+                  "list[str]"
                 ],
                 "default": true
               },
@@ -9561,22 +9561,22 @@
               },
               "date_unit": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding_errors": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": "strict"
               },
@@ -9615,7 +9615,7 @@
               },
               "engine": {
                 "type": "jsonengine",
-                "default": "ujson') -> 'DataFrame | Series | JsonReader"
+                "default": "ujson"
               }
             }
           }
@@ -9630,15 +9630,15 @@
             "properties": {
               "path_or_buf": {
                 "type": [
+                  "readbuffer[bytes]",
                   "filepath",
-                  "readbuffer[str]",
-                  "readbuffer[bytes]"
+                  "readbuffer[str]"
                 ]
               },
               "orient": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -9659,8 +9659,8 @@
               },
               "convert_dates": {
                 "type": [
-                  "list[str]",
-                  "bool"
+                  "bool",
+                  "list[str]"
                 ],
                 "default": true
               },
@@ -9674,22 +9674,22 @@
               },
               "date_unit": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding_errors": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": "strict"
               },
@@ -9728,7 +9728,7 @@
               },
               "engine": {
                 "type": "jsonengine",
-                "default": "ujson') -> 'DataFrame | Series | JsonReader"
+                "default": "ujson"
               }
             }
           }
@@ -9749,9 +9749,9 @@
         "properties": {
           "path_or_buf": {
             "type": [
+              "readbuffer[bytes]",
               "filepath",
-              "readbuffer[str]",
-              "readbuffer[bytes]"
+              "readbuffer[str]"
             ]
           }
         }
@@ -9964,15 +9964,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -9985,10 +9985,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -10225,15 +10225,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -10246,10 +10246,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -10464,15 +10464,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -10485,10 +10485,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -10924,15 +10924,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -10945,10 +10945,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -11951,9 +11951,7 @@
               "description": "",
               "parameters": {
                 "type": "object",
-                "properties": {
-                  "self) -> cryptography.hazmat.primitives.padding.PaddingContex": {}
-                }
+                "properties": {}
               }
             }
           }
@@ -12079,7 +12077,7 @@
             "type": "bytes"
           },
           "pub_key": {
-            "type": "rsa.key.publickey) -> byte"
+            "type": "rsa.key.publickey"
           }
         }
       }
@@ -12410,42 +12408,42 @@
               },
               "sep": {
                 "type": [
-                  "lib.nodefault",
+                  "str",
                   "null",
-                  "str"
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "delimiter": {
                 "type": [
-                  "lib.nodefault",
+                  "str",
                   "null",
-                  "str"
+                  "lib.nodefault"
                 ],
                 "default": null
               },
               "header": {
                 "type": [
-                  "literal['infer']\"",
-                  "sequence[int]",
                   "null",
-                  "\"int"
+                  "literal['infer']\"",
+                  "\"int",
+                  "sequence[int]"
                 ],
                 "default": "infer"
               },
               "names": {
                 "type": [
-                  "lib.nodefault",
                   "null",
-                  "sequence[hashable]"
+                  "sequence[hashable]",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "index_col": {
                 "type": [
-                  "indexlabel",
                   "literal[false]",
-                  "null"
+                  "null",
+                  "indexlabel"
                 ],
                 "default": null
               },
@@ -12520,16 +12518,16 @@
               },
               "parse_dates": {
                 "type": [
-                  "null",
                   "bool",
+                  "null",
                   "sequence[hashable]"
                 ],
                 "default": null
               },
               "infer_datetime_format": {
                 "type": [
-                  "lib.nodefault",
-                  "bool"
+                  "bool",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
@@ -12543,8 +12541,8 @@
               },
               "date_format": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -12573,8 +12571,8 @@
               },
               "thousands": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -12584,8 +12582,8 @@
               },
               "lineterminator": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -12603,37 +12601,37 @@
               },
               "escapechar": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "comment": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding_errors": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": "strict"
               },
               "dialect": {
                 "type": [
-                  "csv.dialect",
+                  "str",
                   "null",
-                  "str"
+                  "csv.dialect"
                 ],
                 "default": null
               },
@@ -12669,7 +12667,7 @@
                   "lib.nodefault",
                   "dtypebackend"
                 ],
-                "default": "<no_default>) -> 'DataFrame | TextFileReader'"
+                "default": "<no_default>"
               }
             }
           }
@@ -12909,15 +12907,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -12930,10 +12928,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -13021,15 +13019,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -13042,10 +13040,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -15979,7 +15977,7 @@
               },
               "values": {
                 "type": "str",
-                "default": "typing.Literal[<no_default>]) -> 'DataFrame"
+                "default": "typing.Literal[<no_default>]"
               }
             }
           }
@@ -15994,15 +15992,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -16015,10 +16013,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -16587,8 +16585,8 @@
             "properties": {
               "path_or_buf": {
                 "type": [
-                  "filepath",
                   "null",
+                  "filepath",
                   "writebuffer[str]",
                   "writebuffer[bytes]"
                 ],
@@ -16611,15 +16609,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -16632,10 +16630,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -16656,9 +16654,9 @@
             "properties": {
               "docx": {
                 "type": [
+                  "str",
                   "io[bytes]",
-                  "null",
-                  "str"
+                  "null"
                 ],
                 "default": null
               }
@@ -16671,9 +16669,9 @@
         "properties": {
           "docx": {
             "type": [
+              "str",
               "io[bytes]",
-              "null",
-              "str"
+              "null"
             ],
             "default": null
           }
@@ -16996,8 +16994,8 @@
             "properties": {
               "path_or_buf": {
                 "type": [
-                  "filepath",
                   "null",
+                  "filepath",
                   "writebuffer[str]",
                   "writebuffer[bytes]"
                 ],
@@ -17020,15 +17018,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -17041,10 +17039,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -18341,15 +18339,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -18362,10 +18360,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -18691,42 +18689,42 @@
               },
               "sep": {
                 "type": [
-                  "lib.nodefault",
+                  "str",
                   "null",
-                  "str"
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "delimiter": {
                 "type": [
-                  "lib.nodefault",
+                  "str",
                   "null",
-                  "str"
+                  "lib.nodefault"
                 ],
                 "default": null
               },
               "header": {
                 "type": [
-                  "literal['infer']\"",
-                  "sequence[int]",
                   "null",
-                  "\"int"
+                  "literal['infer']\"",
+                  "\"int",
+                  "sequence[int]"
                 ],
                 "default": "infer"
               },
               "names": {
                 "type": [
-                  "lib.nodefault",
                   "null",
-                  "sequence[hashable]"
+                  "sequence[hashable]",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
               "index_col": {
                 "type": [
-                  "indexlabel",
                   "literal[false]",
-                  "null"
+                  "null",
+                  "indexlabel"
                 ],
                 "default": null
               },
@@ -18801,16 +18799,16 @@
               },
               "parse_dates": {
                 "type": [
-                  "null",
                   "bool",
+                  "null",
                   "sequence[hashable]"
                 ],
                 "default": null
               },
               "infer_datetime_format": {
                 "type": [
-                  "lib.nodefault",
-                  "bool"
+                  "bool",
+                  "lib.nodefault"
                 ],
                 "default": "<no_default>"
               },
@@ -18824,8 +18822,8 @@
               },
               "date_format": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -18854,8 +18852,8 @@
               },
               "thousands": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -18865,8 +18863,8 @@
               },
               "lineterminator": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
@@ -18884,37 +18882,37 @@
               },
               "escapechar": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "comment": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": null
               },
               "encoding_errors": {
                 "type": [
-                  "null",
-                  "str"
+                  "str",
+                  "null"
                 ],
                 "default": "strict"
               },
               "dialect": {
                 "type": [
-                  "csv.dialect",
+                  "str",
                   "null",
-                  "str"
+                  "csv.dialect"
                 ],
                 "default": null
               },
@@ -18950,7 +18948,7 @@
                   "lib.nodefault",
                   "dtypebackend"
                 ],
-                "default": "<no_default>) -> 'DataFrame | TextFileReader'"
+                "default": "<no_default>"
               }
             }
           }
@@ -18985,8 +18983,8 @@
           },
           "format": {
             "type": [
-              "null",
-              "str"
+              "str",
+              "null"
             ],
             "default": null
           }
@@ -19468,15 +19466,15 @@
           },
           "index": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
           "columns": {
             "type": [
-              "axes",
-              "null"
+              "null",
+              "axes"
             ],
             "default": null
           },
@@ -19489,10 +19487,10 @@
           },
           "copy": {
             "type": [
-              "null",
-              "bool"
+              "bool",
+              "null"
             ],
-            "default": "None) -> 'None'"
+            "default": null
           }
         }
       }
@@ -19534,18 +19532,18 @@
           },
           "header": {
             "type": [
-              "literal['infer']\"",
-              "sequence[int]",
               "null",
-              "\"int"
+              "literal['infer']\"",
+              "\"int",
+              "sequence[int]"
             ],
             "default": "infer"
           },
           "names": {
             "type": [
-              "lib.nodefault",
               "null",
-              "sequence[hashable]"
+              "sequence[hashable]",
+              "lib.nodefault"
             ],
             "default": "<no_default>"
           },
