@@ -3,7 +3,7 @@
     "ftplib.FTP": {
       "name": "ftplib.FTP",
       "type": "class",
-      "signature": "(host='', user='', passwd='', acct='', timeout=<object object at 0x7fa0a90e8b10>, source_address=None, *, encoding='utf-8')",
+      "signature": "(host='', user='', passwd='', acct='', timeout=<object object at 0x7f3ef60c4b10>, source_address=None, *, encoding='utf-8')",
       "short_docstring": "An FTP client class.",
       "chains": {
         "quit": {
@@ -59,7 +59,7 @@
     "csv.reader": {
       "name": "csv.reader",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_reader = reader(iterable [, dialect='excel']\n                        [optional keyword args])\n    for row in csv_reader:\n        process(row)"
     },
     "open.write(f'\\nError executing command, exited with code {ret_code}')": {
@@ -114,7 +114,7 @@
     "time.sleep": {
       "name": "time.sleep",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sleep(seconds)"
     }
   },
@@ -362,7 +362,7 @@
     "flask_login.current_user.id": {
       "name": "flask_login.current_user.id",
       "type": "callable",
-      "signature": null,
+      "signature": "(self, *args, **kwargs)",
       "short_docstring": ""
     },
     "flask_login.login_user": {
@@ -440,7 +440,7 @@
     "numpy.where": {
       "name": "numpy.where",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "where(condition, [x, y])"
     },
     "numpy.delete": {
@@ -452,7 +452,7 @@
     "numpy.abs": {
       "name": "numpy.abs",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "scipy.stats.zscore": {
@@ -550,7 +550,7 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "sklearn.decomposition.PCA.fit_transform": {
@@ -620,7 +620,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -884,7 +884,7 @@
     "time.time": {
       "name": "time.time",
       "type": "callable",
-      "signature": null,
+      "signature": "()",
       "short_docstring": "time() -> floating point number"
     }
   },
@@ -1006,13 +1006,13 @@
         "settimeout": {
           "name": "socket.socket.settimeout",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "settimeout(timeout)"
         },
         "connect": {
           "name": "socket.socket.connect",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "connect(address)"
         }
       }
@@ -1060,13 +1060,13 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "strptime": {
           "name": "datetime.datetime.strptime",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "string, format -> new datetime parsed from a string (like time.strptime())."
         }
       }
@@ -1144,7 +1144,7 @@
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     },
     "re.split": {
@@ -1231,7 +1231,7 @@
     "numpy.random.uniform": {
       "name": "numpy.random.uniform",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "uniform(low=0.0, high=1.0, size=None)"
     },
     "shapely.geometry.Point": {
@@ -1307,13 +1307,13 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.random.choice": {
       "name": "numpy.random.choice",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "choice(a, size=None, replace=True, p=None)"
     }
   },
@@ -1378,7 +1378,7 @@
     "cv2.cvtColor": {
       "name": "cv2.cvtColor",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "cvtColor(src, code[, dst[, dstCn]]) -> dst\n.   @brief Converts an image from one color space to another.\n.   \n.   The function converts an input image from one color space to another. In case of a transformation\n.   to-from RGB color space, the order of the channels should be specified explicitly (RGB or BGR). Note\n.   that the default color format in OpenCV is often referred to as RGB but it is actually BGR (the\n.   bytes are reversed). So the first byte in a standard (24-bit) color image will be an 8-bit Blue\n.   component, the second byte will be Green, and the third byte will be Red. The fourth, fifth, and\n.   sixth bytes would then be the second pixel (Blue, then Green, then Red), and so on.\n.   \n.   The conventional ranges for R, G, and B channel values are:\n.   -   0 to 255 for CV_8U images\n.   -   0 to 65535 for CV_16U images\n.   -   0 to 1 for CV_32F images\n.   \n.   In case of linear transformations, the range does not matter. But in case of a non-linear\n.   transformation, an input RGB image should be normalized to the proper value range to get the correct\n.   results, for example, for RGB \\f$\\rightarrow\\f$ L\\*u\\*v\\* transformation. For example, if you have a\n.   32-bit floating-point image directly converted from an 8-bit image without any scaling, then it will\n.   have the 0..255 value range instead of 0..1 assumed by the function. So, before calling #cvtColor ,\n.   you need first to scale the image down:\n.   @code\n.       img *= 1./255;\n.       cvtColor(img, img, COLOR_BGR2Luv);\n.   @endcode\n.   If you use #cvtColor with 8-bit images, the conversion will have some information lost. For many\n.   applications, this will not be noticeable but it is recommended to use 32-bit images in applications\n.   that need the full range of colors or that convert an image before an operation and then convert\n.   back.\n.   \n.   If conversion adds the alpha channel, its value will set to the maximum of corresponding channel\n.   range: 255 for CV_8U, 65535 for CV_16U, 1 for CV_32F.\n.   \n.   @param src input image: 8-bit unsigned, 16-bit unsigned ( CV_16UC... ), or single-precision\n.   floating-point.\n.   @param dst output image of the same size and depth as src.\n.   @param code color space conversion code (see #ColorConversionCodes).\n.   @param dstCn number of channels in the destination image; if the parameter is 0, the number of the\n.   channels is derived automatically from src and code.\n.   \n.   @see @ref imgproc_color_conversions"
     },
     "matplotlib.pyplot.subplots": {
@@ -1402,13 +1402,13 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.zeros": {
       "name": "numpy.zeros",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "zeros(shape, dtype=float, order='C', *, like=None)"
     },
     "random.seed": {
@@ -1470,7 +1470,7 @@
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "numpy.mean": {
@@ -1482,19 +1482,19 @@
     "numpy.sqrt": {
       "name": "numpy.sqrt",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sqrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.abs": {
       "name": "numpy.abs",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.log10": {
       "name": "numpy.log10",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "log10(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "os.path.isfile": {
@@ -1586,7 +1586,7 @@
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "scipy.stats.norm": {
@@ -1630,13 +1630,13 @@
     "numpy.array.size": {
       "name": "numpy.array.size",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "sklearn.preprocessing.normalize": {
@@ -1691,7 +1691,7 @@
     "numpy.abs": {
       "name": "numpy.abs",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.outer": {
@@ -1703,13 +1703,13 @@
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "numpy.sin": {
       "name": "numpy.sin",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.linspace": {
@@ -1815,7 +1815,7 @@
     "smtplib.SMTP": {
       "name": "smtplib.SMTP",
       "type": "class",
-      "signature": "(host='', port=0, local_hostname=None, timeout=<object object at 0x7fa0a90e8b10>, source_address=None)",
+      "signature": "(host='', port=0, local_hostname=None, timeout=<object object at 0x7f3ef60c4b10>, source_address=None)",
       "short_docstring": "This class manages a connection to an SMTP or ESMTP server.\nSMTP Objects:\n    SMTP objects have the following attributes:\n        helo_resp\n            This is the message given by the server in response to the\n            most recent HELO command.",
       "chains": {
         "starttls": {
@@ -2001,7 +2001,7 @@
           "type": "constant",
           "signature": null,
           "short_docstring": "Access a group of rows and columns by label(s) or a boolean array.",
-          "value": "<property object at 0x7f9ffa8b9490>"
+          "value": "<property object at 0x7f3e4789d620>"
         },
         "apply": {
           "name": "pandas.DataFrame.apply",
@@ -2028,19 +2028,19 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerows": {
       "name": "csv.writer.writerows",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerow": {
       "name": "csv.writer.writerow",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "os.getcwd": {
@@ -2072,7 +2072,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -2164,7 +2164,7 @@
     "time.sleep": {
       "name": "time.sleep",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sleep(seconds)"
     }
   },
@@ -2313,7 +2313,7 @@
     "time.sleep": {
       "name": "time.sleep",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sleep(seconds)"
     }
   },
@@ -2530,13 +2530,13 @@
     "numpy.sin": {
       "name": "numpy.sin",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.cos": {
       "name": "numpy.cos",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.linspace": {
@@ -2782,37 +2782,37 @@
     "cv2.imread.shape": {
       "name": "cv2.imread.shape",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "imread(filename[, flags]) -> retval\n.   @brief Loads an image from a file.\n.   \n.   @anchor imread\n.   \n.   The function imread loads an image from the specified file and returns it. If the image cannot be\n.   read (because of missing file, improper permissions, unsupported or invalid format), the function\n.   returns an empty matrix ( Mat::data==NULL ).\n.   \n.   Currently, the following file formats are supported:\n.   \n.   -   Windows bitmaps - \\*.bmp, \\*.dib (always supported)\n.   -   JPEG files - \\*.jpeg, \\*.jpg, \\*.jpe (see the *Note* section)\n.   -   JPEG 2000 files - \\*.jp2 (see the *Note* section)\n.   -   Portable Network Graphics - \\*.png (see the *Note* section)\n.   -   WebP - \\*.webp (see the *Note* section)\n.   -   AVIF - \\*.avif (see the *Note* section)\n.   -   Portable image format - \\*.pbm, \\*.pgm, \\*.ppm \\*.pxm, \\*.pnm (always supported)\n.   -   PFM files - \\*.pfm (see the *Note* section)\n.   -   Sun rasters - \\*.sr, \\*.ras (always supported)\n.   -   TIFF files - \\*.tiff, \\*.tif (see the *Note* section)\n.   -   OpenEXR Image files - \\*.exr (see the *Note* section)\n.   -   Radiance HDR - \\*.hdr, \\*.pic (always supported)\n.   -   Raster and Vector geospatial data supported by GDAL (see the *Note* section)\n.   \n.   @note\n.   -   The function determines the type of an image by the content, not by the file extension.\n.   -   In the case of color images, the decoded images will have the channels stored in **B G R** order.\n.   -   When using IMREAD_GRAYSCALE, the codec's internal grayscale conversion will be used, if available.\n.       Results may differ to the output of cvtColor()\n.   -   On Microsoft Windows\\* OS and MacOSX\\*, the codecs shipped with an OpenCV image (libjpeg,\n.       libpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs,\n.       and TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware\n.       that currently these native image loaders give images with different pixel values because of\n.       the color management embedded into MacOSX.\n.   -   On Linux\\*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for\n.       codecs supplied with an OS image. Install the relevant packages (do not forget the development\n.       files, for example, \"libjpeg-dev\", in Debian\\* and Ubuntu\\*) to get the codec support or turn\n.       on the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.\n.   -   In the case you set *WITH_GDAL* flag to true in CMake and @ref IMREAD_LOAD_GDAL to load the image,\n.       then the [GDAL](http://www.gdal.org) driver will be used in order to decode the image, supporting\n.       the following formats: [Raster](http://www.gdal.org/formats_list.html),\n.       [Vector](http://www.gdal.org/ogr_formats.html).\n.   -   If EXIF information is embedded in the image file, the EXIF orientation will be taken into account\n.       and thus the image will be rotated accordingly except if the flags @ref IMREAD_IGNORE_ORIENTATION\n.       or @ref IMREAD_UNCHANGED are passed.\n.   -   Use the IMREAD_UNCHANGED flag to keep the floating point values from PFM image.\n.   -   By default number of pixels must be less than 2^30. Limit can be set using system\n.       variable OPENCV_IO_MAX_IMAGE_PIXELS\n.   \n.   @param filename Name of file to be loaded.\n.   @param flags Flag that can take values of cv::ImreadModes"
     },
     "cv2.imread.copy": {
       "name": "cv2.imread.copy",
       "type": "callable",
-      "signature": null,
+      "signature": "()",
       "short_docstring": "imread(filename[, flags]) -> retval\n.   @brief Loads an image from a file.\n.   \n.   @anchor imread\n.   \n.   The function imread loads an image from the specified file and returns it. If the image cannot be\n.   read (because of missing file, improper permissions, unsupported or invalid format), the function\n.   returns an empty matrix ( Mat::data==NULL ).\n.   \n.   Currently, the following file formats are supported:\n.   \n.   -   Windows bitmaps - \\*.bmp, \\*.dib (always supported)\n.   -   JPEG files - \\*.jpeg, \\*.jpg, \\*.jpe (see the *Note* section)\n.   -   JPEG 2000 files - \\*.jp2 (see the *Note* section)\n.   -   Portable Network Graphics - \\*.png (see the *Note* section)\n.   -   WebP - \\*.webp (see the *Note* section)\n.   -   AVIF - \\*.avif (see the *Note* section)\n.   -   Portable image format - \\*.pbm, \\*.pgm, \\*.ppm \\*.pxm, \\*.pnm (always supported)\n.   -   PFM files - \\*.pfm (see the *Note* section)\n.   -   Sun rasters - \\*.sr, \\*.ras (always supported)\n.   -   TIFF files - \\*.tiff, \\*.tif (see the *Note* section)\n.   -   OpenEXR Image files - \\*.exr (see the *Note* section)\n.   -   Radiance HDR - \\*.hdr, \\*.pic (always supported)\n.   -   Raster and Vector geospatial data supported by GDAL (see the *Note* section)\n.   \n.   @note\n.   -   The function determines the type of an image by the content, not by the file extension.\n.   -   In the case of color images, the decoded images will have the channels stored in **B G R** order.\n.   -   When using IMREAD_GRAYSCALE, the codec's internal grayscale conversion will be used, if available.\n.       Results may differ to the output of cvtColor()\n.   -   On Microsoft Windows\\* OS and MacOSX\\*, the codecs shipped with an OpenCV image (libjpeg,\n.       libpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs,\n.       and TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware\n.       that currently these native image loaders give images with different pixel values because of\n.       the color management embedded into MacOSX.\n.   -   On Linux\\*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for\n.       codecs supplied with an OS image. Install the relevant packages (do not forget the development\n.       files, for example, \"libjpeg-dev\", in Debian\\* and Ubuntu\\*) to get the codec support or turn\n.       on the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.\n.   -   In the case you set *WITH_GDAL* flag to true in CMake and @ref IMREAD_LOAD_GDAL to load the image,\n.       then the [GDAL](http://www.gdal.org) driver will be used in order to decode the image, supporting\n.       the following formats: [Raster](http://www.gdal.org/formats_list.html),\n.       [Vector](http://www.gdal.org/ogr_formats.html).\n.   -   If EXIF information is embedded in the image file, the EXIF orientation will be taken into account\n.       and thus the image will be rotated accordingly except if the flags @ref IMREAD_IGNORE_ORIENTATION\n.       or @ref IMREAD_UNCHANGED are passed.\n.   -   Use the IMREAD_UNCHANGED flag to keep the floating point values from PFM image.\n.   -   By default number of pixels must be less than 2^30. Limit can be set using system\n.       variable OPENCV_IO_MAX_IMAGE_PIXELS\n.   \n.   @param filename Name of file to be loaded.\n.   @param flags Flag that can take values of cv::ImreadModes"
     },
     "cv2.imread": {
       "name": "cv2.imread",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "imread(filename[, flags]) -> retval\n.   @brief Loads an image from a file.\n.   \n.   @anchor imread\n.   \n.   The function imread loads an image from the specified file and returns it. If the image cannot be\n.   read (because of missing file, improper permissions, unsupported or invalid format), the function\n.   returns an empty matrix ( Mat::data==NULL ).\n.   \n.   Currently, the following file formats are supported:\n.   \n.   -   Windows bitmaps - \\*.bmp, \\*.dib (always supported)\n.   -   JPEG files - \\*.jpeg, \\*.jpg, \\*.jpe (see the *Note* section)\n.   -   JPEG 2000 files - \\*.jp2 (see the *Note* section)\n.   -   Portable Network Graphics - \\*.png (see the *Note* section)\n.   -   WebP - \\*.webp (see the *Note* section)\n.   -   AVIF - \\*.avif (see the *Note* section)\n.   -   Portable image format - \\*.pbm, \\*.pgm, \\*.ppm \\*.pxm, \\*.pnm (always supported)\n.   -   PFM files - \\*.pfm (see the *Note* section)\n.   -   Sun rasters - \\*.sr, \\*.ras (always supported)\n.   -   TIFF files - \\*.tiff, \\*.tif (see the *Note* section)\n.   -   OpenEXR Image files - \\*.exr (see the *Note* section)\n.   -   Radiance HDR - \\*.hdr, \\*.pic (always supported)\n.   -   Raster and Vector geospatial data supported by GDAL (see the *Note* section)\n.   \n.   @note\n.   -   The function determines the type of an image by the content, not by the file extension.\n.   -   In the case of color images, the decoded images will have the channels stored in **B G R** order.\n.   -   When using IMREAD_GRAYSCALE, the codec's internal grayscale conversion will be used, if available.\n.       Results may differ to the output of cvtColor()\n.   -   On Microsoft Windows\\* OS and MacOSX\\*, the codecs shipped with an OpenCV image (libjpeg,\n.       libpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs,\n.       and TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware\n.       that currently these native image loaders give images with different pixel values because of\n.       the color management embedded into MacOSX.\n.   -   On Linux\\*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for\n.       codecs supplied with an OS image. Install the relevant packages (do not forget the development\n.       files, for example, \"libjpeg-dev\", in Debian\\* and Ubuntu\\*) to get the codec support or turn\n.       on the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.\n.   -   In the case you set *WITH_GDAL* flag to true in CMake and @ref IMREAD_LOAD_GDAL to load the image,\n.       then the [GDAL](http://www.gdal.org) driver will be used in order to decode the image, supporting\n.       the following formats: [Raster](http://www.gdal.org/formats_list.html),\n.       [Vector](http://www.gdal.org/ogr_formats.html).\n.   -   If EXIF information is embedded in the image file, the EXIF orientation will be taken into account\n.       and thus the image will be rotated accordingly except if the flags @ref IMREAD_IGNORE_ORIENTATION\n.       or @ref IMREAD_UNCHANGED are passed.\n.   -   Use the IMREAD_UNCHANGED flag to keep the floating point values from PFM image.\n.   -   By default number of pixels must be less than 2^30. Limit can be set using system\n.       variable OPENCV_IO_MAX_IMAGE_PIXELS\n.   \n.   @param filename Name of file to be loaded.\n.   @param flags Flag that can take values of cv::ImreadModes"
     },
     "cv2.imread.reshape": {
       "name": "cv2.imread.reshape",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "imread(filename[, flags]) -> retval\n.   @brief Loads an image from a file.\n.   \n.   @anchor imread\n.   \n.   The function imread loads an image from the specified file and returns it. If the image cannot be\n.   read (because of missing file, improper permissions, unsupported or invalid format), the function\n.   returns an empty matrix ( Mat::data==NULL ).\n.   \n.   Currently, the following file formats are supported:\n.   \n.   -   Windows bitmaps - \\*.bmp, \\*.dib (always supported)\n.   -   JPEG files - \\*.jpeg, \\*.jpg, \\*.jpe (see the *Note* section)\n.   -   JPEG 2000 files - \\*.jp2 (see the *Note* section)\n.   -   Portable Network Graphics - \\*.png (see the *Note* section)\n.   -   WebP - \\*.webp (see the *Note* section)\n.   -   AVIF - \\*.avif (see the *Note* section)\n.   -   Portable image format - \\*.pbm, \\*.pgm, \\*.ppm \\*.pxm, \\*.pnm (always supported)\n.   -   PFM files - \\*.pfm (see the *Note* section)\n.   -   Sun rasters - \\*.sr, \\*.ras (always supported)\n.   -   TIFF files - \\*.tiff, \\*.tif (see the *Note* section)\n.   -   OpenEXR Image files - \\*.exr (see the *Note* section)\n.   -   Radiance HDR - \\*.hdr, \\*.pic (always supported)\n.   -   Raster and Vector geospatial data supported by GDAL (see the *Note* section)\n.   \n.   @note\n.   -   The function determines the type of an image by the content, not by the file extension.\n.   -   In the case of color images, the decoded images will have the channels stored in **B G R** order.\n.   -   When using IMREAD_GRAYSCALE, the codec's internal grayscale conversion will be used, if available.\n.       Results may differ to the output of cvtColor()\n.   -   On Microsoft Windows\\* OS and MacOSX\\*, the codecs shipped with an OpenCV image (libjpeg,\n.       libpng, libtiff, and libjasper) are used by default. So, OpenCV can always read JPEGs, PNGs,\n.       and TIFFs. On MacOSX, there is also an option to use native MacOSX image readers. But beware\n.       that currently these native image loaders give images with different pixel values because of\n.       the color management embedded into MacOSX.\n.   -   On Linux\\*, BSD flavors and other Unix-like open-source operating systems, OpenCV looks for\n.       codecs supplied with an OS image. Install the relevant packages (do not forget the development\n.       files, for example, \"libjpeg-dev\", in Debian\\* and Ubuntu\\*) to get the codec support or turn\n.       on the OPENCV_BUILD_3RDPARTY_LIBS flag in CMake.\n.   -   In the case you set *WITH_GDAL* flag to true in CMake and @ref IMREAD_LOAD_GDAL to load the image,\n.       then the [GDAL](http://www.gdal.org) driver will be used in order to decode the image, supporting\n.       the following formats: [Raster](http://www.gdal.org/formats_list.html),\n.       [Vector](http://www.gdal.org/ogr_formats.html).\n.   -   If EXIF information is embedded in the image file, the EXIF orientation will be taken into account\n.       and thus the image will be rotated accordingly except if the flags @ref IMREAD_IGNORE_ORIENTATION\n.       or @ref IMREAD_UNCHANGED are passed.\n.   -   Use the IMREAD_UNCHANGED flag to keep the floating point values from PFM image.\n.   -   By default number of pixels must be less than 2^30. Limit can be set using system\n.       variable OPENCV_IO_MAX_IMAGE_PIXELS\n.   \n.   @param filename Name of file to be loaded.\n.   @param flags Flag that can take values of cv::ImreadModes"
     },
     "cv2.imwrite": {
       "name": "cv2.imwrite",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "imwrite(filename, img[, params]) -> retval\n.   @brief Saves an image to a specified file.\n.   \n.   The function imwrite saves the image to the specified file. The image format is chosen based on the\n.   filename extension (see cv::imread for the list of extensions). In general, only 8-bit unsigned (CV_8U)\n.   single-channel or 3-channel (with 'BGR' channel order) images\n.   can be saved using this function, with these exceptions:\n.   \n.   - With OpenEXR encoder, only 32-bit float (CV_32F) images can be saved.\n.     - 8-bit unsigned (CV_8U) images are not supported.\n.   - With Radiance HDR encoder, non 64-bit float (CV_64F) images can be saved.\n.     - All images will be converted to 32-bit float (CV_32F).\n.   - With JPEG 2000 encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.\n.   - With PAM encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.\n.   - With PNG encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.\n.     - PNG images with an alpha channel can be saved using this function. To do this, create\n.       8-bit (or 16-bit) 4-channel image BGRA, where the alpha channel goes last. Fully transparent pixels\n.       should have alpha set to 0, fully opaque pixels should have alpha set to 255/65535 (see the code sample below).\n.   - With PGM/PPM encoder, 8-bit unsigned (CV_8U) and 16-bit unsigned (CV_16U) images can be saved.\n.   - With TIFF encoder, 8-bit unsigned (CV_8U), 16-bit unsigned (CV_16U),\n.                        32-bit float (CV_32F) and 64-bit float (CV_64F) images can be saved.\n.     - Multiple images (vector of Mat) can be saved in TIFF format (see the code sample below).\n.     - 32-bit float 3-channel (CV_32FC3) TIFF images will be saved\n.       using the LogLuv high dynamic range encoding (4 bytes per pixel)\n.   \n.   If the image format is not supported, the image will be converted to 8-bit unsigned (CV_8U) and saved that way.\n.   \n.   If the format, depth or channel order is different, use\n.   Mat::convertTo and cv::cvtColor to convert it before saving. Or, use the universal FileStorage I/O\n.   functions to save the image to XML or YAML format.\n.   \n.   The sample below shows how to create a BGRA image, how to set custom compression parameters and save it to a PNG file.\n.   It also demonstrates how to save multiple images in a TIFF file:\n.   @include snippets/imgcodecs_imwrite.cpp\n.   @param filename Name of the file.\n.   @param img (Mat or vector of Mat) Image or Images to be saved.\n.   @param params Format-specific parameters encoded as pairs (paramId_1, paramValue_1, paramId_2, paramValue_2, ... .) see cv::ImwriteFlags"
     },
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "numpy.stack": {
@@ -2824,7 +2824,7 @@
     "numpy.where": {
       "name": "numpy.where",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "where(condition, [x, y])"
     },
     "os.path.exists": {
@@ -2932,13 +2932,13 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.random.normal": {
       "name": "numpy.random.normal",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "normal(loc=0.0, scale=1.0, size=None)"
     },
     "points.shape": {
@@ -3006,7 +3006,7 @@
           "type": "constant",
           "signature": null,
           "short_docstring": "The column labels of the DataFrame.",
-          "value": "<pandas._libs.properties.AxisProperty object at 0x7f9ffa33fb80>"
+          "value": "<pandas._libs.properties.AxisProperty object at 0x7f3e47317f40>"
         }
       }
     },
@@ -3121,13 +3121,13 @@
     "time.time": {
       "name": "time.time",
       "type": "callable",
-      "signature": null,
+      "signature": "()",
       "short_docstring": "time() -> floating point number"
     },
     "time.sleep": {
       "name": "time.sleep",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sleep(seconds)"
     }
   },
@@ -3147,37 +3147,37 @@
     "numpy.random.rand": {
       "name": "numpy.random.rand",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "rand(d0, d1, ..., dn)"
     },
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.random.shuffle": {
       "name": "numpy.random.shuffle",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "shuffle(x)"
     },
     "numpy.random.choice": {
       "name": "numpy.random.choice",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "choice(a, size=None, replace=True, p=None)"
     },
     "numpy.concatenate": {
       "name": "numpy.concatenate",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "concatenate((a1, a2, ...), axis=0, out=None, dtype=None, casting=\"same_kind\")"
     }
   },
@@ -3185,13 +3185,13 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "fromtimestamp": {
           "name": "datetime.datetime.fromtimestamp",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "timestamp[, tz] -> tz's local time from POSIX timestamp."
         }
       }
@@ -3207,7 +3207,7 @@
           "type": "constant",
           "signature": null,
           "short_docstring": "Access a group of rows and columns by label(s) or a boolean array.",
-          "value": "<property object at 0x7f9ffa8b9490>"
+          "value": "<property object at 0x7f3e4789d620>"
         },
         "plot": {
           "name": "pandas.DataFrame.plot",
@@ -3224,19 +3224,19 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     },
     "numpy.random.normal": {
       "name": "numpy.random.normal",
       "type": "callable",
-      "signature": null,
+      "signature": "(**kwargs)",
       "short_docstring": "normal(loc=0.0, scale=1.0, size=None)"
     }
   },
@@ -3244,7 +3244,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -3256,7 +3256,7 @@
         "fromtimestamp": {
           "name": "datetime.datetime.fromtimestamp",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "timestamp[, tz] -> tz's local time from POSIX timestamp."
         }
       }
@@ -3328,7 +3328,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -3366,7 +3366,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -3380,13 +3380,13 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.random.rand": {
       "name": "numpy.random.rand",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "rand(d0, d1, ..., dn)"
     },
     "pandas.date_range": {
@@ -3400,7 +3400,7 @@
     "csv.reader": {
       "name": "csv.reader",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_reader = reader(iterable [, dialect='excel']\n                        [optional keyword args])\n    for row in csv_reader:\n        process(row)"
     },
     "data.append([i + 1, status, content])": {
@@ -3426,7 +3426,7 @@
           "type": "constant",
           "signature": null,
           "short_docstring": "Indicator whether Series/DataFrame is empty.",
-          "value": "<property object at 0x7f9ffa353c90>"
+          "value": "<property object at 0x7f3e4732bba0>"
         }
       }
     },
@@ -3548,13 +3548,13 @@
     "collections.defaultdict": {
       "name": "collections.defaultdict",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "defaultdict(default_factory=None, /, [...]) --> dict with default factory",
       "chains": {
         "items": {
           "name": "collections.defaultdict.items",
           "type": "callable",
-          "signature": null,
+          "signature": "()",
           "short_docstring": "D.items() -> a set-like object providing a view on D's items"
         }
       }
@@ -3603,13 +3603,13 @@
         "keys": {
           "name": "collections.Counter.keys",
           "type": "callable",
-          "signature": null,
+          "signature": "()",
           "short_docstring": "D.keys() -> a set-like object providing a view on D's keys"
         },
         "values": {
           "name": "collections.Counter.values",
           "type": "callable",
-          "signature": null,
+          "signature": "()",
           "short_docstring": "D.values() -> an object providing a view on D's values"
         }
       }
@@ -3631,7 +3631,7 @@
     "csv.reader": {
       "name": "csv.reader",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_reader = reader(iterable [, dialect='excel']\n                        [optional keyword args])\n    for row in csv_reader:\n        process(row)"
     },
     "df.plot.set_ylabel('Count')": {
@@ -3689,13 +3689,13 @@
     "numpy.floor": {
       "name": "numpy.floor",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "floor(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     },
     "seaborn.histplot": {
@@ -3807,13 +3807,13 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.random.randn": {
       "name": "numpy.random.randn",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "randn(d0, d1, ..., dn)"
     }
   },
@@ -3821,13 +3821,13 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "strptime": {
           "name": "datetime.datetime.strptime",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "string, format -> new datetime parsed from a string (like time.strptime())."
         }
       }
@@ -3955,7 +3955,7 @@
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     }
   },
@@ -4000,13 +4000,13 @@
     "numpy.sin": {
       "name": "numpy.sin",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.random.rand": {
       "name": "numpy.random.rand",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "rand(d0, d1, ..., dn)"
     },
     "numpy.linspace": {
@@ -4040,7 +4040,7 @@
     "csv.reader": {
       "name": "csv.reader",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_reader = reader(iterable [, dialect='excel']\n                        [optional keyword args])\n    for row in csv_reader:\n        process(row)"
     },
     "matplotlib.pyplot.subplots": {
@@ -4094,7 +4094,7 @@
     "numpy.random.randn": {
       "name": "numpy.random.randn",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "randn(d0, d1, ..., dn)"
     },
     "numpy.linspace": {
@@ -4285,7 +4285,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -4327,7 +4327,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -4341,13 +4341,13 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerows": {
       "name": "csv.writer.writerows",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "data.append(row)": {
@@ -4383,7 +4383,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -4397,13 +4397,13 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerows": {
       "name": "csv.writer.writerows",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "data.append(row)": {
@@ -4481,7 +4481,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -4495,13 +4495,13 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerows": {
       "name": "csv.writer.writerows",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "data.append(row)": {
@@ -4607,7 +4607,7 @@
     "numpy.random.randint": {
       "name": "numpy.random.randint",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "randint(low, high=None, size=None, dtype=int)"
     }
   },
@@ -4647,7 +4647,7 @@
     "numpy.random.randint": {
       "name": "numpy.random.randint",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "randint(low, high=None, size=None, dtype=int)"
     },
     "random.sample": {
@@ -4695,19 +4695,19 @@
     "numpy.exp": {
       "name": "numpy.exp",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     },
     "numpy.where": {
       "name": "numpy.where",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "where(condition, [x, y])"
     },
     "numpy.linspace": {
@@ -4891,7 +4891,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -4905,13 +4905,13 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerow": {
       "name": "csv.writer.writerow",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "os.path.isfile": {
@@ -4957,13 +4957,13 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerows": {
       "name": "csv.writer.writerows",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "data.append(row)": {
@@ -5045,13 +5045,13 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "datetime": {
           "name": "datetime.datetime.datetime",
           "type": "class",
-          "signature": null,
+          "signature": "(self, /, *args, **kwargs)",
           "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])"
         }
       }
@@ -5073,19 +5073,19 @@
     "numpy.random.randint": {
       "name": "numpy.random.randint",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "randint(low, high=None, size=None, dtype=int)"
     },
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.random.choice": {
       "name": "numpy.random.choice",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "choice(a, size=None, replace=True, p=None)"
     },
     "re.sub": {
@@ -5099,13 +5099,13 @@
     "collections.defaultdict": {
       "name": "collections.defaultdict",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "defaultdict(default_factory=None, /, [...]) --> dict with default factory",
       "chains": {
         "items": {
           "name": "collections.defaultdict.items",
           "type": "callable",
-          "signature": null,
+          "signature": "()",
           "short_docstring": "D.items() -> a set-like object providing a view on D's items"
         }
       }
@@ -5195,19 +5195,19 @@
     "csv.reader": {
       "name": "csv.reader",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_reader = reader(iterable [, dialect='excel']\n                        [optional keyword args])\n    for row in csv_reader:\n        process(row)"
     },
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerows": {
       "name": "csv.writer.writerows",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "file_pattern.match.group(1)": {
@@ -5329,13 +5329,13 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerows": {
       "name": "csv.writer.writerows",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "goals.items()": {
@@ -5409,7 +5409,7 @@
         "keys": {
           "name": "collections.Counter.keys",
           "type": "callable",
-          "signature": null,
+          "signature": "()",
           "short_docstring": "D.keys() -> a set-like object providing a view on D's keys"
         }
       }
@@ -5431,7 +5431,7 @@
     "numpy.sqrt": {
       "name": "numpy.sqrt",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sqrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "re.compile": {
@@ -5451,7 +5451,7 @@
     "functools.reduce": {
       "name": "functools.reduce",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "reduce(function, iterable[, initial]) -> value"
     },
     "math.factorial": {
@@ -5489,7 +5489,7 @@
     "time.sleep": {
       "name": "time.sleep",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "sleep(seconds)"
     },
     "transferred_files.append(os.path.basename(src_file))": {
@@ -5513,7 +5513,7 @@
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "scipy.stats.zscore": {
@@ -5616,13 +5616,13 @@
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     },
     "numpy.bincount": {
       "name": "numpy.bincount",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "bincount(x, weights=None, minlength=0)"
     },
     "random.seed": {
@@ -5694,13 +5694,13 @@
     "pandas.Timestamp": {
       "name": "pandas.Timestamp",
       "type": "class",
-      "signature": "(ts_input=<object object at 0x7fa00245a440>, year=None, month=None, day=None, hour=None, minute=None, second=None, microsecond=None, tzinfo=None, *, nanosecond=None, tz=None, unit=None, fold=None)",
+      "signature": "(ts_input=<object object at 0x7f3e4f45a440>, year=None, month=None, day=None, hour=None, minute=None, second=None, microsecond=None, tzinfo=None, *, nanosecond=None, tz=None, unit=None, fold=None)",
       "short_docstring": "Pandas replacement for python datetime.datetime object.",
       "chains": {
         "timestamp": {
           "name": "pandas.Timestamp.timestamp",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "Return POSIX timestamp as float."
         }
       }
@@ -5726,7 +5726,7 @@
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     },
     "pandas.to_datetime": {
@@ -5794,7 +5794,7 @@
     "numpy.abs": {
       "name": "numpy.abs",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])"
     },
     "scipy.stats.zscore": {
@@ -5961,13 +5961,13 @@
     "numpy.random.seed": {
       "name": "numpy.random.seed",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "seed(self, seed=None)"
     },
     "numpy.random.randint": {
       "name": "numpy.random.randint",
       "type": "callable",
-      "signature": null,
+      "signature": "(**kwargs)",
       "short_docstring": "randint(low, high=None, size=None, dtype=int)"
     },
     "pandas.date_range": {
@@ -5985,13 +5985,13 @@
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     },
     "numpy.random.randint": {
       "name": "numpy.random.randint",
       "type": "callable",
-      "signature": null,
+      "signature": "(**kwargs)",
       "short_docstring": "randint(low, high=None, size=None, dtype=int)"
     },
     "pandas.date_range": {
@@ -6023,13 +6023,13 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "today": {
           "name": "datetime.datetime.today",
           "type": "callable",
-          "signature": null,
+          "signature": "()",
           "short_docstring": "Current date or datetime:  same as self.__class__.fromtimestamp(time.time())."
         }
       }
@@ -6061,7 +6061,7 @@
         "items": {
           "name": "collections.Counter.items",
           "type": "callable",
-          "signature": null,
+          "signature": "()",
           "short_docstring": "D.items() -> a set-like object providing a view on D's items"
         }
       }
@@ -6093,7 +6093,7 @@
     "numpy.arange": {
       "name": "numpy.arange",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "arange([start,] stop[, step,], dtype=None, *, like=None)"
     },
     "re.IGNORECASE": {
@@ -6284,7 +6284,7 @@
     "datetime.timezone": {
       "name": "datetime.timezone",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "Fixed offset from UTC implementation of tzinfo.",
       "chains": {
         "utc": {
@@ -6299,13 +6299,13 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "fromtimestamp": {
           "name": "datetime.datetime.fromtimestamp",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "timestamp[, tz] -> tz's local time from POSIX timestamp."
         }
       }
@@ -6469,7 +6469,7 @@
     "binascii.hexlify": {
       "name": "binascii.hexlify",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "Hexadecimal representation of binary data."
     },
     "bytes.fromhex(hex_string)": {
@@ -6569,7 +6569,7 @@
           "type": "constant",
           "signature": null,
           "short_docstring": "",
-          "value": "<property object at 0x7fa0a87ffd30>"
+          "value": "<property object at 0x7f3ef5800090>"
         }
       }
     },
@@ -6906,13 +6906,13 @@
     "csv.writer": {
       "name": "csv.writer",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "csv.writer.writerow": {
       "name": "csv.writer.writerow",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "csv_writer = csv.writer(fileobj [, dialect='excel']\n                            [optional keyword args])\n    for row in sequence:\n        csv_writer.writerow(row)"
     },
     "requests.get.text": {
@@ -6946,7 +6946,7 @@
           "type": "constant",
           "signature": null,
           "short_docstring": "Indicator whether Series/DataFrame is empty.",
-          "value": "<property object at 0x7f9ffa353c90>"
+          "value": "<property object at 0x7f3e4732bba0>"
         },
         "to_sql": {
           "name": "pandas.DataFrame.to_sql",
@@ -7001,13 +7001,13 @@
     "sqlite3.connect.close": {
       "name": "sqlite3.connect.close",
       "type": "callable",
-      "signature": null,
+      "signature": "()",
       "short_docstring": "connect(database[, timeout, detect_types, isolation_level,\n        check_same_thread, factory, cached_statements, uri])"
     },
     "sqlite3.connect": {
       "name": "sqlite3.connect",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "connect(database[, timeout, detect_types, isolation_level,\n        check_same_thread, factory, cached_statements, uri])"
     },
     "webpage_url.startswith('file://')": {
@@ -7095,7 +7095,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -7212,7 +7212,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {
@@ -7238,19 +7238,19 @@
         "listen": {
           "name": "socket.socket.listen",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "listen([backlog])"
         },
         "setblocking": {
           "name": "socket.socket.setblocking",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "setblocking(flag)"
         },
         "bind": {
           "name": "socket.socket.bind",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "bind(address)"
         }
       }
@@ -7324,7 +7324,7 @@
     "smtplib.SMTP": {
       "name": "smtplib.SMTP",
       "type": "class",
-      "signature": "(host='', port=0, local_hostname=None, timeout=<object object at 0x7fa0a90e8b10>, source_address=None)",
+      "signature": "(host='', port=0, local_hostname=None, timeout=<object object at 0x7f3ef60c4b10>, source_address=None)",
       "short_docstring": "This class manages a connection to an SMTP or ESMTP server.\nSMTP Objects:\n    SMTP objects have the following attributes:\n        helo_resp\n            This is the message given by the server in response to the\n            most recent HELO command.",
       "chains": {
         "starttls": {
@@ -7462,7 +7462,7 @@
     "numpy.array": {
       "name": "numpy.array",
       "type": "callable",
-      "signature": null,
+      "signature": "(*args, **kwargs)",
       "short_docstring": "array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n      like=None)"
     }
   },
@@ -7470,13 +7470,13 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "strptime": {
           "name": "datetime.datetime.strptime",
           "type": "callable",
-          "signature": null,
+          "signature": "(*args, **kwargs)",
           "short_docstring": "string, format -> new datetime parsed from a string (like time.strptime())."
         }
       }
@@ -7601,7 +7601,7 @@
     "datetime.datetime": {
       "name": "datetime.datetime",
       "type": "class",
-      "signature": null,
+      "signature": "(self, /, *args, **kwargs)",
       "short_docstring": "datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])",
       "chains": {
         "now": {

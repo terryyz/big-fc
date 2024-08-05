@@ -143,13 +143,19 @@ def get_api_info(api_call):
             try:
                 result['signature'] = str(inspect.signature(module))
             except ValueError:
-                pass
+                try:
+                    result['signature'] = str(inspect.signature(module.__init__))
+                except ValueError:
+                    pass
         elif callable(module):
             result['type'] = 'callable'
             try:
                 result['signature'] = str(inspect.signature(module))
             except ValueError:
-                pass
+                try:
+                    result['signature'] = str(inspect.signature(module.__call__))
+                except ValueError:
+                    pass
         else:
             result['type'] = 'constant'
             result['value'] = str(module)
