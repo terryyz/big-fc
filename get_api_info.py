@@ -371,8 +371,6 @@ if __name__ == "__main__":
 
     result = {}
     for task_id, api_list in tqdm(list(apis_data.items())[:]):
-        # if task_id != "BigCodeBench/92":
-        #     continue
         result[task_id] = process_api_list(api_list)
 
     # Write the result to a JSON file
@@ -381,6 +379,9 @@ if __name__ == "__main__":
     
     # with open("apis_info.json", "r") as f:
     #     result = json.load(f)
-    result = map_subscriptable_methods(result)
+    
+    grouped_result = {}
+    for task_id, api_info in tqdm(result.items()):
+        grouped_result[task_id] = map_subscriptable_methods(api_info)
     with open("apis_info_grouped.json", "w") as f:
-        json.dump(result, f, indent=2)
+        json.dump(grouped_result, f, indent=2)

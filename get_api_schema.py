@@ -174,11 +174,20 @@ def process_api_info(api_info):
             api_data['parameters'] = schema
         
         if 'chains' in api_data:
-            for chain_name, chain_data in api_data['chains'].items():
-                chain_schema = parse_api_info(chain_data)
-                if chain_schema:
-                    chain_data['parameters'] = chain_schema
-   
+            process_chains(api_data['chains'])
+
+def process_chains(chains):
+    """Recursively process chains and their nested chains."""
+    for chain_name, chain_data in chains.items():
+        # Recursively process nested chains
+        if 'chains' in chain_data:
+            process_chains(chain_data['chains'])
+        
+        elif 'type' in chain_data:
+            chain_schema = parse_api_info(chain_data)
+            if chain_schema:
+                chain_data['parameters'] = chain_schema
+
 if __name__ == "__main__":
      # Read the JSON file
     with open('apis_info_grouped.json', 'r') as f:
