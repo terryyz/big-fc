@@ -68,7 +68,7 @@ def get_subscript_method_info(base_api, subscript, method):
             'name': f"{base_api}[{subscript}].{method}",
             'type': 'method',
             'signature': str(inspect.signature(method_obj)),
-            'description': (inspect.getdoc(method_obj) or '').split('\n\n')[0]
+            'description': inspect.getdoc(method_obj) or ''
         }
         
         return result
@@ -239,7 +239,9 @@ def remove_unnecessary_modules(combined_result):
 def process_api_list(api_list):
     
     object_methods, standalone_apis = separate_api_calls(api_list)
+    print(object_methods)
     processed_object_methods = process_object_methods(object_methods)
+    print(json.dumps(processed_object_methods, indent=4))
     processed_standalone_apis = process_standalone_apis(standalone_apis)
     api_info = combine_results(processed_object_methods, processed_standalone_apis)
     api_info = remove_unnecessary_modules(api_info)
@@ -247,7 +249,6 @@ def process_api_list(api_list):
 
 def map_subscriptable_methods(api_info):
     for key, value in list(api_info.items()):
-        print(f"Processing key: {key}")
         if '[' in key and '].' in key:
             base_key, subscript_method = key.rsplit('[', 1)
             subscript, method = subscript_method.split('].')
@@ -295,6 +296,76 @@ def map_subscriptable_methods(api_info):
 
     return api_info
 
+
+def parse_signature(signature):
+    # Remove the outer parentheses
+    signature = signature.strip('()')
+    
+    # Split the signature into individual parameters
+    params = re.split(r',\s*(?![^[]*\])', signature)
+    
+    parameters = {}
+    for param in params:
+        # Split each parameter into name, type annotation, and default value
+        parts = re.split(r':\s*|\s*=\s*', param, 2)
+        name = parts[0].strip()
+        
+        if name == 'self':
+            parameters[name] = {}
+            continue
+        
+        if name.startswith('*'):
+            # Handle *args and **kwargs
+            continue
+        
+        param_info = {}
+        
+        # Handle type annotation
+        if len(parts) > 1:
+            type_annotation = parts[1].strip().strip("'\"")
+            param_info["type"] = parse_type_annotation(type_annotation)
+        else:
+            param_info["type"] = ["object"]  # Default to object if no type is specified
+        
+        # Handle default value
+        if len(parts) > 2:
+            default = parts[2].strip()
+            param_info["default"] = parse_default_value(default)
+        
+        parameters[name] = param_info
+    
+    return parameters
+
+def parse_type_annotation(annotation):
+    if '|' in annotation:
+        types = [t.strip().lower() for t in annotation.split('|')]
+        parsed_types = set()
+        for t in types:
+            if t == 'none':
+                parsed_types.add('null')
+            elif t.startswith('os.pathlike'):
+                parsed_types.add('string')
+            else:
+                parsed_types.add(t)
+        return list(parsed_types)
+    elif annotation.lower().startswith('os.pathlike'):
+        return ['string']
+    else:
+        return [annotation.lower()]
+
+def parse_default_value(default):
+    if default.lower() == 'none':
+        return None
+    elif default in ('True', 'False'):
+        return default == 'True'
+    elif default.startswith("'") or default.startswith('"'):
+        return default.strip("'\"")
+    elif default.replace('.', '').isdigit():
+        return float(default) if '.' in default else int(default)
+    else:
+        return default
+    
+
 if __name__ == "__main__":
     # Read the API list from the JSON file
     with open("apis.json", "r") as f:
@@ -302,16 +373,6 @@ if __name__ == "__main__":
 
     result = {}
     for task_id, api_list in tqdm(list(apis_data.items())[:]):
-        # if task_id != "BigCodeBench/92":
-        #     continue
-        result[task_id] = process_api_list(api_list)
-
-    # Write the result to a JSON file
-    with open("apis_info.json", "w") as f:
-        json.dump(result, f, indent=2)
+        if task_id == "BigCodeBench/37":
+            process_api_list(api_list)
     
-    # with open("apis_info.json", "r") as f:
-    #     result = json.load(f)
-    result = map_subscriptable_methods(result)
-    with open("apis_info_grouped.json", "w") as f:
-        json.dump(result, f, indent=2)

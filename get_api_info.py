@@ -76,17 +76,19 @@ def get_subscript_method_info(base_api, subscript, method):
         print(e)
         return {'name': f"{base_api}[{subscript}].{method}", 'error': str(e)}
     
-    
+def process_nested_call(call):
+    if isinstance(call, ast.Attribute):
+        return process_nested_call(call.value) + [call.attr]
+    elif isinstance(call, ast.Name):
+        return [call.id]
+    elif isinstance(call, ast.Subscript):
+        return process_nested_call(call.value) + [f"[{ast.unparse(call.slice)}]"]
+    elif isinstance(call, ast.Call):
+        return process_nested_call(call.func)
+    else:
+        return []
+           
 def get_api_info(api_call):
-    def process_nested_call(call):
-        if isinstance(call, ast.Attribute):
-            return process_nested_call(call.value) + [call.attr]
-        elif isinstance(call, ast.Name):
-            return [call.id]
-        elif isinstance(call, ast.Subscript):
-            return process_nested_call(call.value) + [f"[{ast.unparse(call.slice)}]"]
-        else:
-            return []
 
     try:
         parsed_call = ast.parse(api_call).body[0].value
@@ -98,7 +100,6 @@ def get_api_info(api_call):
             api_parts = process_nested_call(parsed_call)
         else:
             api_parts = [parsed_call.id]
-        
         # Combine parts, handling subscripts correctly
         api = ""
         for part in api_parts:
@@ -193,17 +194,21 @@ def separate_api_calls(api_list):
 def process_object_methods(api_list):
     result = {}
     for api_call in api_list:
-        parts = api_call.split('(')[0].split('.')
+        # Use ast to parse the API call
+        parsed_call = ast.parse(api_call).body[0].value
+        api_parts = process_nested_call(parsed_call)
+        
         if '[' in api_call:
             try:
-                base_obj = '.'.join(parts[:next(i for i, p in enumerate(parts) if '[' in p)])
-                method = ''.join(parts[next(i for i, p in enumerate(parts) if '[' in p):])
+                base_obj = '.'.join(api_parts[:next(i for i, p in enumerate(api_parts) if '[' in p)])
+                method = '.'.join(api_parts[next(i for i, p in enumerate(api_parts) if '[' in p):])
             except StopIteration:
-                base_obj = '.'.join(parts[:-1])
-                method = parts[-1]
+                base_obj = '.'.join(api_parts[:-1])
+                method = api_parts[-1]
         else:
-            base_obj = '.'.join(parts[:-1])
-            method = parts[-1]
+            base_obj = '.'.join(api_parts[:-1])
+            method = api_parts[-1]
+        
         if base_obj not in result:
             result[base_obj] = {"info": get_api_info(base_obj), "chains": {}}
         
@@ -371,8 +376,10 @@ if __name__ == "__main__":
 
     result = {}
     for task_id, api_list in tqdm(list(apis_data.items())[:]):
+        # if task_id != "BigCodeBench/82":
+        #     continue
         result[task_id] = process_api_list(api_list)
-
+    
     # Write the result to a JSON file
     with open("apis_info.json", "w") as f:
         json.dump(result, f, indent=2)

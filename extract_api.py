@@ -89,7 +89,6 @@ def extract_apis(code):
                         full_attr = f"{class_map[base]}.{'.'.join(attrs[1:])}"
                     else:
                         full_attr = f"{base}.{'.'.join(attrs[1:])}"
-                
                 if base in imported_modules:
                     api_call = f"{imported_modules[base]}.{'.'.join(attrs[1:])}"
                     self.add_api_call(api_call, full_attr, node)
@@ -149,10 +148,15 @@ def extract_apis(code):
                     if isinstance(target, ast.Name):
                         if isinstance(node.value, ast.Call):
                             api_call = ast.unparse(node.value.func)
-                            if api_call in imported_modules:
-                                api_call = imported_modules[api_call]
-                            elif api_call in imported_names:
-                                api_call = imported_names[api_call]
+                            parts = api_call.split('.')
+                            base = parts[0]
+                            attr = '.' + '.'.join(parts[1:]) if len(parts) > 1 else ''
+                            if base in imported_modules:
+                                api_call = imported_modules[base]+attr
+                            elif base in imported_names:
+                                api_call = imported_names[base]+attr
+                            args = self.get_call_args(node.value)
+                            api_call += args
                             variable_map[target.id] = f"{api_call}[{index}]"
                             self.object_creations[target.id] = index
             elif isinstance(node.value, ast.Call):
@@ -161,6 +165,8 @@ def extract_apis(code):
                     api_call = imported_modules[api_call]
                 elif api_call in imported_names:
                     api_call = imported_names[api_call]
+                args = self.get_call_args(node.value)
+                api_call += args
                 for target in node.targets:
                     if isinstance(target, ast.Name):
                         variable_map[target.id] = api_call
@@ -169,7 +175,6 @@ def extract_apis(code):
                             if isinstance(elt, ast.Name):
                                 variable_map[elt.id] = api_call
                                 self.object_creations[elt.id] = index
-
             elif isinstance(node.targets[0], ast.Attribute):
                 attr = node.targets[0]
                 if isinstance(attr.value, ast.Name):
@@ -258,8 +263,10 @@ def extract_apis(code):
                     args.append(f"**{ast.unparse(keyword.value)}")
             return '(' + ', '.join(args) + ')'
 
-    ApiExtractor().visit(tree)
-    return api_dict
+    ae = ApiExtractor()
+    ae.visit(tree)
+    return api_dict, variable_map
+
 
 if __name__ == "__main__":
     import json
@@ -272,12 +279,18 @@ if __name__ == "__main__":
     api_list = dict()
     api2task = dict()
     code2apis = dict()
+    var2apis = dict()
     for item in tqdm(dataset[:]):
         task_id = item["task_id"]
+        # if task_id != "BigCodeBench/92":
+        #     continue
         complete_prompt = item["complete_prompt"]
+        if task_id == "BigCodeBench/37":
+            complete_prompt = "import pandas as pd\n" + complete_prompt
         canonical_solution = item["canonical_solution"]
-        tmp_code2apis = extract_apis(complete_prompt+canonical_solution)
+        tmp_code2apis, tmp_var2apis = extract_apis(complete_prompt+canonical_solution)
         code2apis[task_id] = tmp_code2apis
+        var2apis[task_id] = tmp_var2apis
         all_apis = [api for apis in tmp_code2apis.values() for api in apis]
         tmp_apis = sorted(set(all_apis), key=lambda x: len(x))
         filtered_apis = []
@@ -303,7 +316,8 @@ if __name__ == "__main__":
     
     with open("code2apis.json", "w") as f:
         json.dump(code2apis, f, indent=4)
-        
+    with open("var2apis.json", "w") as f:
+        json.dump(var2apis, f, indent=4)
     with open("apis.json", "w") as f:
         json.dump(api_list, f, indent=4)
     

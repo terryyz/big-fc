@@ -1,0 +1,908 @@
+{
+    "BigCodeBench/13": {
+        "ftp_obj": "ftplib.FTP(ftp_server)"
+    },
+    "BigCodeBench/15": {
+        "f": "open",
+        "reader": "csv.reader(f)",
+        "ret_code": "subprocess.call(command, shell=True, stdout=f, stderr=subprocess.STDOUT)"
+    },
+    "BigCodeBench/17": {
+        "is_running": "any([proc for proc in psutil.process_iter() if proc.name() == process_name])"
+    },
+    "BigCodeBench/19": {
+        "zip_file_path": "os.path.join(directory, 'files.zip')",
+        "zipf": "zipfile.ZipFile"
+    },
+    "BigCodeBench/34": {
+        "text": "re.sub('http[s]?://\\\\S+', '', text)",
+        "wordcloud": "WordCloud().generate(text)"
+    },
+    "BigCodeBench/37": {
+        "X": "df.drop(target_column, axis=1)",
+        "model": "RandomForestClassifier(random_state=42).fit(X, y)",
+        "feature_imp": "pd.Series(model.feature_importances_, index=X.columns).sort_values(ascending=False)",
+        "ax": "sns.barplot(x=feature_imp, y=feature_imp.index)"
+    },
+    "BigCodeBench/82": {
+        "username": "wtforms.StringField('Username', validators=[DataRequired(), Length(min=4, max=25)])",
+        "password": "wtforms.PasswordField('Password', validators=[DataRequired(), Length(min=8, max=80)])",
+        "submit": "wtforms.SubmitField('Log In')",
+        "login_manager": "flask_login.LoginManager()",
+        "app": "flask.Flask(__name__, template_folder=template_folder)",
+        "form": "LoginForm()",
+        "user": "User(form.username.data, form.password.data)"
+    },
+    "BigCodeBench/89": {
+        "data_copy": "np.copy(data)",
+        "scaler": "sklearn.preprocessing.StandardScaler()",
+        "standardized_data": "scaler.fit_transform(column_data.reshape(-1, 1))",
+        "z_scores": "np.abs(stats.zscore(standardized_data))",
+        "outliers": "np.where(z_scores > outlier_z_score)",
+        "data_without_outliers": "np.delete(data_copy, outliers, axis=0)"
+    },
+    "BigCodeBench/92": {
+        "kmeans": "sklearn.cluster.KMeans(n_clusters=n_clusters)",
+        "labels": "kmeans.fit_predict(data)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/93": {
+        "pca": "sklearn.decomposition.PCA(n_components=n_components)",
+        "transformed_data": "pca.fit_transform(data)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/99": {
+        "iris": "sklearn.datasets.load_iris()",
+        "iris_df": "pd.DataFrame(data=iris.data, columns=iris.feature_names)",
+        "pair_plot": "sns.pairplot(iris_df, hue='species', vars=iris.feature_names)"
+    },
+    "BigCodeBench/100": {
+        "dates": "pd.date_range(end=datetime.now(), periods=30)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/101": {
+        "raw_df": "pd.read_csv(data_url, sep='\\\\s+', skiprows=22, header=None)",
+        "data": "np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])",
+        "boston_df": "pd.DataFrame(data=data, columns=columns)",
+        "corr": "boston_df.corr()",
+        "ax": "sns.heatmap(corr, annot=True)"
+    },
+    "BigCodeBench/108": {
+        "df": "df.asfreq(freq, method='pad')",
+        "result": "statsmodels.tsa.seasonal.seasonal_decompose(df['value'], model=decomposition_model)",
+        "ax": "df.plot(y='value')"
+    },
+    "BigCodeBench/120": {
+        "dates": "pd.Series([start_date + timedelta(days=randint(0, num_days)) for _ in range(num_days)])"
+    },
+    "BigCodeBench/123": {
+        "num_files": "sum(my_list)",
+        "concatenated_df": "pd.concat(data_frames, ignore_index=True)"
+    },
+    "BigCodeBench/124": {
+        "total_size": "min(sum(my_list), size)",
+        "start_time": "time.time()",
+        "end_time": "time.time()",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/129": {
+        "response": "requests.get(url)",
+        "soup": "bs4.BeautifulSoup(response.text, 'html.parser')",
+        "table": "soup.find('table')",
+        "cols": "row.find_all('td')",
+        "df": "pd.DataFrame(data, columns=headers if headers else None)"
+    },
+    "BigCodeBench/139": {
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/147": {
+        "sock": "socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+        "thread": "threading.Thread(target=check_port, args=(ip,))"
+    },
+    "BigCodeBench/161": {
+        "file": "open",
+        "line": "line.strip()",
+        "match": "re.match(log_pattern, line)",
+        "log_type": "match.groups()[0]",
+        "timestamp": "match.groups()[1]",
+        "message": "match.groups()[2]",
+        "df": "pd.DataFrame(parsed_data, columns=['Type', 'Timestamp', 'Message'])"
+    },
+    "BigCodeBench/162": {
+        "words": "re.split('\\\\W+', text)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/177": {
+        "pattern": "re.compile('(like|what)', re.IGNORECASE)",
+        "tokens": "nltk.word_tokenize(content)"
+    },
+    "BigCodeBench/184": {
+        "text": "' '.join((word for word in text.split() if word not in STOPWORDS))",
+        "vectorizer": "sklearn.feature_extraction.text.CountVectorizer()",
+        "vectorized_data": "vectorizer.fit_transform(dataframe[text_column])"
+    },
+    "BigCodeBench/187": {
+        "gdf": "gpd.GeoDataFrame(data, geometry='Coordinates')"
+    },
+    "BigCodeBench/199": {
+        "city_tz": "pytz.timezone(timezones[city])",
+        "city_time": "utc_datetime.astimezone(city_tz)",
+        "report_df": "pd.DataFrame(report_data, columns=['City', 'Local Time', 'Weather Condition'])"
+    },
+    "BigCodeBench/208": {
+        "steps": "np.random.choice([-1, 1], size=elements)",
+        "walk": "np.cumsum(steps)",
+        "descriptive_stats": "pd.Series(walk).describe(percentiles=[0.05, 0.25, 0.5, 0.75, 0.95]).to_dict()"
+    },
+    "BigCodeBench/211": {
+        "response": "requests.get(url, headers=headers)",
+        "filename": "os.path.basename(url)",
+        "zip_path": "os.path.join(destination_directory, filename)",
+        "f": "open",
+        "zip_ref": "zipfile.ZipFile",
+        "extracted_files": "os.listdir(destination_directory)"
+    },
+    "BigCodeBench/214": {
+        "image": "np.zeros(image_size, dtype=np.uint8)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/227": {
+        "data": "soundfile.read(audio_file)[0]",
+        "samplerate": "soundfile.read(audio_file)[1]",
+        "matrix": "np.array(L).reshape(M, N)",
+        "D": "librosa.amplitude_to_db(np.abs(librosa.stft(matrix)), ref=np.max)",
+        "fig": "librosa.display.specshow(D, sr=samplerate, x_axis='time', y_axis='log')"
+    },
+    "BigCodeBench/239": {
+        "arr": "np.array([b for (a, b) in original])",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]",
+        "xmin": "ax.get_xlim()[0]",
+        "xmax": "ax.get_xlim()[1]",
+        "x": "np.linspace(xmin, xmax, 100)",
+        "p": "stats.norm.pdf(x, computed_stats['mean'], computed_stats['std'])"
+    },
+    "BigCodeBench/241": {
+        "arr": "np.array([b for (a, b) in original])",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/267": {
+        "signal": "np.sin(np.outer(time, signal) * np.pi)",
+        "time": "np.linspace(0, 2, 2 * sample_rate, False)",
+        "fft": "fftpack.fft(signal)",
+        "fig": "matplotlib.pyplot.subplots(figsize=(12, 6))[0]",
+        "ax": "matplotlib.pyplot.subplots(figsize=(12, 6))[1]"
+    },
+    "BigCodeBench/273": {
+        "ctype": "cgi.parse_header(self.headers.get('content-type'))[0]",
+        "pdict": "cgi.parse_header(self.headers.get('content-type'))[1]",
+        "length": "int(self.headers.get('content-length'))",
+        "message": "json.loads(self.rfile.read(length))",
+        "response": "json.dumps(SUCCESS_RESPONSE).encode()"
+    },
+    "BigCodeBench/274": {
+        "ctype": "cgi.parse_header(self.headers.get('content-type'))[0]",
+        "pdict": "cgi.parse_header(self.headers.get('content-type'))[1]",
+        "length": "int(self.headers.get('content-length'))",
+        "email_data": "json.loads(self.rfile.read(length))",
+        "msg": "email.mime.text.MIMEText(email_data['message'])",
+        "server": "smtplib.SMTP"
+    },
+    "BigCodeBench/287": {
+        "word_counts": "collections.Counter()",
+        "file": "open",
+        "words": "file.read().split()"
+    },
+    "BigCodeBench/302": {
+        "df": "pd.concat([df['Date'], df['Value'].apply(pd.Series)], axis=1)",
+        "corr_df": "df.iloc[:, 1:].corr()",
+        "heatmap": "sns.heatmap(corr_df, annot=True, cmap='coolwarm')"
+    },
+    "BigCodeBench/308": {
+        "df": "pd.DataFrame(report_data, index=STUDENTS)"
+    },
+    "BigCodeBench/310": {
+        "filepath": "os.path.join(os.getcwd(), filename)",
+        "file": "open",
+        "writer": "csv.writer(file)"
+    },
+    "BigCodeBench/313": {
+        "file": "open",
+        "content": "file.read()",
+        "match": "re.search('(.*?)\\\\[.*?\\\\]', content)",
+        "subdirectory": "match.group(1).strip()"
+    },
+    "BigCodeBench/324": {
+        "process": "subprocess.Popen(file_path)"
+    },
+    "BigCodeBench/326": {
+        "file_paths": "glob.glob(os.path.join(directory_path, '*.bat'))",
+        "process": "subprocess.Popen(file_path, shell=True)",
+        "exit_code": "process.wait()"
+    },
+    "BigCodeBench/341": {
+        "fig": "matplotlib.pyplot.subplots(nrows=2, ncols=1)[0]",
+        "axes": "matplotlib.pyplot.subplots(nrows=2, ncols=1)[1]"
+    },
+    "BigCodeBench/346": {
+        "process": "subprocess.Popen([sys.executable, script_path, *args], stderr=subprocess.PIPE, stdout=subprocess.PIPE)"
+    },
+    "BigCodeBench/360": {
+        "df": "pd.read_excel(file_location, sheet_name=sheet_name)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]",
+        "mean": "np.mean(df[column])",
+        "std": "np.std(df[column])"
+    },
+    "BigCodeBench/367": {
+        "activity_counts": "collections.defaultdict(int)",
+        "day": "activity.strftime('%A')",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/368": {
+        "files": "os.listdir(src_dir)",
+        "file_name": "random.choice(files)",
+        "src_file": "os.path.join(src_dir, file_name)",
+        "dest_file": "os.path.join(dest_dir, file_name)"
+    },
+    "BigCodeBench/374": {
+        "xlsx_files": "glob.glob(directory_path + '/*.xlsx')",
+        "workbook": "openpyxl.load_workbook(filename=xlsx_file)"
+    },
+    "BigCodeBench/399": {
+        "x": "np.linspace(0, 2 * math.pi, sample_size)",
+        "y_sin": "np.sin(frequency * x)",
+        "y_cos": "np.cos(frequency * x)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/401": {
+        "app": "flask.Flask(app_name)",
+        "mail": "flask_mail.Mail(app)"
+    },
+    "BigCodeBench/409": {
+        "excel_file": "os.path.join(excel_file_path, file_name)",
+        "df": "pd.read_excel(excel_file)",
+        "mean": "np.mean(df[column_name])",
+        "median": "np.median(df[column_name])",
+        "std_dev": "np.std(df[column_name])"
+    },
+    "BigCodeBench/417": {
+        "X_train": "sklearn.model_selection.train_test_split(X, Y, test_size=0.25)[0]",
+        "X_test": "sklearn.model_selection.train_test_split(X, Y, test_size=0.25)[1]",
+        "Y_train": "sklearn.model_selection.train_test_split(X, Y, test_size=0.25)[2]",
+        "Y_test": "sklearn.model_selection.train_test_split(X, Y, test_size=0.25)[3]",
+        "model": "keras.models.Sequential([Dense(input_dim=2, units=1, activation='sigmoid')])",
+        "history": "model.fit(X_train, Y_train, epochs=200, batch_size=1, verbose=0, validation_data=(X_test, Y_test))",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/418": {
+        "X_train": "sklearn.model_selection.train_test_split(X, Y, test_size=0.3)[0]",
+        "X_test": "sklearn.model_selection.train_test_split(X, Y, test_size=0.3)[1]",
+        "Y_train": "sklearn.model_selection.train_test_split(X, Y, test_size=0.3)[2]",
+        "Y_test": "sklearn.model_selection.train_test_split(X, Y, test_size=0.3)[3]",
+        "model": "keras.Sequential([keras.layers.Dense(input_dim=2, units=1, activation='sigmoid')])",
+        "Y_pred": "model.predict(X_test, verbose=0).ravel()",
+        "fpr": "sklearn.metrics.roc_curve(Y_test, Y_pred)[0]",
+        "tpr": "sklearn.metrics.roc_curve(Y_test, Y_pred)[1]",
+        "thresholds": "sklearn.metrics.roc_curve(Y_test, Y_pred)[2]",
+        "auc_score": "sklearn.metrics.auc(fpr, tpr)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/424": {
+        "img": "cv2.imread(image_path)",
+        "pixels": "img.reshape(-1, 3)",
+        "kmeans": "sklearn.cluster.KMeans(n_clusters=n_clusters, random_state=random_seed)",
+        "segmented_image": "segmented_image.reshape(img.shape).astype('uint8')",
+        "cluster_img": "np.where(np.stack([mask] * 3, axis=-1), segmented_image, np.array([255, 255, 255], dtype=np.uint8))"
+    },
+    "BigCodeBench/443": {
+        "result": "np.tensordot(P, T, axes=[1, 1]).swapaxes(0, 1)",
+        "flattened_result": "result.reshape(-1, tensor_shape[2])",
+        "kmeans": "sklearn.cluster.KMeans(n_clusters=n_clusters, random_state=random_state, n_init=n_init)",
+        "cluster_result": "kmeans.fit_predict(flattened_result)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/445": {
+        "vor": "scipy.spatial.Voronoi(jittered_points)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/454": {
+        "files": "glob.glob(os.path.join(src_dir, '*.' + ext))",
+        "filename": "os.path.basename(file)",
+        "dest_file_path": "os.path.join(dest_dir, filename)"
+    },
+    "BigCodeBench/458": {
+        "NUMBERS": "re.compile('^-?\\\\d+(?:\\\\.\\\\d+)?$')",
+        "my_dict": "json.loads(json_str)",
+        "df": "pd.DataFrame(my_dict)",
+        "converted_col": "pd.to_numeric(df[col], errors='coerce')"
+    },
+    "BigCodeBench/461": {
+        "p": "subprocess.Popen(['bash', script_path])",
+        "start_time": "time.time()",
+        "process": "psutil.Process(pid)",
+        "cpu_percent": "process.cpu_percent(interval=0.05)"
+    },
+    "BigCodeBench/477": {
+        "all_categories": "np.concatenate([guaranteed_categories, remaining_categories])",
+        "guaranteed_categories": "np.array(CATEGORIES)",
+        "remaining_categories": "np.random.choice(CATEGORIES, N - len(CATEGORIES))",
+        "df": "pd.DataFrame({'x': np.random.rand(N), 'y': np.random.rand(N), 'category': all_categories})",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/486": {
+        "timestamps": "np.arange(start_time, end_time, step)",
+        "df": "pd.DataFrame(columns=['Time', 'Value'])",
+        "values": "np.random.normal(size=len(timestamps))",
+        "dt": "datetime.fromtimestamp(ts / 1000).strftime('%Y-%m-%d %H:%M:%S.%f')",
+        "ax": "df.plot(x='Time', y='Value')"
+    },
+    "BigCodeBench/492": {
+        "products": "list(set(products))",
+        "start_date": "datetime.fromtimestamp(epoch_milliseconds / 1000.0)",
+        "end_date": "datetime.now()",
+        "date_range": "pd.date_range(start_date, end_date, freq='D')",
+        "sales": "random.randint(10, 50)",
+        "df": "pd.DataFrame(sales_data, columns=['Product', 'Date', 'Sales'])"
+    },
+    "BigCodeBench/501": {
+        "data": "pd.read_json(json_str)",
+        "book": "xlwt.Workbook()",
+        "sheet": "book.add_sheet(sheet_name)"
+    },
+    "BigCodeBench/502": {
+        "duration": "random.randint(0, 120)",
+        "df": "pd.DataFrame(data, columns=['Date', 'Activity', 'Duration'])",
+        "ax": "sns.lineplot(data=df, x='Date', y='Duration', hue='Activity')"
+    },
+    "BigCodeBench/503": {
+        "dates": "pd.date_range(end=datetime.now().date(), periods=days_in_past)",
+        "df": "pd.DataFrame(prices, columns=stock_names, index=dates)"
+    },
+    "BigCodeBench/509": {
+        "file": "open",
+        "reader": "csv.reader(file, delimiter=delimiter, quotechar=quotechar)",
+        "csv_content1": "csv_to_list(file_path1, delimiter, quotechar)",
+        "csv_content2": "csv_to_list(file_path2, delimiter, quotechar)",
+        "diff": "difflib.ndiff(csv_content1, csv_content2)",
+        "df": "pd.DataFrame(data, columns=headers)"
+    },
+    "BigCodeBench/511": {
+        "df": "pd.DataFrame(data, columns=COLUMNS)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/513": {
+        "df": "pd.DataFrame(data, columns=COLUMNS)",
+        "ax": "df.plot.line(x='Date', y=column)"
+    },
+    "BigCodeBench/526": {
+        "f": "open",
+        "data": "json.load(f)",
+        "all_keys": "set().union(*(d.keys() for d in data))",
+        "stats": "collections.defaultdict(list)",
+        "value": "d.get(key, np.nan)",
+        "df": "pd.DataFrame(result).transpose().sort_index()"
+    },
+    "BigCodeBench/528": {
+        "file_path": "file_path.strip()",
+        "f": "open",
+        "reader": "csv.reader(f)",
+        "rows": "list(reader)",
+        "duplicates": "collections.Counter((tuple(row) for row in rows if rows.count(row) > 1))",
+        "df": "pd.DataFrame(duplicates.values(), duplicates.keys())",
+        "ax": "df.plot(kind='bar', legend=False, title='Duplicate Entries')"
+    },
+    "BigCodeBench/530": {
+        "duplicate_names": "df['name'].value_counts()[df['name'].value_counts() > 1].index.tolist()",
+        "duplicates_counter": "collections.Counter(duplicates_df['age'])",
+        "bins": "np.arange(min_age, max_age + 1)",
+        "ax": "sns.histplot(duplicates_df['age'], bins=bins)"
+    },
+    "BigCodeBench/532": {
+        "duplicates_counter": "collections.Counter(duplicates['value'])",
+        "mu": "scipy.stats.norm.fit(df['value'])[0]",
+        "std": "scipy.stats.norm.fit(df['value'])[1]",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]",
+        "xmin": "matplotlib.pyplot.xlim()[0]",
+        "xmax": "matplotlib.pyplot.xlim()[1]",
+        "x": "np.linspace(xmin, xmax, 100)",
+        "p": "norm.pdf(x, mu, std)"
+    },
+    "BigCodeBench/553": {
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "df.plot(kind='bar')",
+        "df": "pd.DataFrame(np.random.randn(len(a), len(b)), index=a, columns=selected_columns)"
+    },
+    "BigCodeBench/560": {
+        "data_entries": "data.split(',')",
+        "df": "df.set_index('Month')",
+        "fig": "matplotlib.pyplot.subplots(figsize=(10, 6))[0]",
+        "ax": "matplotlib.pyplot.subplots(figsize=(10, 6))[1]"
+    },
+    "BigCodeBench/567": {
+        "data": "data.split('-')",
+        "df": "pd.DataFrame(data, columns=['Values'])",
+        "ax": "plt.gca()"
+    },
+    "BigCodeBench/574": {
+        "x": "np.linspace(0, 4 * np.pi, array_length)",
+        "popt": "scipy.optimize.curve_fit(func, x, y, p0=[1, 1])[0]",
+        "pcov": "scipy.optimize.curve_fit(func, x, y, p0=[1, 1])[1]",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/579": {
+        "file": "open",
+        "reader": "csv.reader(file)",
+        "normalized_word": "unicodedata.normalize('NFKD', word).encode('ascii', 'ignore').decode()",
+        "word_counter": "collections.Counter(words)",
+        "most_common_words": "word_counter.most_common(10)",
+        "labels": "zip(*most_common_words)[0]",
+        "values": "zip(*most_common_words)[1]",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/582": {
+        "data": "np.random.randn(size)",
+        "mu": "scipy.stats.norm.fit(data)[0]",
+        "std": "scipy.stats.norm.fit(data)[1]",
+        "bin_edges": "np.histogram_bin_edges(data, bins='auto')",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]",
+        "xmin": "ax.get_xlim()[0]",
+        "xmax": "ax.get_xlim()[1]",
+        "x": "np.linspace(xmin, xmax, size)",
+        "p": "stats.norm.pdf(x, mu, std)"
+    },
+    "BigCodeBench/583": {
+        "pub_key": "rsa.newkeys(512)[0]",
+        "priv_key": "rsa.newkeys(512)[1]",
+        "password": "Crypto.Random.get_random_bytes(16)",
+        "cipher": "AES.new(password, AES.MODE_EAX)",
+        "priv_key_encrypted": "b64encode(priv_key_encrypted).decode('utf-8')",
+        "tag": "cipher.encrypt_and_digest(priv_key.save_pkcs1())[1]",
+        "f": "open"
+    },
+    "BigCodeBench/587": {
+        "pub_key": "rsa.newkeys(512)[0]",
+        "priv_key": "rsa.newkeys(512)[1]",
+        "aes_key": "os.urandom(32)",
+        "iv": "os.urandom(16)",
+        "cipher": "cryptography.hazmat.primitives.ciphers.Cipher(algorithms.AES(aes_key), modes.CBC(iv), backend=default_backend())",
+        "f": "open",
+        "data": "f.read()",
+        "padder": "padding.PKCS7(128).padder()",
+        "encryptor": "cipher.encryptor()",
+        "encrypted_aes_key": "rsa.encrypt(aes_key, pub_key)"
+    },
+    "BigCodeBench/590": {
+        "res": "urllib.request.urlopen",
+        "html": "res.read().decode()",
+        "d": "pyquery.PyQuery(html)",
+        "fetch_time": "datetime.now().strftime('%Y-%m-%d %H:%M:%S')",
+        "df": "pd.DataFrame(anchors, columns=['text', 'href'])"
+    },
+    "BigCodeBench/592": {
+        "FILE_PATH": "os.path.join(output_dir, 'sensor_data.csv')",
+        "f": "open",
+        "writer": "csv.writer(f)"
+    },
+    "BigCodeBench/593": {
+        "FILE_PATH": "os.path.join(output_dir, 'traffic_data.csv')",
+        "f": "open",
+        "writer": "csv.writer(f)",
+        "df": "pd.read_csv(FILE_PATH)",
+        "ax": "df.plot(x='Time', y=VEHICLE_TYPES, kind='line', title='Traffic Data Over Time')"
+    },
+    "BigCodeBench/594": {
+        "FILE_PATH": "os.path.join(output_dir, 'weather_data.csv')",
+        "BACKUP_PATH": "os.path.join(output_dir, 'backup/')",
+        "f": "open",
+        "writer": "csv.writer(f)"
+    },
+    "BigCodeBench/618": {
+        "team_goals": "random.randint(0, goals)",
+        "team_penalties": "random.randint(0, penalties)",
+        "results_df": "pd.DataFrame(match_results, columns=['Team', 'Goals', 'Penalty Cost'])",
+        "plot1": "sns.barplot(x='Team', y='Goals', data=results_df, palette='viridis')",
+        "plot2": "sns.barplot(x='Team', y='Penalty Cost', data=results_df, palette='viridis')"
+    },
+    "BigCodeBench/636": {
+        "empty_ax": "plt.gca()",
+        "data": "np.random.randint(10, size=(rows, len(COLUMNS)))",
+        "df": "pd.DataFrame(data, columns=COLUMNS)",
+        "counts": "df.astype(bool).sum(axis=0)",
+        "ax": "counts.plot(kind='bar')"
+    },
+    "BigCodeBench/637": {
+        "students_sample": "random.sample(STUDENTS, num_students)",
+        "grades": "np.random.randint(40, 101, size=(num_students, len(COURSES)))",
+        "df": "pd.DataFrame(grades, index=students_sample, columns=COURSES)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/654": {
+        "x_data": "np.arange(len(indices))",
+        "popt": "scipy.optimize.curve_fit(func, x_data, y_data, p0=initial_guess, maxfev=10000)[0]",
+        "_": "scipy.optimize.curve_fit(func, x_data, y_data, p0=initial_guess, maxfev=10000)[1]",
+        "x_fit": "np.linspace(min(x_data), max(x_data), 500)"
+    },
+    "BigCodeBench/655": {
+        "ALPHANUMERIC": "re.compile('[\\\\W_]+')",
+        "STOPWORDS": "nltk.corpus.stopwords.words('english')",
+        "vectorizer": "sklearn.feature_extraction.text.TfidfVectorizer(max_df=1.0, min_df=1, stop_words='english')",
+        "tfidf": "vectorizer.fit_transform(tokenized_texts)",
+        "nmf": "NMF(n_components=num_topics, random_state=1).fit(tfidf)"
+    },
+    "BigCodeBench/657": {
+        "ALPHANUMERIC": "re.compile('[\\\\W_]+')",
+        "stopwords": "nltk.corpus.stopwords.words('english')",
+        "model": "gensim.models.Word2Vec(sentences=tokenized_texts, vector_size=100, window=5, min_count=1, workers=4)"
+    },
+    "BigCodeBench/678": {
+        "df": "pd.concat([df, temp_df])",
+        "processed_path": "os.path.join(path, 'processed')",
+        "file_path": "os.path.join(path, filename)",
+        "file": "open",
+        "data": "json.load(file)",
+        "temp_df": "pd.DataFrame(data)"
+    },
+    "BigCodeBench/720": {
+        "temperature": "random.uniform(20, 30)",
+        "humidity": "random.uniform(50, 60)",
+        "timestamp": "datetime.now()",
+        "f": "open",
+        "csv_writer": "csv.writer(f)"
+    },
+    "BigCodeBench/723": {
+        "html": "urllib.request.urlopen(url).read()",
+        "soup": "bs4.BeautifulSoup(html, 'html.parser')",
+        "table": "soup.find('table', attrs={'class': 'data-table'})",
+        "table_rows": "table.find_all('tr')",
+        "td": "tr.find_all('td')",
+        "f": "open",
+        "writer": "csv.writer(f)"
+    },
+    "BigCodeBench/752": {
+        "X": "data.drop(columns=[target_column])",
+        "X_train": "sklearn.model_selection.train_test_split(X, y, test_size=test_size, random_state=random_state)[0]",
+        "X_test": "sklearn.model_selection.train_test_split(X, y, test_size=test_size, random_state=random_state)[1]",
+        "y_train": "sklearn.model_selection.train_test_split(X, y, test_size=test_size, random_state=random_state)[2]",
+        "y_test": "sklearn.model_selection.train_test_split(X, y, test_size=test_size, random_state=random_state)[3]",
+        "model": "LinearRegression().fit(X_train, y_train)"
+    },
+    "BigCodeBench/760": {
+        "is_latin": "np.random.choice([True, False])",
+        "birth_year": "np.random.randint(start_year, end_year + 1)",
+        "dob": "datetime.datetime(birth_year, np.random.randint(1, 13), np.random.randint(1, 29))",
+        "df": "pd.DataFrame(data, columns=['ID', 'Name', 'Date of Birth', 'Email'])"
+    },
+    "BigCodeBench/763": {
+        "f": "open",
+        "data": "json.load(f)",
+        "stats": "collections.defaultdict(list)",
+        "writer": "csv.DictWriter(f, fieldnames=['key', 'mean', 'median'])"
+    },
+    "BigCodeBench/765": {},
+    "BigCodeBench/771": {
+        "file_dir": "pathlib.Path(directory)",
+        "file_pattern": "re.compile(pattern)",
+        "match": "file_pattern.match(filename)",
+        "prefix": "match.group(1)",
+        "infile": "open",
+        "outfile": "open",
+        "reader": "csv.reader(infile)",
+        "writer": "csv.writer(outfile)"
+    },
+    "BigCodeBench/777": {
+        "match": "re.match(pattern, filename)",
+        "file_path": "os.path.join(directory, filename)",
+        "base_name": "match.group(1)",
+        "extract_path": "os.path.join(directory, base_name)",
+        "zip_ref": "zipfile.ZipFile"
+    },
+    "BigCodeBench/785": {
+        "file_list": "glob.glob(pattern)",
+        "archive_file_base": "os.path.join(ARCHIVE_DIR, 'archive')"
+    },
+    "BigCodeBench/800": {
+        "file": "open",
+        "writer": "csv.writer(file)",
+        "counts": "collections.Counter({'goals': 0, 'penalties': 0})",
+        "reader": "csv.DictReader(file)"
+    },
+    "BigCodeBench/826": {},
+    "BigCodeBench/845": {
+        "ALPHANUMERIC": "re.compile('[\\\\W_]+')",
+        "text1": "ALPHANUMERIC.sub(' ', text1).lower()",
+        "text2": "ALPHANUMERIC.sub(' ', text2).lower()",
+        "vec1": "collections.Counter(text1.split())",
+        "vec2": "collections.Counter(text2.split())",
+        "numerator": "sum([vec1[x] * vec2[x] for x in intersection])",
+        "sum1": "sum([vec1[x] ** 2 for x in vec1.keys()])",
+        "sum2": "sum([vec2[x] ** 2 for x in vec2.keys()])",
+        "levenshtein_ratio": "Levenshtein.ratio(text1, text2)"
+    },
+    "BigCodeBench/854": {
+        "all_permutations": "list(permutations(numbers))"
+    },
+    "BigCodeBench/857": {},
+    "BigCodeBench/865": {
+        "items": "zip(*data)[0]",
+        "counts": "zip(*data)[1]",
+        "weights": "zip(*data)[2]",
+        "counts_normalized": "scipy.stats.zscore(counts)",
+        "scaler": "sklearn.preprocessing.MinMaxScaler()",
+        "weights_normalized": "scaler.fit_transform(np.array(weights).reshape(-1, 1)).flatten()",
+        "report_df": "pd.DataFrame({'Item': items, 'Normalized Count': counts_normalized, 'Normalized Weight': weights_normalized})"
+    },
+    "BigCodeBench/870": {
+        "unzipped_data": "list(itertools.zip_longest(*data_list, fillvalue=np.nan))",
+        "df": "pd.DataFrame(mean_values, columns=['Mean Value'], index=['Position {}'.format(i) for i in range(len(mean_values))])"
+    },
+    "BigCodeBench/879": {
+        "contingency_table": "pd.crosstab(data[col1], data[col2])",
+        "chi2": "scipy.stats.chi2_contingency(contingency_table)[0]",
+        "p": "scipy.stats.chi2_contingency(contingency_table)[1]",
+        "dof": "scipy.stats.chi2_contingency(contingency_table)[2]",
+        "expected": "scipy.stats.chi2_contingency(contingency_table)[3]"
+    },
+    "BigCodeBench/897": {
+        "NUMBERS": "list(range(1, 7))",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/906": {
+        "archive_path": "os.path.join(target_dir, archive_name)",
+        "archive": "zipfile.ZipFile"
+    },
+    "BigCodeBench/914": {
+        "X": "df['date'].values.reshape(-1, 1)",
+        "model": "sklearn.linear_model.LinearRegression()",
+        "future_dates": "np.array([df['date'].max() + i * 24 * 60 * 60 for i in range(1, 8)]).reshape(-1, 1)",
+        "pred_prices": "model.predict(future_dates)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/915": {
+        "fig": "matplotlib.pyplot.subplots(figsize=(10, 5))[0]",
+        "ax": "matplotlib.pyplot.subplots(figsize=(10, 5))[1]"
+    },
+    "BigCodeBench/916": {
+        "fig": "matplotlib.pyplot.subplots(1, 2, figsize=(12, 6))[0]",
+        "axes": "matplotlib.pyplot.subplots(1, 2, figsize=(12, 6))[1]",
+        "boxplot_ax": "sns.boxplot(x=df['closing_price'], ax=axes[0])",
+        "histplot_ax": "sns.histplot(df['closing_price'], kde=True, ax=axes[1])"
+    },
+    "BigCodeBench/917": {
+        "model": "statsmodels.tsa.arima.model.ARIMA(df['closing_price'], order=(5, 1, 0))",
+        "model_fit": "model.fit()",
+        "forecast": "model_fit.forecast(steps=7)",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]",
+        "forecast_dates": "pd.date_range(start=df['date'].iloc[-1] + pd.Timedelta(days=1), periods=7)"
+    },
+    "BigCodeBench/928": {
+        "word_counter": "collections.Counter(word_combinations)"
+    },
+    "BigCodeBench/942": {
+        "date_range": "pd.date_range(start=start_date, periods=periods, freq=freq)",
+        "sales": "np.random.randint(low=100, high=500)",
+        "sales_df": "pd.DataFrame(report_data, columns=['Date', 'Category', 'Sales'])",
+        "fig": "matplotlib.pyplot.subplots(figsize=(12, 8))[0]",
+        "ax": "matplotlib.pyplot.subplots(figsize=(12, 8))[1]"
+    },
+    "BigCodeBench/945": {
+        "sales_data": "np.random.randint(low=100, high=500, size=periods)",
+        "date_range": "pd.date_range(start=start_date, freq=freq, periods=periods)",
+        "sales_df": "pd.DataFrame({'Date': date_range, 'Sales': sales_data})",
+        "X": "np.arange(len(sales_df)).reshape(-1, 1)",
+        "model": "sklearn.linear_model.LinearRegression()",
+        "future_dates": "np.arange(len(sales_df), 2 * len(sales_df)).reshape(-1, 1)",
+        "future_sales": "model.predict(future_dates)"
+    },
+    "BigCodeBench/952": {
+        "task_name": "random.choice(task_list).replace(' ', '_')",
+        "employee": "random.choice(employees)",
+        "due_date": "datetime.today().strftime('%Y-%m-%d')",
+        "assignment_df": "pd.DataFrame(assignment_data, columns=['Task Name', 'Assigned To', 'Due Date'])"
+    },
+    "BigCodeBench/955": {
+        "text": "re.sub(word, word.replace(' ', '_'), text, flags=re.IGNORECASE)",
+        "word_counts": "collections.Counter(text.split())",
+        "words": "zip(*word_counts.items())[0]",
+        "frequencies": "zip(*word_counts.items())[1]",
+        "indices": "np.arange(len(word_counts))",
+        "fig": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/963": {
+        "zip_path": "os.path.join(target_directory, f'{zip_name.strip()}.zip')",
+        "zipf": "zipfile.ZipFile"
+    },
+    "BigCodeBench/964": {
+        "filepath": "os.path.join(root, file)",
+        "target_filepath": "os.path.join(target_directory, Path(file).stem + '.csv')",
+        "df": "pd.DataFrame({'Text': data})",
+        "doc": "docx.Document(filepath)",
+        "f": "open",
+        "data": "f.readlines()"
+    },
+    "BigCodeBench/969": {
+        "df_cumsum": "df.cumsum()",
+        "scaler": "sklearn.preprocessing.MinMaxScaler()",
+        "df_norm_cumsum": "pd.DataFrame(scaler.fit_transform(df_cumsum), columns=df.columns)"
+    },
+    "BigCodeBench/971": {
+        "file_info": "os.stat(entry.path)",
+        "creation_time": "datetime.fromtimestamp(file_info.st_ctime, timezone.utc).isoformat()",
+        "modification_time": "datetime.fromtimestamp(file_info.st_mtime, timezone.utc).isoformat()"
+    },
+    "BigCodeBench/985": {
+        "file_path": "os.path.join(output_dir, file_name)",
+        "data": "json.loads(json_data)",
+        "country_data_dict": "data.get('Countries')",
+        "df": "pd.DataFrame(country_data, columns=['Country', 'Population'])"
+    },
+    "BigCodeBench/988": {
+        "full_path": "pathlib.Path(os.path.join(dir_path, item))"
+    },
+    "BigCodeBench/990": {
+        "decoded_str": "bytes.fromhex(hex_string).decode('utf-8')"
+    },
+    "BigCodeBench/998": {
+        "md5_hash": "hashlib.md5()",
+        "f": "open",
+        "tar_ref": "tarfile.open"
+    },
+    "BigCodeBench/999": {
+        "f": "open",
+        "reader": "csv.DictReader(f)"
+    },
+    "BigCodeBench/1003": {
+        "response": "urllib.request.urlopen",
+        "xml_data": "response.read()",
+        "xml_tree": "etree.XML(xml_data)"
+    },
+    "BigCodeBench/1004": {
+        "response": "urllib.request.urlopen",
+        "text": "response.read().decode()",
+        "words": "re.findall('\\\\b\\\\w+\\\\b', text)",
+        "word_freq": "collections.Counter(words)",
+        "top_words": "word_freq.most_common(10)",
+        "_": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/1006": {
+        "response": "requests.get(url, timeout=5)",
+        "file_name": "os.path.join(download_path, os.path.basename(url))",
+        "f": "open",
+        "zip_ref": "ZipFile"
+    },
+    "BigCodeBench/1008": {
+        "response": "requests.get(url, timeout=5)",
+        "soup": "bs4.BeautifulSoup(response.text, 'html.parser')",
+        "table": "soup.find('table', {'id': table_id})"
+    },
+    "BigCodeBench/1012": {
+        "DOWNLOAD_DIR": "pathlib.Path('downloads')",
+        "ZIP_DIR": "pathlib.Path('unzipped_files')",
+        "response": "requests.get(url, stream=True, timeout=5)",
+        "handle": "open",
+        "zip_ref": "zipfile.ZipFile"
+    },
+    "BigCodeBench/1013": {
+        "full_url": "urllib.parse.urljoin(base_url, url)",
+        "response": "requests.get(full_url)",
+        "soup": "bs4.BeautifulSoup(response.text, 'html.parser')",
+        "csvfile": "open",
+        "writer": "csv.writer(csvfile)"
+    },
+    "BigCodeBench/1015": {
+        "file": "open",
+        "content": "file.read()",
+        "response": "requests.get(webpage_url, timeout=5)",
+        "tree": "html.fromstring(content)",
+        "rows": "tree.xpath('//tr')",
+        "df": "pd.DataFrame(data)",
+        "conn": "sqlite3.connect(database_name)"
+    },
+    "BigCodeBench/1019": {
+        "image": "Image.open",
+        "extracted_text": "pytesseract.image_to_string(image)",
+        "comment": "image.info.get('comment', '')"
+    },
+    "BigCodeBench/1020": {
+        "response": "requests.get(url, timeout=5)",
+        "content": "content.encode(to_encoding).decode(to_encoding)",
+        "data": "json.loads(content)"
+    },
+    "BigCodeBench/1022": {
+        "df": "df.sort_values(by=column_name)",
+        "current_date": "datetime.now().date()"
+    },
+    "BigCodeBench/1039": {
+        "context": "ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)",
+        "secure_socket": "context.wrap_socket(client_socket, server_side=True)",
+        "request": "secure_socket.recv(buffer_size).decode('utf-8')",
+        "file": "open",
+        "sha256_hash": "hashlib.sha256()",
+        "response": "sha256_hash.hexdigest()"
+    },
+    "BigCodeBench/1040": {
+        "server": "socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+        "readable": "select.select(inputs, outputs, inputs, 1)[0]",
+        "writable": "select.select(inputs, outputs, inputs, 1)[1]",
+        "_": "s.accept()[1]",
+        "connection": "s.accept()[0]",
+        "data": "s.recv(buffer_size)",
+        "next_msg": "message_queues[s].get_nowait()"
+    },
+    "BigCodeBench/1042": {
+        "request": "client_socket.recv(BUFFER_SIZE).decode('utf-8')",
+        "email": "email.message.EmailMessage()",
+        "smtp": "smtplib.SMTP"
+    },
+    "BigCodeBench/1053": {
+        "df": "pd.read_csv(file_path, usecols=[0], names=['Text'], header=None)",
+        "vectorizer": "sklearn.feature_extraction.text.CountVectorizer(stop_words=STOP_WORDS)",
+        "word_count": "vectorizer.fit_transform(df['Text'].dropna())",
+        "sum_words": "word_count.sum(axis=0)",
+        "words_freq": "sorted(words_freq, key=lambda x: x[1], reverse=True)",
+        "df_top": "pd.DataFrame(top_words, columns=['Word', 'Count'])",
+        "ax": "df_top.plot.bar(x='Word', y='Count', rot=0, legend=False)"
+    },
+    "BigCodeBench/1057": {
+        "data": "np.array(pairs).reshape(-1, len(foods))",
+        "df": "pd.DataFrame(data, columns=foods)"
+    },
+    "BigCodeBench/1077": {
+        "time_zone": "pytz.timezone(timezone)"
+    },
+    "BigCodeBench/1085": {
+        "cleaned_text": "re.sub(f'[{punctuation}]', '', text).lower()",
+        "words": "cleaned_text.split()",
+        "word_counts": "collections.Counter(words)",
+        "most_common_words": "word_counts.most_common(10)",
+        "_": "matplotlib.pyplot.subplots()[0]",
+        "ax": "matplotlib.pyplot.subplots()[1]"
+    },
+    "BigCodeBench/1124": {
+        "url_match": "re.search('(https?://\\\\S+)', myString)",
+        "url": "url_match.group()",
+        "response": "requests.get(url, headers=HEADERS)",
+        "soup": "bs4.BeautifulSoup(response.text, 'html.parser')"
+    },
+    "BigCodeBench/1129": {
+        "data": "json.loads(json_data)",
+        "response": "requests.get(url)",
+        "timestamp": "datetime.now().strftime('%Y%m%d%H%M%S%f')",
+        "file_path": "os.path.join(save_dir, filename)",
+        "f": "open"
+    },
+    "BigCodeBench/1137": {
+        "file": "open",
+        "text": "soup.get_text()",
+        "response": "requests.get(url, headers=HEADERS)",
+        "soup": "bs4.BeautifulSoup(response.text, 'html.parser')",
+        "phone_numbers": "re.findall(PHONE_REGEX, text)",
+        "f": "open"
+    }
+}
