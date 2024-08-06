@@ -187,7 +187,27 @@ def process_chains(chains):
             chain_schema = parse_api_info(chain_data)
             if chain_schema:
                 chain_data['parameters'] = chain_schema
+                
 
+def split_schema(api_info, parent_name=''):
+    split_schemas = {}
+    
+    for api_name, api_data in api_info.items():
+        full_name = f"{parent_name}.{api_name}" if parent_name else api_name
+        split_schemas[full_name] = api_data.copy()
+        
+        if 'chains' in api_data:
+            chains = api_data['chains']
+            del split_schemas[full_name]['chains']
+            
+            # Recursively split nested chains
+            nested_schemas = split_schema(chains, full_name)
+            split_schemas.update(nested_schemas)
+    
+    return split_schemas
+    
+    
+    
 if __name__ == "__main__":
      # Read the JSON file
     with open('apis_info_grouped.json', 'r') as f:
@@ -198,4 +218,15 @@ if __name__ == "__main__":
     
     with open('apis_info_grouped_schema.json', 'w') as f:
         json.dump(full_api_info, f, indent=2)
-    
+        
+    with open('apis_info_grouped_schema_split.jsonl', 'w') as f:
+        new_api_info = []
+        for task_id, task_info in full_api_info.items():
+            tmp_schemas = split_schema(task_info)
+            for name, api_info in tmp_schemas.items():
+                if not api_info:
+                    continue
+                api = dict()
+                api["task_id"] = task_id
+                api["data"] = api_info
+                f.write(json.dumps(api) + "\n")

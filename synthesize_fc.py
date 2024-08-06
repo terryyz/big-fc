@@ -10,7 +10,7 @@ from rich.progress import (
     TextColumn,
     TimeElapsedColumn,
 )
-from utils import write_jsonl, get_apidocs, load_api2task, load_example
+from utils import write_jsonl, load_api_schema, load_example
 
 def codegen(
     model: DecoderBase,
@@ -34,18 +34,11 @@ def codegen(
         if not os.path.exists(dirname) and dirname != "":
             os.makedirs(dirname)
         
-        api_docs = get_apidocs()
-        api2task = load_api2task()
+        api_schemas = load_api_schema()
         data = load_example()
-        for id_num, (api, task_ids) in enumerate(p.track(api2task.items())):
-            api_split = api.split("(")
-            if len(api_split) == 1:
-                has_args = False
-            else:
-                has_args = True
-            
-            api_doc = api_docs[api_split[0]]
-            
+        for id_num, schema in enumerate(p.track(api_schemas)):
+            task_id = schema["task_id"]
+            api = schema["data"]
             if id_range is not None:
                 low, high = id_range
                 if id_num < low or id_num >= high:
@@ -56,65 +49,46 @@ def codegen(
             if os.path.exists(save_path):
                 with open(save_path, "r") as f:
                     existing_data = f.read().splitlines()
+            
             log = f"Synthesis: {id_num} @ {model}"
-            for task_id in task_ids:
-                n_existing = 0
-                example = data[task_id]
-                
-                if resume:
-                    if os.path.exists(save_path):
-                        n_existing = len([1 for line in existing_data if json.loads(line)["id_num"] == id_num and
-                                        json.loads(line)["task_id"] == task_id])
-                    else:
-                        n_existing = 0
-                    if n_existing > 0:
-                        log += f" (resuming from {n_existing})"
+            example = data[task_id]
+            n_existing = 0
 
-                nsamples = n_samples - n_existing
-                p.console.print(log)
+            if resume:
+                if os.path.exists(save_path):
+                    n_existing = len([1 for line in existing_data if json.loads(line)["id_num"] == id_num and
+                                    json.loads(line)["task_id"] == task_id])
+                else:
+                    n_existing = 0
+                if n_existing > 0:
+                    log += f" (resuming from {n_existing})"
 
-                sidx = n_samples - nsamples
-                while sidx < n_samples:
-                    try:
-                        api.pop("short_docstring")
-                    except:
-                        pass
-                    if has_args:
-                        try:
-                            api_doc.pop("signature")
-                        except:
-                            pass
-                        api_doc["signature"] = "("+"(".join(api_split[1:])
-                    try:
-                        api_doc.pop("docstring")
-                    except:
-                        pass
-                    try:
-                        api_doc.pop("error")
-                    except:
-                        pass
-                    outputs = model.codegen(
-                        api,
-                        api_doc,
-                        example,
-                        negative=negative,
-                        do_sample=not greedy,
-                        num_samples=n_samples - sidx,
+            nsamples = n_samples - n_existing
+            p.console.print(log)
+
+            sidx = n_samples - nsamples
+            while sidx < n_samples:
+                outputs = model.codegen(
+                    api,
+                    example,
+                    negative=negative,
+                    do_sample=not greedy,
+                    num_samples=n_samples - sidx,
+                )
+                assert outputs, "No outputs from model!"
+
+                samples = [
+                    dict(
+                        id_num=id_num,
+                        task_id=task_id,
+                        api_name=api["name"],
+                        synthesis=completion,
                     )
-                    assert outputs, "No outputs from model!"
-
-                    samples = [
-                        dict(
-                            id_num=id_num,
-                            task_id=task_id,
-                            api=api,
-                            synthesis=completion,
-                        )
-                        for id_num, completion in zip([id_num]*len(outputs), outputs)
-                    ]
-                    print(f"Generated {len(samples)} samples")
-                    write_jsonl(save_path, samples, append=True)
-                    sidx += len(outputs)
+                    for id_num, completion in zip([id_num]*len(outputs), outputs)
+                ]
+                print(f"Generated {len(samples)} samples")
+                write_jsonl(save_path, samples, append=True)
+                sidx += len(outputs)
 
 
 def main():

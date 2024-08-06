@@ -7,27 +7,17 @@ inverse_matrix(matrix)
 """
 
 POSITIVE_TEMPLATE="""\
-Creatively propose a self-contained API to replace the following hierarchical API call.
+Creatively propose an API schema to rephrase the given hierarchical API schema.
 
-- The name of the proposed API **must not contain any dots** and refers to the high-level functionality.
-- The name format of the proposed API can be either **snake_case** or **camelCase**.
-- The proposed proposed API should be as natural as possible, paired with a short description similar to the given hierarchical API call.
-- The "type" of the proposed API **must be the same** as the given hierarchical API call.
-- The signature of the proposed API **must be aligned** with how the hierarchical API is invoked.
+- "name" of the proposed API **must not contain any dots** and refers to the high-level functionality.
+- "name" of the proposed API can be either **snake_case** or **camelCase**.
+- "type" of the proposed API **must align** with the "type" of the given API, unless the "type" of the given API is not given.
+- "signature" of the proposed API **must align** with the "signature" of the given API, though the parameter names can be different.
+- "description" of the proposed API **must be concise** and **align** with the given API functionality.
 
-# Given hierarchical API call:
+# Given API schema:
 ```json
 {api}
-```
-
-# Hierarchical API documentation:
-```json
-{api_doc}
-```
-
-# Code example:
-```python
-{example}
 ```
 """
 
@@ -49,8 +39,56 @@ Creatively provide a self-contained API call, **in contrast to** the given hiera
 ```
 """
 
+SCHEMA = """\
+# You are required to return a valid JSON object in the following schema:
+```json
+{
+    API: {
+        "name": "", # The name of the API
+        "type": "", # The type of the API, choose from "function", "class", "method"
+        "signature": "", # A concise signature of the API, wrapped with parentheses
+        "description": "", # A concise description of the API
+        "parameters": { # If the API is callable, it has parameters
+            "type": "object", # The type of the parameters
+            "properties": { # The properties of the parameters
+                PARAM_1: {
+                    "type": "",
+                    "default": ""
+                },
+                ...
+            }
+        }
+    }
+}
+```
+"""
+
+OBJECT_SCHEMA = """\
+# You are required to return a valid JSON object in the following schema:
+```json
+{
+    API: {
+        "name": "", # The name of the API
+        "type": "", # The type of the API, choose from "function", "class", "method"
+        "signature": "", # A concise signature of the API, wrapped with parentheses
+        "description": "", # A concise description of the API
+        "parameters": { # If the API is callable, it has parameters
+            "type": "object", # The type of the parameters
+            "properties": { # The properties of the parameters
+                PARAM_1: {
+                    "type": "",
+                    "default": ""
+                },
+                ...
+            }
+        }
+    }
+}
+```
+"""
+
 RESPONSE_TEMPLATE="""\
-# Proposed API in the perfect JSON (name in **snake_case** or **camelCase**) {{"label": "{label}", "name": "", "type": "{type}", "signature": "",  "short_description": ""}}:
+# Proposed API schema:
 ```json
 {_MAGIC_SPLITTER_}
 ```

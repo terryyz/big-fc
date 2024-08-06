@@ -28,14 +28,10 @@ def write_jsonl(
                 if drop_builtin:
                     x = {k: v for k, v in x.items() if not k.startswith("_")}
                 fp.write((json.dumps(x) + "\n").encode("utf-8"))
-
-def get_apidocs():
-    with open("apis_info.jsonl", "r") as f:
-        return {json.loads(line)["name"]: json.loads(line) for i, line in enumerate(f)}
     
-def load_api2task():
-    with open("api2task.json", "r") as f:
-        return json.load(f)
+def load_api_schema():
+    with open("apis_info_grouped_schema_split.jsonl", "r") as f:
+        return [json.loads(line) for line in f]
 
 def load_example():
     ds = load_dataset("bigcode/bigcodebench-hard", split="v0.1.0_hf")
@@ -43,3 +39,10 @@ def load_example():
     for sample in ds:
         ds_dict[sample["task_id"]] = sample["code_prompt"] + sample["canonical_solution"]
     return ds_dict
+
+def validator(data):
+    new_data = []
+    for d in data:
+        json.loads(d)
+        new_data.append(d)
+    return new_data

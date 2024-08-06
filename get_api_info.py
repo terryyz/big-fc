@@ -74,7 +74,7 @@ def get_subscript_method_info(base_api, subscript, method):
         return result
     except Exception as e:
         print(e)
-        return {'name': f"{base_api}[{subscript}].{method}", 'error': str(e)}
+        return {'name': f"{base_api}[{subscript}].{method}"} #, 'error': str(e)}
     
 def process_nested_call(call):
     if isinstance(call, ast.Attribute):
@@ -165,11 +165,11 @@ def get_api_info(api_call):
         result['description'] = inspect.getdoc(module) or ''
         return result
     except ImportError as e:
-        return {'name': api_call, 'error': f'Import error: {str(e)}'}
+        return {'name': api_call,} # 'error': f'Import error: {str(e)}'}
     except AttributeError as e:
-        return {'name': api_call, 'error': f'Attribute error: {str(e)}'}
+        return {'name': api_call,} # 'error': f'Attribute error: {str(e)}'}
     except Exception as e:
-        return {'name': api_call, 'error': str(e)}
+        return {'name': api_call,} # 'error': str(e)}
 
 def separate_api_calls(api_list):
     object_methods = []
