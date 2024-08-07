@@ -43,20 +43,18 @@ SCHEMA = """\
 # You are required to return a valid JSON object in the following schema:
 ```json
 {
-    API: {
-        "name": "", # The name of the API
-        "type": "", # The type of the API, choose from "function", "class", "method"
-        "signature": "", # A concise signature of the API, wrapped with parentheses
-        "description": "", # A concise description of the API
-        "parameters": { # If the API is callable, it has parameters
-            "type": "object", # The type of the parameters
-            "properties": { # The properties of the parameters
-                PARAM_1: {
-                    "type": "",
-                    "default": ""
-                },
-                ...
-            }
+    "name": "", # The name of the API
+    "type": "", # The type of the API, choose from "function", "class", "method"
+    "signature": "(...)", # A concise signature of the API, wrapped with parentheses
+    "description": "", # A concise description of the API
+    "parameters": { # If the API is callable, it has parameters
+        "type": "object", # The type of the parameters
+        "properties": { # The properties of the parameters
+            PARAM_1: {
+                "type": "",
+                "default": ""
+            },
+            ...
         }
     }
 }
