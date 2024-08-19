@@ -148,7 +148,7 @@ class OpenAIChatDecoder(DecoderBase):
         batch_size = min(self.batch_size, num_samples)
 
         # construct prompt
-        fmt = "json_object"
+        fmt = "text"
         
         # message = POSITIVE_TEMPLATE.format(api=api, example=examplem) + "\n" + SCHEMA + RESPONSE_TEMPLATE.split("```json")[0]
         message = TYPE_INFERENCE_TEMPLATE.format(api=api, example=example) + "\n" + TYPE_SCHEMA + "\n" +  TYPE_RESPONSE_TEMPLATE.format(_MAGIC_SPLITTER_=_MAGIC_SPLITTER_, name=api["name"])

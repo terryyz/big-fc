@@ -38,6 +38,9 @@ def codegen(
         for id_num, schema in enumerate(p.track(api_schemas)):
             task_id = schema["task_id"]
             api = schema["data"]
+            api_type = api.pop("type", None)
+            if api_type == "class":
+                continue
             if id_range is not None:
                 low, high = id_range
                 if id_num < low or id_num >= high:

@@ -68,7 +68,7 @@ def get_subscript_method_info(base_api, subscript, method):
             'name': f"{base_api}[{subscript}].{method}",
             'type': 'method',
             'signature': str(inspect.signature(method_obj)),
-            'description': inspect.getdoc(method_obj) or ''
+            # 'description': inspect.getdoc(method_obj) or ''
         }
         
         return result
@@ -135,7 +135,7 @@ def get_api_info(api_call):
             'name': api,
             'type': None,
             'signature': None,
-            'description': None
+            # 'description': None
         }
         if inspect.ismodule(module):
             result['type'] = 'module'
@@ -162,7 +162,7 @@ def get_api_info(api_call):
             result['value'] = str(module)
         if result['signature'] and "(" in api_call:
             result['signature'] = filter_unused_args(result['signature'], api_call)
-        result['description'] = inspect.getdoc(module) or ''
+        # result['description'] = inspect.getdoc(module) or ''
         return result
     except ImportError as e:
         return {'name': api_call,} # 'error': f'Import error: {str(e)}'}

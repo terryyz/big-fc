@@ -1,6 +1,6 @@
 BS=10
-MODEL=deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
-BACKEND=vllm
+MODEL=gpt-4o-2024-08-06
+BACKEND=openai
 TEMP=0.2
 N_SAMPLES=10
 NUM_GPU=8
