@@ -1,0 +1,1433 @@
+{
+    "BigCodeBench/13": {
+        "downloaded_files.append": [
+            {
+                "api_call": "downloaded_files.append(filename)",
+                "line": 32,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/15": {
+        "f.write": [
+            {
+                "api_call": "open.write(f'\\nError executing command, exited with code {ret_code}')",
+                "line": 24,
+                "col_offset": 16
+            }
+        ],
+        "output_files.append": [
+            {
+                "api_call": "output_files.append(output_file)",
+                "line": 25,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/17": {
+        "proc.name": [
+            {
+                "api_call": "proc.name()",
+                "line": 6,
+                "col_offset": 64
+            }
+        ],
+        "proc.terminate": [
+            {
+                "api_call": "proc.terminate()",
+                "line": 12,
+                "col_offset": 16
+            }
+        ]
+    },
+    "BigCodeBench/19": {},
+    "BigCodeBench/34": {},
+    "BigCodeBench/37": {
+        "df.drop": [
+            {
+                "api_call": "df.drop(target_column, axis=1)",
+                "line": 7,
+                "col_offset": 8
+            }
+        ],
+        "X.columns": [
+            {
+                "api_call": "df.drop(target_column, axis=1).columns",
+                "line": 11,
+                "col_offset": 62
+            }
+        ]
+    },
+    "BigCodeBench/82": {
+        "form.validate_on_submit": [
+            {
+                "api_call": "LoginForm().validate_on_submit()",
+                "line": 30,
+                "col_offset": 11
+            }
+        ],
+        "form.username.data": [
+            {
+                "api_call": "LoginForm().username.data",
+                "line": 31,
+                "col_offset": 24
+            }
+        ],
+        "form.username": [
+            {
+                "api_call": "LoginForm().username",
+                "line": 31,
+                "col_offset": 24
+            }
+        ],
+        "form.password.data": [
+            {
+                "api_call": "LoginForm().password.data",
+                "line": 31,
+                "col_offset": 44
+            }
+        ],
+        "form.password": [
+            {
+                "api_call": "LoginForm().password",
+                "line": 31,
+                "col_offset": 44
+            }
+        ]
+    },
+    "BigCodeBench/89": {
+        "column_data.reshape": [
+            {
+                "api_call": "column_data.reshape(-1, 1)",
+                "line": 12,
+                "col_offset": 45
+            }
+        ]
+    },
+    "BigCodeBench/92": {
+        "data.iloc": [
+            {
+                "api_call": "data.iloc",
+                "line": 16,
+                "col_offset": 15
+            }
+        ]
+    },
+    "BigCodeBench/93": {},
+    "BigCodeBench/99": {},
+    "BigCodeBench/100": {},
+    "BigCodeBench/101": {},
+    "BigCodeBench/108": {
+        "df.columns": [
+            {
+                "api_call": "df.columns",
+                "line": 7,
+                "col_offset": 58
+            }
+        ],
+        "df.set_index": [
+            {
+                "api_call": "df.set_index('date').set_index('date')",
+                "line": 15,
+                "col_offset": 9
+            }
+        ],
+        "df.asfreq": [
+            {
+                "api_call": "df.set_index('date').asfreq(freq, method='pad').asfreq(freq, method='pad')",
+                "line": 16,
+                "col_offset": 9
+            }
+        ],
+        "df.plot": [
+            {
+                "api_call": "df.set_index('date').asfreq(freq, method='pad').plot(y='value')",
+                "line": 26,
+                "col_offset": 9
+            }
+        ]
+    },
+    "BigCodeBench/120": {},
+    "BigCodeBench/123": {
+        "my_list.append": [
+            {
+                "api_call": "my_list.append(12)",
+                "line": 8,
+                "col_offset": 4
+            }
+        ]
+    },
+    "BigCodeBench/124": {
+        "my_list.append": [
+            {
+                "api_call": "my_list.append(12)",
+                "line": 10,
+                "col_offset": 4
+            }
+        ]
+    },
+    "BigCodeBench/129": {
+        "th.text.strip": [
+            {
+                "api_call": "th.text.strip()",
+                "line": 20,
+                "col_offset": 19
+            }
+        ],
+        "th.text": [
+            {
+                "api_call": "th.text",
+                "line": 20,
+                "col_offset": 19
+            }
+        ],
+        "row.find_all": [
+            {
+                "api_call": "row.find_all('td')",
+                "line": 25,
+                "col_offset": 19
+            }
+        ],
+        "ele.text.strip": [
+            {
+                "api_call": "ele.text.strip()",
+                "line": 28,
+                "col_offset": 20
+            }
+        ],
+        "ele.text": [
+            {
+                "api_call": "ele.text",
+                "line": 28,
+                "col_offset": 20
+            }
+        ],
+        "data.append": [
+            {
+                "api_call": "data.append(cols)",
+                "line": 29,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/139": {
+        "df.empty": [
+            {
+                "api_call": "df.empty",
+                "line": 5,
+                "col_offset": 43
+            }
+        ],
+        "df.select_dtypes": [
+            {
+                "api_call": "df.select_dtypes(include=np.number)",
+                "line": 8,
+                "col_offset": 19
+            }
+        ],
+        "numeric_cols.size": [
+            {
+                "api_call": "numeric_cols.size",
+                "line": 9,
+                "col_offset": 11
+            }
+        ],
+        "axes.append": [
+            {
+                "api_call": "axes.append(ax)",
+                "line": 18,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/147": {
+        "threads.append": [
+            {
+                "api_call": "threads.append(thread)",
+                "line": 23,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/161": {
+        "line.strip": [
+            {
+                "api_call": "line.strip().strip()",
+                "line": 10,
+                "col_offset": 19
+            }
+        ],
+        "parsed_data.append": [
+            {
+                "api_call": "parsed_data.append([log_type, timestamp, message.strip()])",
+                "line": 19,
+                "col_offset": 16
+            }
+        ],
+        "message.strip": [
+            {
+                "api_call": "match.groups()[2].strip()",
+                "line": 19,
+                "col_offset": 57
+            }
+        ]
+    },
+    "BigCodeBench/162": {},
+    "BigCodeBench/177": {
+        "df.columns": [
+            {
+                "api_call": "df.columns",
+                "line": 6,
+                "col_offset": 22
+            }
+        ]
+    },
+    "BigCodeBench/184": {
+        "text.lower": [
+            {
+                "api_call": "text.lower().lower()",
+                "line": 16,
+                "col_offset": 15
+            }
+        ],
+        "text.split": [
+            {
+                "api_call": "' '.join((word for word in text.split() if word not in STOPWORDS)).split()",
+                "line": 19,
+                "col_offset": 41
+            }
+        ]
+    },
+    "BigCodeBench/187": {},
+    "BigCodeBench/199": {
+        "utc_datetime.astimezone": [
+            {
+                "api_call": "utc_datetime.astimezone(city_tz)",
+                "line": 28,
+                "col_offset": 20
+            }
+        ],
+        "report_data.append": [
+            {
+                "api_call": "report_data.append([city, city_time.strftime('%Y-%m-%d %H:%M:%S %Z'), weather])",
+                "line": 30,
+                "col_offset": 8
+            }
+        ],
+        "city_time.strftime": [
+            {
+                "api_call": "utc_datetime.astimezone(city_tz).strftime('%Y-%m-%d %H:%M:%S %Z')",
+                "line": 30,
+                "col_offset": 34
+            }
+        ]
+    },
+    "BigCodeBench/208": {},
+    "BigCodeBench/211": {
+        "f.write": [
+            {
+                "api_call": "open.write(response.content)",
+                "line": 16,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/214": {},
+    "BigCodeBench/227": {},
+    "BigCodeBench/239": {},
+    "BigCodeBench/241": {},
+    "BigCodeBench/267": {
+        "data.values": [
+            {
+                "api_call": "data.values()",
+                "line": 9,
+                "col_offset": 27
+            }
+        ]
+    },
+    "BigCodeBench/273": {},
+    "BigCodeBench/274": {},
+    "BigCodeBench/287": {
+        "file_name.endswith": [
+            {
+                "api_call": "file_name.endswith('.txt')",
+                "line": 9,
+                "col_offset": 15
+            }
+        ],
+        "file.read": [
+            {
+                "api_call": "open.read()",
+                "line": 12,
+                "col_offset": 20
+            }
+        ],
+        "file.read().split": [
+            {
+                "api_call": "open.read().split()",
+                "line": 12,
+                "col_offset": 20
+            }
+        ]
+    },
+    "BigCodeBench/302": {
+        "df.index": [
+            {
+                "api_call": "df.index",
+                "line": 8,
+                "col_offset": 88
+            }
+        ]
+    },
+    "BigCodeBench/308": {},
+    "BigCodeBench/310": {},
+    "BigCodeBench/313": {
+        "file.read": [
+            {
+                "api_call": "open.read()",
+                "line": 10,
+                "col_offset": 22
+            }
+        ],
+        "filename.split": [
+            {
+                "api_call": "filename.split('.')",
+                "line": 18,
+                "col_offset": 34
+            }
+        ]
+    },
+    "BigCodeBench/324": {
+        "exit_codes.append": [
+            {
+                "api_call": "exit_codes.append(process.poll())",
+                "line": 12,
+                "col_offset": 8
+            }
+        ],
+        "thread.start": [
+            {
+                "api_call": "thread.start()",
+                "line": 17,
+                "col_offset": 8
+            }
+        ],
+        "thread.join": [
+            {
+                "api_call": "thread.join()",
+                "line": 21,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/326": {
+        "results.append": [
+            {
+                "api_call": "results.append((os.path.basename(file_path), exit_code))",
+                "line": 14,
+                "col_offset": 12
+            },
+            {
+                "api_call": "results.append((os.path.basename(file_path), None))",
+                "line": 17,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/341": {
+        "df.empty": [
+            {
+                "api_call": "df.empty",
+                "line": 6,
+                "col_offset": 43
+            }
+        ],
+        "df.columns": [
+            {
+                "api_call": "df.columns",
+                "line": 6,
+                "col_offset": 66
+            }
+        ]
+    },
+    "BigCodeBench/346": {},
+    "BigCodeBench/360": {},
+    "BigCodeBench/367": {
+        "activity.strftime": [
+            {
+                "api_call": "activity.strftime('%A')",
+                "line": 11,
+                "col_offset": 14
+            }
+        ]
+    },
+    "BigCodeBench/368": {},
+    "BigCodeBench/374": {
+        "cell.value": [
+            {
+                "api_call": "cell.value",
+                "line": 17,
+                "col_offset": 34
+            }
+        ]
+    },
+    "BigCodeBench/399": {},
+    "BigCodeBench/401": {},
+    "BigCodeBench/409": {},
+    "BigCodeBench/417": {},
+    "BigCodeBench/418": {},
+    "BigCodeBench/424": {
+        "segmented_image.reshape": [
+            {
+                "api_call": "segmented_image.reshape(img.shape).astype('uint8').reshape(img.shape)",
+                "line": 25,
+                "col_offset": 22
+            }
+        ],
+        "segmented_image.reshape(img.shape).astype": [
+            {
+                "api_call": "segmented_image.reshape(img.shape).astype('uint8').reshape(img.shape).astype('uint8')",
+                "line": 25,
+                "col_offset": 22
+            }
+        ]
+    },
+    "BigCodeBench/443": {
+        "T.shape": [
+            {
+                "api_call": "T.shape",
+                "line": 13,
+                "col_offset": 11
+            }
+        ]
+    },
+    "BigCodeBench/445": {
+        "points.shape": [
+            {
+                "api_call": "points.shape",
+                "line": 9,
+                "col_offset": 7
+            }
+        ]
+    },
+    "BigCodeBench/454": {
+        "files_moved.append": [
+            {
+                "api_call": "files_moved.append(dest_file_path)",
+                "line": 17,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/458": {},
+    "BigCodeBench/461": {},
+    "BigCodeBench/477": {},
+    "BigCodeBench/486": {},
+    "BigCodeBench/492": {
+        "sales_data.append": [
+            {
+                "api_call": "sales_data.append([product, date, sales])",
+                "line": 25,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/501": {},
+    "BigCodeBench/502": {
+        "data.append": [
+            {
+                "api_call": "data.append([date, activity, duration])",
+                "line": 19,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/503": {},
+    "BigCodeBench/509": {
+        "data.append": [
+            {
+                "api_call": "data.append([i + 1, status, content])",
+                "line": 25,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/511": {},
+    "BigCodeBench/513": {},
+    "BigCodeBench/526": {
+        "d.keys": [
+            {
+                "api_call": "d.keys()",
+                "line": 9,
+                "col_offset": 29
+            }
+        ],
+        "d.get": [
+            {
+                "api_call": "d.get(key, np.nan)",
+                "line": 13,
+                "col_offset": 20
+            }
+        ]
+    },
+    "BigCodeBench/528": {
+        "file_path.strip": [
+            {
+                "api_call": "file_path.strip().strip()",
+                "line": 7,
+                "col_offset": 16
+            }
+        ],
+        "file_path.lower": [
+            {
+                "api_call": "file_path.strip().lower()",
+                "line": 8,
+                "col_offset": 11
+            }
+        ]
+    },
+    "BigCodeBench/530": {
+        "df.empty": [
+            {
+                "api_call": "df.empty",
+                "line": 7,
+                "col_offset": 7
+            }
+        ]
+    },
+    "BigCodeBench/532": {
+        "df.empty": [
+            {
+                "api_call": "df.empty",
+                "line": 11,
+                "col_offset": 7
+            }
+        ]
+    },
+    "BigCodeBench/553": {},
+    "BigCodeBench/560": {
+        "data.strip": [
+            {
+                "api_call": "data.strip()",
+                "line": 6,
+                "col_offset": 11
+            }
+        ],
+        "data.split": [
+            {
+                "api_call": "data.split(',')",
+                "line": 9,
+                "col_offset": 19
+            }
+        ],
+        "d.split": [
+            {
+                "api_call": "d.split('-')",
+                "line": 10,
+                "col_offset": 19
+            }
+        ],
+        "d.rsplit": [
+            {
+                "api_call": "d.rsplit('-', 1)",
+                "line": 18,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/567": {
+        "data.split": [
+            {
+                "api_call": "data.split('-').split('-')",
+                "line": 5,
+                "col_offset": 11
+            }
+        ]
+    },
+    "BigCodeBench/574": {},
+    "BigCodeBench/579": {
+        "words.append": [
+            {
+                "api_call": "words.append(normalized_word)",
+                "line": 13,
+                "col_offset": 20
+            }
+        ]
+    },
+    "BigCodeBench/582": {},
+    "BigCodeBench/583": {
+        "f.write": [
+            {
+                "api_call": "open.write(priv_key_encrypted)",
+                "line": 18,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/587": {
+        "f.read": [
+            {
+                "api_call": "open.read()",
+                "line": 14,
+                "col_offset": 15
+            }
+        ],
+        "f.write": [
+            {
+                "api_call": "open.write(encrypted_data)",
+                "line": 22,
+                "col_offset": 8
+            },
+            {
+                "api_call": "open.write(b64encode(encrypted_aes_key))",
+                "line": 27,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/590": {
+        "a.text": [
+            {
+                "api_call": "a.text",
+                "line": 18,
+                "col_offset": 16
+            }
+        ],
+        "a.get": [
+            {
+                "api_call": "a.get('href')",
+                "line": 18,
+                "col_offset": 24
+            }
+        ]
+    },
+    "BigCodeBench/592": {
+        "data.append": [
+            {
+                "api_call": "data.append(row)",
+                "line": 16,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/593": {
+        "data.append": [
+            {
+                "api_call": "data.append(row)",
+                "line": 18,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/594": {
+        "data.append": [
+            {
+                "api_call": "data.append(row)",
+                "line": 15,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/618": {
+        "match_results.append": [
+            {
+                "api_call": "match_results.append([team, team_goals, penalty_cost])",
+                "line": 15,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/636": {},
+    "BigCodeBench/637": {},
+    "BigCodeBench/654": {
+        "indices.size": [
+            {
+                "api_call": "indices.size",
+                "line": 9,
+                "col_offset": 7
+            }
+        ]
+    },
+    "BigCodeBench/655": {
+        "text.split": [
+            {
+                "api_call": "text.split()",
+                "line": 16,
+                "col_offset": 49
+            }
+        ],
+        "topic.argsort": [
+            {
+                "api_call": "topic.argsort()",
+                "line": 32,
+                "col_offset": 52
+            }
+        ],
+        "topics.append": [
+            {
+                "api_call": "topics.append(topic_keywords)",
+                "line": 33,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/657": {
+        "text.split": [
+            {
+                "api_call": "text.split()",
+                "line": 11,
+                "col_offset": 41
+            }
+        ]
+    },
+    "BigCodeBench/678": {
+        "filename.endswith": [
+            {
+                "api_call": "filename.endswith('.json')",
+                "line": 14,
+                "col_offset": 11
+            }
+        ]
+    },
+    "BigCodeBench/720": {},
+    "BigCodeBench/723": {
+        "tr.find_all": [
+            {
+                "api_call": "tr.find_all('td')",
+                "line": 16,
+                "col_offset": 13
+            }
+        ],
+        "tr.text": [
+            {
+                "api_call": "tr.text",
+                "line": 17,
+                "col_offset": 15
+            }
+        ],
+        "data.append": [
+            {
+                "api_call": "data.append(row)",
+                "line": 18,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/752": {
+        "data.empty": [
+            {
+                "api_call": "data.empty",
+                "line": 10,
+                "col_offset": 7
+            }
+        ],
+        "data.columns": [
+            {
+                "api_call": "data.columns",
+                "line": 13,
+                "col_offset": 28
+            }
+        ],
+        "data.dtypes": [
+            {
+                "api_call": "data.dtypes",
+                "line": 16,
+                "col_offset": 60
+            }
+        ],
+        "data.drop": [
+            {
+                "api_call": "data.drop(columns=[target_column])",
+                "line": 26,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/760": {
+        "name.lower": [
+            {
+                "api_call": "name.lower()",
+                "line": 24,
+                "col_offset": 36
+            }
+        ],
+        "data.append": [
+            {
+                "api_call": "data.append([i, name, dob, email])",
+                "line": 25,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/763": {
+        "d.items": [
+            {
+                "api_call": "d.items()",
+                "line": 12,
+                "col_offset": 26
+            }
+        ],
+        "result.items": [
+            {
+                "api_call": "result.items()",
+                "line": 20,
+                "col_offset": 27
+            }
+        ]
+    },
+    "BigCodeBench/765": {
+        "kwargs.items": [
+            {
+                "api_call": "kwargs.items()",
+                "line": 11,
+                "col_offset": 25
+            }
+        ],
+        "copied_files.append": [
+            {
+                "api_call": "copied_files.append(str(target_file))",
+                "line": 15,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/771": {
+        "new_files.append": [
+            {
+                "api_call": "new_files.append(new_filename)",
+                "line": 20,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/777": {
+        "extracted_dirs.append": [
+            {
+                "api_call": "extracted_dirs.append(extract_path)",
+                "line": 16,
+                "col_offset": 16
+            }
+        ]
+    },
+    "BigCodeBench/785": {},
+    "BigCodeBench/800": {
+        "row.get": [
+            {
+                "api_call": "row.get('goals', 0)",
+                "line": 26,
+                "col_offset": 39
+            },
+            {
+                "api_call": "row.get('penalties', 0)",
+                "line": 27,
+                "col_offset": 43
+            }
+        ],
+        "goals.items": [
+            {
+                "api_call": "goals.items()",
+                "line": 29,
+                "col_offset": 28
+            }
+        ],
+        "penalties.items": [
+            {
+                "api_call": "penalties.items()",
+                "line": 32,
+                "col_offset": 32
+            }
+        ]
+    },
+    "BigCodeBench/826": {},
+    "BigCodeBench/845": {},
+    "BigCodeBench/854": {},
+    "BigCodeBench/857": {
+        "transferred_files.append": [
+            {
+                "api_call": "transferred_files.append(os.path.basename(src_file))",
+                "line": 15,
+                "col_offset": 16
+            }
+        ]
+    },
+    "BigCodeBench/865": {},
+    "BigCodeBench/870": {
+        "mean_values.append": [
+            {
+                "api_call": "mean_values.append(np.nanmean(numeric_values))",
+                "line": 15,
+                "col_offset": 12
+            },
+            {
+                "api_call": "mean_values.append(np.nan)",
+                "line": 17,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/879": {
+        "data.empty": [
+            {
+                "api_call": "data.empty",
+                "line": 6,
+                "col_offset": 7
+            }
+        ]
+    },
+    "BigCodeBench/897": {},
+    "BigCodeBench/906": {},
+    "BigCodeBench/914": {},
+    "BigCodeBench/915": {},
+    "BigCodeBench/916": {},
+    "BigCodeBench/917": {},
+    "BigCodeBench/928": {},
+    "BigCodeBench/942": {
+        "report_data.append": [
+            {
+                "api_call": "report_data.append([date, category, sales])",
+                "line": 17,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/945": {},
+    "BigCodeBench/952": {
+        "assignment_data.append": [
+            {
+                "api_call": "assignment_data.append([task_name, employee, due_date])",
+                "line": 22,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/955": {
+        "word.replace": [
+            {
+                "api_call": "word.replace(' ', '_')",
+                "line": 11,
+                "col_offset": 28
+            }
+        ]
+    },
+    "BigCodeBench/963": {},
+    "BigCodeBench/964": {
+        "p.text": [
+            {
+                "api_call": "p.text",
+                "line": 28,
+                "col_offset": 28
+            }
+        ],
+        "f.readlines": [
+            {
+                "api_call": "open.readlines()",
+                "line": 32,
+                "col_offset": 31
+            }
+        ]
+    },
+    "BigCodeBench/969": {
+        "df.select_dtypes": [
+            {
+                "api_call": "df.select_dtypes(include=np.number)",
+                "line": 5,
+                "col_offset": 7
+            }
+        ],
+        "df.shape": [
+            {
+                "api_call": "df.shape",
+                "line": 5,
+                "col_offset": 55
+            }
+        ],
+        "df.empty": [
+            {
+                "api_call": "df.empty",
+                "line": 7,
+                "col_offset": 7
+            }
+        ],
+        "df.isnull": [
+            {
+                "api_call": "df.isnull()",
+                "line": 7,
+                "col_offset": 19
+            }
+        ],
+        "df.cumsum": [
+            {
+                "api_call": "df.cumsum()",
+                "line": 10,
+                "col_offset": 16
+            }
+        ],
+        "df.columns": [
+            {
+                "api_call": "df.columns",
+                "line": 12,
+                "col_offset": 75
+            }
+        ]
+    },
+    "BigCodeBench/971": {
+        "entry.is_file": [
+            {
+                "api_call": "entry.is_file()",
+                "line": 10,
+                "col_offset": 11
+            }
+        ],
+        "entry.path": [
+            {
+                "api_call": "entry.path",
+                "line": 11,
+                "col_offset": 32
+            }
+        ],
+        "file_details.append": [
+            {
+                "api_call": "file_details.append((entry.name, file_size, creation_time, modification_time))",
+                "line": 19,
+                "col_offset": 12
+            }
+        ],
+        "entry.name": [
+            {
+                "api_call": "entry.name",
+                "line": 20,
+                "col_offset": 17
+            }
+        ]
+    },
+    "BigCodeBench/985": {},
+    "BigCodeBench/988": {
+        "x.is_file": [
+            {
+                "api_call": "x.is_file()",
+                "line": 6,
+                "col_offset": 29
+            }
+        ],
+        "x.is_dir": [
+            {
+                "api_call": "x.is_dir()",
+                "line": 7,
+                "col_offset": 28
+            }
+        ],
+        "x.stem": [
+            {
+                "api_call": "x.stem",
+                "line": 8,
+                "col_offset": 61
+            }
+        ],
+        "x.name": [
+            {
+                "api_call": "x.name",
+                "line": 9,
+                "col_offset": 55
+            }
+        ],
+        "predicate_functions.items": [
+            {
+                "api_call": "predicate_functions.items()",
+                "line": 25,
+                "col_offset": 48
+            }
+        ]
+    },
+    "BigCodeBench/990": {},
+    "BigCodeBench/998": {
+        "f.read": [
+            {
+                "api_call": "open.read(4096)",
+                "line": 17,
+                "col_offset": 39
+            }
+        ]
+    },
+    "BigCodeBench/999": {},
+    "BigCodeBench/1003": {
+        "child.tag": [
+            {
+                "api_call": "child.tag",
+                "line": 18,
+                "col_offset": 21
+            }
+        ],
+        "child.text": [
+            {
+                "api_call": "child.text",
+                "line": 18,
+                "col_offset": 32
+            }
+        ],
+        "data.append": [
+            {
+                "api_call": "data.append(data_item)",
+                "line": 19,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/1004": {},
+    "BigCodeBench/1006": {
+        "f.write": [
+            {
+                "api_call": "open.write(response.content)",
+                "line": 19,
+                "col_offset": 12
+            }
+        ]
+    },
+    "BigCodeBench/1008": {},
+    "BigCodeBench/1012": {
+        "filepath.parent.mkdir": [
+            {
+                "api_call": "filepath.parent.mkdir(parents=True, exist_ok=True)",
+                "line": 13,
+                "col_offset": 12
+            }
+        ],
+        "filepath.parent": [
+            {
+                "api_call": "filepath.parent",
+                "line": 13,
+                "col_offset": 12
+            }
+        ],
+        "handle.write": [
+            {
+                "api_call": "open.write(data)",
+                "line": 17,
+                "col_offset": 20
+            }
+        ],
+        "file.name": [
+            {
+                "api_call": "file.name",
+                "line": 27,
+                "col_offset": 16
+            }
+        ]
+    },
+    "BigCodeBench/1013": {},
+    "BigCodeBench/1015": {
+        "webpage_url.startswith": [
+            {
+                "api_call": "webpage_url.startswith('file://')",
+                "line": 7,
+                "col_offset": 11
+            }
+        ],
+        "file.read": [
+            {
+                "api_call": "open.read()",
+                "line": 9,
+                "col_offset": 26
+            }
+        ],
+        "cell.text_content": [
+            {
+                "api_call": "cell.text_content()",
+                "line": 18,
+                "col_offset": 13
+            }
+        ],
+        "row.xpath": [
+            {
+                "api_call": "row.xpath('.//td')",
+                "line": 18,
+                "col_offset": 53
+            }
+        ]
+    },
+    "BigCodeBench/1019": {},
+    "BigCodeBench/1020": {
+        "content.decode": [
+            {
+                "api_call": "content.decode(detected_encoding).decode(detected_encoding)",
+                "line": 19,
+                "col_offset": 18
+            },
+            {
+                "api_call": "content.decode(detected_encoding).decode(from_encoding).decode(from_encoding)",
+                "line": 21,
+                "col_offset": 18
+            }
+        ],
+        "content.encode": [
+            {
+                "api_call": "content.decode(detected_encoding).decode(from_encoding).encode(to_encoding).decode(to_encoding).encode(to_encoding)",
+                "line": 23,
+                "col_offset": 14
+            }
+        ],
+        "content.encode(to_encoding).decode": [
+            {
+                "api_call": "content.decode(detected_encoding).decode(from_encoding).encode(to_encoding).decode(to_encoding).encode(to_encoding).decode(to_encoding)",
+                "line": 23,
+                "col_offset": 14
+            }
+        ]
+    },
+    "BigCodeBench/1022": {},
+    "BigCodeBench/1039": {
+        "file.read": [
+            {
+                "api_call": "open.read(4096)",
+                "line": 15,
+                "col_offset": 47
+            }
+        ]
+    },
+    "BigCodeBench/1040": {
+        "s.accept": [
+            {
+                "api_call": "s.accept()",
+                "line": 22,
+                "col_offset": 36
+            }
+        ],
+        "connection.setblocking": [
+            {
+                "api_call": "s.accept()[0].setblocking(0)",
+                "line": 23,
+                "col_offset": 20
+            }
+        ],
+        "inputs.append": [
+            {
+                "api_call": "inputs.append(connection)",
+                "line": 24,
+                "col_offset": 20
+            }
+        ],
+        "s.recv": [
+            {
+                "api_call": "s.recv(buffer_size)",
+                "line": 27,
+                "col_offset": 27
+            }
+        ],
+        "data.decode": [
+            {
+                "api_call": "s.recv(buffer_size).decode()",
+                "line": 29,
+                "col_offset": 67
+            }
+        ],
+        "outputs.append": [
+            {
+                "api_call": "outputs.append(s)",
+                "line": 31,
+                "col_offset": 28
+            }
+        ],
+        "outputs.remove": [
+            {
+                "api_call": "outputs.remove(s)",
+                "line": 34,
+                "col_offset": 28
+            }
+        ],
+        "inputs.remove": [
+            {
+                "api_call": "inputs.remove(s)",
+                "line": 35,
+                "col_offset": 24
+            }
+        ],
+        "s.close": [
+            {
+                "api_call": "s.close()",
+                "line": 36,
+                "col_offset": 24
+            }
+        ],
+        "s.sendall": [
+            {
+                "api_call": "s.sendall(next_msg.encode('utf-8'))",
+                "line": 48,
+                "col_offset": 20
+            }
+        ],
+        "next_msg.encode": [
+            {
+                "api_call": "message_queues[s].get_nowait().encode('utf-8')",
+                "line": 48,
+                "col_offset": 30
+            }
+        ]
+    },
+    "BigCodeBench/1042": {
+        "client_socket.recv": [
+            {
+                "api_call": "client_socket.recv(BUFFER_SIZE)",
+                "line": 10,
+                "col_offset": 14
+            }
+        ],
+        "client_socket.send": [
+            {
+                "api_call": "client_socket.send(response.encode('utf-8'))",
+                "line": 25,
+                "col_offset": 4
+            }
+        ],
+        "response.encode": [
+            {
+                "api_call": "response.encode('utf-8')",
+                "line": 25,
+                "col_offset": 23
+            }
+        ],
+        "client_socket.close": [
+            {
+                "api_call": "client_socket.close()",
+                "line": 26,
+                "col_offset": 4
+            }
+        ]
+    },
+    "BigCodeBench/1053": {},
+    "BigCodeBench/1057": {},
+    "BigCodeBench/1077": {},
+    "BigCodeBench/1085": {},
+    "BigCodeBench/1124": {
+        "title.string": [
+            {
+                "api_call": "title.string",
+                "line": 28,
+                "col_offset": 15
+            }
+        ]
+    },
+    "BigCodeBench/1129": {
+        "f.write": [
+            {
+                "api_call": "open.write(response.content)",
+                "line": 18,
+                "col_offset": 8
+            }
+        ]
+    },
+    "BigCodeBench/1137": {
+        "url.startswith": [
+            {
+                "api_call": "url.startswith('file://')",
+                "line": 10,
+                "col_offset": 7
+            }
+        ],
+        "file.read": [
+            {
+                "api_call": "open.read()",
+                "line": 12,
+                "col_offset": 19
+            }
+        ]
+    }
+}

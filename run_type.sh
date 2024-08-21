@@ -1,6 +1,6 @@
 BS=10
-MODEL=gpt-4o-2024-08-06
-BACKEND=openai
+MODEL=meta-llama/Meta-Llama-3.1-70B-Instruct
+BACKEND=vllm
 TEMP=0.2
 N_SAMPLES=10
 NUM_GPU=8

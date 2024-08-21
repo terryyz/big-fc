@@ -1,9 +1,19 @@
 import ast
 
+
+def get_builtin_classes():
+    import builtins
+    builtin_classes = dict()
+    for name in dir(builtins):
+        obj = getattr(builtins, name)
+        if isinstance(obj, type):
+            builtin_classes[name] = name
+    return builtin_classes
+
 def extract_apis(code):
     tree = ast.parse(code)
     api_dict = {}
-    imported_modules = {}
+    imported_modules = get_builtin_classes()
     imported_names = {}
     variable_map = {}
     class_map = {}
@@ -36,10 +46,31 @@ def extract_apis(code):
             for item in node.items:
                 context_expr = item.context_expr
                 optional_vars = item.optional_vars
+                if isinstance(context_expr, ast.Call):
+                    api_call = ast.unparse(context_expr)
+                    base = api_call.split('(')[0].split('.')
+                    for i in range(len(base)):
+                        new_base = '.'.join(base[:i+1])
+                        if new_base in imported_modules:
+                            api_call = imported_modules[new_base] + api_call[len(new_base):]
+                        elif new_base in imported_names:
+                            api_call = imported_names[new_base] + api_call[len(new_base):]
+                        elif new_base in variable_map:
+                            api_call = variable_map[new_base] + api_call[len(new_base):]
+                    self.add_api_call(api_call, api_call, context_expr)
                 if optional_vars and isinstance(optional_vars, ast.Name):
                     context_name = ast.unparse(context_expr)
+                    base = context_name.split('(')[0].split('.')
+                    for i in range(len(base)):
+                        new_base = '.'.join(base[:i+1])
+                        if new_base in imported_modules:
+                            context_name = imported_modules[new_base] + context_name[len(new_base):]
+                        elif new_base in imported_names:
+                            context_name = imported_names[new_base] + context_name[len(new_base):]
+                        elif new_base in variable_map:
+                            context_name = variable_map[new_base] + context_name[len(new_base):]
                     alias_name = optional_vars.id
-                    variable_map[alias_name] = context_name.split('(', -1)[0]
+                    variable_map[alias_name] = context_name.split('(', 1)[0]
             self.generic_visit(node)
         
         def get_object_initialization(self, obj_name):
@@ -160,21 +191,30 @@ def extract_apis(code):
                             variable_map[target.id] = f"{api_call}[{index}]"
                             self.object_creations[target.id] = index
             elif isinstance(node.value, ast.Call):
-                api_call = ast.unparse(node.value.func)
-                if api_call in imported_modules:
-                    api_call = imported_modules[api_call]
-                elif api_call in imported_names:
-                    api_call = imported_names[api_call]
-                args = self.get_call_args(node.value)
-                api_call += args
+                # Extract the full call including arguments
+                api_call = ast.unparse(node.value)
+                base = api_call.split('(')[0].split('.')
+                # print(api_call, base, variable_map)
+                for i in range(len(base)):
+                    new_base = '.'.join(base[:i+1])
+                    if new_base in imported_modules:
+                        api_call = imported_modules[new_base] + api_call[len(new_base):]
+                    elif new_base in imported_names:
+                        api_call = imported_names[new_base] + api_call[len(new_base):]
+                    elif new_base in variable_map:
+                        api_call = variable_map[new_base] + api_call[len(new_base):]
                 for target in node.targets:
                     if isinstance(target, ast.Name):
                         variable_map[target.id] = api_call
+                        # print(target.id,api_call)
+                        # print(variable_map)
                     elif isinstance(target, ast.Tuple):
                         for index, elt in enumerate(target.elts):
                             if isinstance(elt, ast.Name):
                                 variable_map[elt.id] = api_call
+                                # print(variable_map)
                                 self.object_creations[elt.id] = index
+
             elif isinstance(node.targets[0], ast.Attribute):
                 attr = node.targets[0]
                 if isinstance(attr.value, ast.Name):
@@ -220,13 +260,17 @@ def extract_apis(code):
             parts = api_call.split('.')
             if len(parts) > 2 and '(' in parts[1]:
                 api_call = f"{parts[0]}.{parts[1]}.{'.'.join(parts[2:])}"
-
             # Add the API call if it's part of a Call node, Subscript node, or a direct attribute
-            if isinstance(parent, ast.Call) or isinstance(parent, ast.Subscript) or isinstance(node, ast.Attribute):
+            if isinstance(parent, ast.Call) or isinstance(parent, ast.Subscript) or isinstance(node, ast.Attribute) or isinstance(parent, ast.Assign):
                 if full_attr not in api_dict:
                     api_dict[full_attr] = []
-                if api_call not in api_dict[full_attr]:
-                    api_dict[full_attr].append(api_call)
+                # Ensure no duplicate API calls are added
+                if not any(api['api_call'] == api_call for api in api_dict[full_attr]):
+                    api_dict[full_attr].append({
+                        'api_call': api_call,
+                        'line': node.lineno,
+                        'col_offset': node.col_offset
+                    })
         
         def visit_Name(self, node):
             if node.id in imported_modules:
@@ -244,7 +288,23 @@ def extract_apis(code):
                 self.visit(arg)
             for keyword in node.keywords:
                 self.visit(keyword.value)
-            
+            # Handle chained method calls
+            if isinstance(node.func, ast.Attribute):
+                func_name = ast.unparse(node.func)
+                parts = func_name.split('.')
+                base = parts[0].split('(', 1)[0]
+                if base in variable_map:
+                    obj_init = variable_map[base]
+                    method_call = f"{'.'.join(parts[1:])}{self.get_call_args(node)}"
+                    api_call = f"{obj_init}.{method_call}"
+                    self.add_api_call(api_call, func_name, node)
+                elif base in imported_modules:
+                    api_call = f"{imported_modules[base]}.{'.'.join(parts[1:])}{self.get_call_args(node)}"
+                    self.add_api_call(api_call, func_name, node)
+                elif base in imported_names:
+                    api_call = f"{imported_names[base]}.{'.'.join(parts[1:])}{self.get_call_args(node)}"
+                    self.add_api_call(api_call, func_name, node)
+                
         def get_parent(self, node):
             for parent in ast.walk(tree):
                 for child in ast.iter_child_nodes(parent):
@@ -265,7 +325,23 @@ def extract_apis(code):
 
     ae = ApiExtractor()
     ae.visit(tree)
-    return api_dict, variable_map
+    # print(api_dict)
+    # filtered_api_dict = {k: v for k, v in api_dict.items() if any(api['api_call'].split('.')[0] in imported_modules or api['api_call'].split('.')[0] in imported_names for api in v)}
+    imported_modules = set(imported_modules.values())
+    imported_names = set(imported_names.values())
+    # print(imported_modules)
+    # print(imported_names)
+    non_api_dict = {k: v for k, v in api_dict.items() for api in v if not any(api['api_call'].startswith(module) for module in imported_modules) and not any(api['api_call'].startswith(name) for name in imported_names)}
+    # print(non_api_dict)
+    api_dict = {k: v for k, v in api_dict.items() if k not in non_api_dict}
+    
+    # # Print the filtered APIs
+    # for api_key, apis in filtered_api_dict.items():
+    #     print(f"{api_key}:")
+    #     for api in apis:
+    #         print(f"  {api['api_call']} (line {api['line']}, col {api['col_offset']})")
+    
+    return api_dict, non_api_dict, variable_map
 
 
 if __name__ == "__main__":
@@ -279,43 +355,66 @@ if __name__ == "__main__":
     api_list = dict()
     api2task = dict()
     code2apis = dict()
+    non_api_dict = dict()
     var2apis = dict()
     for item in tqdm(dataset[:]):
         task_id = item["task_id"]
-        # if task_id != "BigCodeBench/92":
+        # print(task_id)
+        # if task_id not in ["BigCodeBench/914", "BigCodeBench/1008", "BigCodeBench/1039", "BigCodeBench/1053"]:
         #     continue
-        complete_prompt = item["complete_prompt"]
+        complete_prompt = item["code_prompt"]
         if task_id == "BigCodeBench/37":
             complete_prompt = "import pandas as pd\n" + complete_prompt
+        if task_id == "BigCodeBench/590":
+            complete_prompt = "import pandas as urllib\n" + complete_prompt
         canonical_solution = item["canonical_solution"]
-        tmp_code2apis, tmp_var2apis = extract_apis(complete_prompt+canonical_solution)
-        code2apis[task_id] = tmp_code2apis
+        tmp_code2apis, tmp_non_api_dict, tmp_var2apis = extract_apis(complete_prompt+canonical_solution)
+        tmp_pos2apis = dict()
+        for api_key, _apis in tmp_code2apis.items():
+            for api in _apis:
+                tmp_pos2apis.setdefault(str((api['line'], api['col_offset'])), []).append({"api_key": api_key, "api_call": api['api_call']})
+        
+        # remove the api call with the same line and col_offset, but is the substring of another api call
+        # for pos, _apis in tmp_pos2apis.items():
+        #     for api in _apis:
+        #         for other_api in _apis:
+        #             if api['api_call'] != other_api['api_call'] and api['api_call'] in other_api['api_call']:
+        #                 _apis.remove(api)
+        for pos, _apis in tmp_pos2apis.items():
+            longest_api = max(_apis, key=lambda x: len(x['api_call']))
+            _apis[:] = [api for api in _apis if api['api_call'] == longest_api['api_call']]
+        code2apis[task_id] = tmp_pos2apis
         var2apis[task_id] = tmp_var2apis
-        all_apis = [api for apis in tmp_code2apis.values() for api in apis]
-        tmp_apis = sorted(set(all_apis), key=lambda x: len(x))
+        non_api_dict[task_id] = tmp_non_api_dict
+        all_apis = [api['api_call'] for _apis in tmp_code2apis.values() for api in _apis]
+        tmp_apis = sorted(set(all_apis), key=lambda x: len(x), reverse=True)
         filtered_apis = []
         for api in tmp_apis:
             # if not any(other_api.startswith(api) for other_api in tmp_apis if api != other_api):
             #     filtered_apis.append(api)
             flg = True
             for other_api in filtered_apis:
-                if api.startswith(other_api) and api.endswith(')'):
+                if other_api.startswith(api) and not api.endswith(')'):
+                    # print(api, other_api)
                     filtered_apis.append(api.replace(other_api, other_api.split("(")[0]))
                     # print(api, other_api)
                     flg = False
                     break
             if flg:
+                # print(api)
                 filtered_apis.append(api)
         if len(filtered_apis) < 3:
             print(task_id)
         for api in filtered_apis:
             api2task.setdefault(api, []).append(task_id)
-        
+        # exit()
         api_list[task_id] = sorted(filtered_apis, key=lambda x: x.split('.')[0])
         apis.extend(filtered_apis)
     
     with open("code2apis.json", "w") as f:
         json.dump(code2apis, f, indent=4)
+    with open("non_api_dict.json", "w") as f:
+        json.dump(non_api_dict, f, indent=4)
     with open("var2apis.json", "w") as f:
         json.dump(var2apis, f, indent=4)
     with open("apis.json", "w") as f:
